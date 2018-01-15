@@ -43,7 +43,7 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
     {
         $this->output['publication'] = [
             'title' => (string) $this->searchTree->MedlineCitation->Article->ArticleTitle ?? null,
-            'url' => (string) 'http://www.ncbi.nlm.nih.gov/pubmed/' . $this->searchTree->MedlineCitation->PMID,
+            'url' => (string) 'http://www.ncbi.nlm.nih.gov/pubmed/'.$this->searchTree->MedlineCitation->PMID,
             'published_at' => (new DateHelper)->dateFromPubDate($this->searchTree->MedlineCitation->Article->Journal->JournalIssue->PubDate),
             'abstract' => (string) $this->searchTree->MedlineCitation->Article->Abstract->AbstractText ?? null,
         ];
@@ -58,17 +58,16 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
         foreach ($this->searchTree->PubmedData->ArticleIdList->ArticleId as $identifier) {
             $this->output['identifiers'][] = [
                 'value' => (string) $identifier,
-                'type' => (string) $identifier['IdType']
+                'type' => (string) $identifier['IdType'],
             ];
         }
 
-        if($this->searchTree->MedlineCitation->Article->Journal->ISSN) {
+        if ($this->searchTree->MedlineCitation->Article->Journal->ISSN) {
             $this->output['identifiers'][] = [
                 'value' => (string) $this->searchTree->MedlineCitation->Article->Journal->ISSN,
-                'type' => 'issn'
+                'type' => 'issn',
             ];
         }
-
     }
 
     /**
@@ -79,11 +78,11 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
     {
         $issn = [];
 
-        if($this->searchTree->MedlineCitation->Article->Journal->ISSN) {
+        if ($this->searchTree->MedlineCitation->Article->Journal->ISSN) {
             $issn[] = $this->searchTree->MedlineCitation->Article->Journal->ISSN;
         }
 
-        if($this->searchTree->MedlineCitation->MedlineJournalInfo->ISSNLinking) {
+        if ($this->searchTree->MedlineCitation->MedlineJournalInfo->ISSNLinking) {
             $issn[] = $this->searchTree->MedlineCitation->MedlineJournalInfo->ISSNLinking;
         }
 
@@ -102,9 +101,9 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
         try {
             foreach ($this->searchTree->MedlineCitation->Article->AuthorList->Author as $author) {
                 $this->output['authors'][] = [
-                    'first_name' => (string)$author->ForeName,
-                    'last_name' => (string)$author->LastName,
-                    'affiliation' => (string)$author->AffiliationInfo->Affiliation,
+                    'first_name' => (string) $author->ForeName,
+                    'last_name' => (string) $author->LastName,
+                    'affiliation' => (string) $author->AffiliationInfo->Affiliation,
                 ];
             }
         } catch (\Exception $e) {

@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Doi;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Doi;
 
 class DoiDataExtractorTest extends TestCase
 {
@@ -94,7 +94,7 @@ class DoiDataExtractorTest extends TestCase
     }
 
     /** @test */
-    function it_can_extract_updates_from_crossref_api()
+    public function it_can_extract_updates_from_crossref_api()
     {
         // Arrange
         $file = $this->loadJson('Doi/valid-with-updates-article');
@@ -110,9 +110,8 @@ class DoiDataExtractorTest extends TestCase
                     'doi' => '10.1016/j.canlet.2012.01.013',
                 ],
                 'type' => 'Erratum',
-            ]
+            ],
         ], $extracted['updates']);
-
     }
 
     public function loadJson($name)

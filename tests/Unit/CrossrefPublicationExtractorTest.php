@@ -2,16 +2,16 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
-use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
 
 class CrossrefPublicationExtractorTest extends TestCase
 {
     use TestHelpers;
 
     /** @test */
-    function it_can_extract_a_title_as_an_array()
+    public function it_can_extract_a_title_as_an_array()
     {
         // Arrange
         $extractor = new Crossref('');
@@ -24,10 +24,10 @@ class CrossrefPublicationExtractorTest extends TestCase
                 'date-parts' => [
                     [
                         '2010',
-                        '12'
-                    ]
-                ]
-            ]
+                        '12',
+                    ],
+                ],
+            ],
         ]);
 
         // Act
@@ -40,12 +40,12 @@ class CrossrefPublicationExtractorTest extends TestCase
                 'abstract' => 'blibli',
                 'url'   =>  'bloblo',
                 'published_at'  =>  '2010-12',
-            ]
+            ],
         ], $this->getProtectedProperty($extractor, 'output'));
     }
 
     /** @test */
-    function it_can_extract_a_title_as_a_string()
+    public function it_can_extract_a_title_as_a_string()
     {
         $extractor = new Crossref('');
 
@@ -57,10 +57,10 @@ class CrossrefPublicationExtractorTest extends TestCase
                 'date-parts' => [
                     [
                         '2010',
-                        '12'
-                    ]
-                ]
-            ]
+                        '12',
+                    ],
+                ],
+            ],
         ]);
 
         // Act
@@ -73,7 +73,7 @@ class CrossrefPublicationExtractorTest extends TestCase
                 'abstract' => 'blibli',
                 'url'   =>  'bloblo',
                 'published_at'  =>  '2010-12',
-            ]
+            ],
         ], $this->getProtectedProperty($extractor, 'output'));
     }
 }

@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 
 class Crossref implements Resource
 {
@@ -11,8 +11,8 @@ class Crossref implements Resource
 
     protected $queryStringParameters = [
         'headers' => [
-            'User-Agent'    =>  'PubPeer/2.0 (https://pubpeer.com; mailto:contact@pubpeer.com)'
-        ]
+            'User-Agent'    =>  'PubPeer/2.0 (https://pubpeer.com; mailto:contact@pubpeer.com)',
+        ],
     ];
 
     protected $input;
@@ -31,7 +31,7 @@ class Crossref implements Resource
      */
     public function getApiUrl(): string
     {
-        return $this->url . $this->identifier->getQueryString();
+        return $this->url.$this->identifier->getQueryString();
     }
 
     /**

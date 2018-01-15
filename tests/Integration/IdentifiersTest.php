@@ -6,8 +6,8 @@ use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Doi;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Arxiv;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Pubmed;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Figshare;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\BioArxiv;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Figshare;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
 

@@ -90,7 +90,7 @@ class Identifier
      */
     public function getUrl()
     {
-        return $this->baseUrl . $this->getQueryString();
+        return $this->baseUrl.$this->getQueryString();
     }
 
     /**
