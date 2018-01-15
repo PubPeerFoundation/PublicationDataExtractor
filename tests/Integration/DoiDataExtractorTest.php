@@ -1,9 +1,9 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Test\Integration;
+namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use XavRsl\PublicationDataExtractor\Resources\Extractors\Doi;
-use XavRsl\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Doi;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class DoiDataExtractorTest extends TestCase
 {

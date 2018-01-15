@@ -1,6 +1,6 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Resources\Extractors;
+namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 interface ProvidesPublicationData
 {

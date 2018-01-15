@@ -1,8 +1,8 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Identifiers;
+namespace PubPeerFoundation\PublicationDataExtractor\Identifiers;
 
-use XavRsl\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
 
 class Identifier
 {

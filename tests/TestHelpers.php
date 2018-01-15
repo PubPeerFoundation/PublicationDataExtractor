@@ -1,26 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roussel
- * Date: 11/01/2018
- * Time: 14:08
- */
 
-namespace XavRsl\PublicationDataExtractor\Test;
-
+namespace PubPeerFoundation\PublicationDataExtractor\Test;
 
 use ReflectionClass;
 
 trait TestHelpers
 {
     /**
-     * Sets a protected property on a given object via reflection
+     * Sets a protected property on a given object via reflection.
      *
      * @param $object - instance in which protected value is being modified
      * @param $property - property on instance being modified
      * @param $value - new value of the property being modified
-     *
-     * @return void
      */
     public function setProtectedProperty($object, $property, $value)
     {
@@ -31,7 +22,7 @@ trait TestHelpers
     }
 
     /**
-     * Gets a protected property on a given object via reflection
+     * Gets a protected property on a given object via reflection.
      *
      * @param $object - instance in which protected value is being modified
      * @param $property - property on instance being modified
@@ -43,17 +34,18 @@ trait TestHelpers
         $reflection = new ReflectionClass($object);
         $reflection_property = $reflection->getProperty($property);
         $reflection_property->setAccessible(true);
+
         return $reflection_property->getValue($object);
     }
 
     /**
      * Call protected/private method of a class.
      *
-     * @param object &$object    Instantiated object that we will run method on.
+     * @param object &$object    Instantiated object that we will run method on
      * @param string $methodName Method name to call
-     * @param array  $parameters Array of parameters to pass into method.
+     * @param array  $parameters array of parameters to pass into method
      *
-     * @return mixed Method return.
+     * @return mixed method return
      */
     public function invokeMethod(&$object, $methodName, array $parameters = array())
     {

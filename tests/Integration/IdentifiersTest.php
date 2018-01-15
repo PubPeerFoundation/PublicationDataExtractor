@@ -1,15 +1,15 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Test\Integration;
+namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use XavRsl\PublicationDataExtractor\Test\TestCase;
-use XavRsl\PublicationDataExtractor\Identifiers\Doi;
-use XavRsl\PublicationDataExtractor\Identifiers\Arxiv;
-use XavRsl\PublicationDataExtractor\Identifiers\Pubmed;
-use XavRsl\PublicationDataExtractor\Identifiers\Figshare;
-use XavRsl\PublicationDataExtractor\Identifiers\BioArxiv;
-use XavRsl\PublicationDataExtractor\Identifiers\Identifier;
-use XavRsl\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Doi;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Arxiv;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Pubmed;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Figshare;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\BioArxiv;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
 
 class IdentifiersTest extends TestCase
 {

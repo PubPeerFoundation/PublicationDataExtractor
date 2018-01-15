@@ -1,10 +1,10 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Test\Integration;
+namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
 use SimpleXMLElement;
-use XavRsl\PublicationDataExtractor\Resources\Extractors\Arxiv;
-use XavRsl\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Arxiv;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class ArxivDataExtractorTest extends TestCase
 {

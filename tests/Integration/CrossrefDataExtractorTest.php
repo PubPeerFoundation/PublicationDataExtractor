@@ -1,10 +1,10 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Test\Integration;
+namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use XavRsl\PublicationDataExtractor\Exceptions\UnparseableApiException;
-use XavRsl\PublicationDataExtractor\Resources\Extractors\Crossref;
-use XavRsl\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class CrossrefDataExtractorTest extends TestCase
 {

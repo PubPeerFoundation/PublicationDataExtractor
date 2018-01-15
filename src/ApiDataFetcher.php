@@ -1,14 +1,14 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor;
+namespace PubPeerFoundation\PublicationDataExtractor;
 
 use Generator;
 use GuzzleHttp\Promise\EachPromise;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 use GrahamCampbell\GuzzleFactory\GuzzleFactory;
-use XavRsl\PublicationDataExtractor\Resources\Resource;
-use XavRsl\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Resource;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class ApiDataFetcher
 {

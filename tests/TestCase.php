@@ -1,6 +1,6 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Test;
+namespace PubPeerFoundation\PublicationDataExtractor\Test;
 
 use \PHPUnit\Framework\TestCase as PHPUnit;
 

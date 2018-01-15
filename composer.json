@@ -1,5 +1,5 @@
 {
-    "name": "xavrsl/publication-data-extractor",
+    "name": "PubPeerFoundation/publication-data-extractor",
     "description": "Extract publication data from multiple external APIs",
     "type": "library",
     "license": "MIT",
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-	"php": "^7.0",
+	    "php": "^7.0",
         "graham-campbell/guzzle-factory": "^2.2",
         "nesbot/carbon": "^1.22"
     },
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "XavRsl\\PublicationDataExtractor\\": "src/"
+            "PubPeerFoundation\\PublicationDataExtractor\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "XavRsl\\PublicationDataExtractor\\Test\\": "tests/"
+            "PubPeerFoundation\\PublicationDataExtractor\\Test\\": "tests/"
         }
     },
     "scripts": {

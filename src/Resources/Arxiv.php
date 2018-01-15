@@ -1,9 +1,9 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Resources;
+namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
 use SimpleXMLElement;
-use XavRsl\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class Arxiv implements Resource
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Test\Unit;
+namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
-use XavRsl\PublicationDataExtractor\Resources\Extractors\Crossref;
-use XavRsl\PublicationDataExtractor\Test\TestHelpers;
-use XavRsl\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class CrossrefJournalExtractorTest extends TestCase
 {

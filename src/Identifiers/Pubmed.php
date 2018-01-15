@@ -1,11 +1,11 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Identifiers;
+namespace PubPeerFoundation\PublicationDataExtractor\Identifiers;
 
 class Pubmed extends Identifier
 {
     protected $resources = [
-        \XavRsl\PublicationDataExtractor\Resources\EutilsEfetch::class,
+        \PubPeerFoundation\PublicationDataExtractor\Resources\EutilsEfetch::class,
 //        'idconverter' => \App\Resources\IdConverter::class,
     ];
 

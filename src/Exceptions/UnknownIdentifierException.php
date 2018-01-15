@@ -1,6 +1,6 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Exceptions;
+namespace PubPeerFoundation\PublicationDataExtractor\Exceptions;
 
 use Exception;
 

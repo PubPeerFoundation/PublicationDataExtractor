@@ -1,10 +1,10 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Test\Integration;
+namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use XavRsl\PublicationDataExtractor\ApiDataFetcher;
-use XavRsl\PublicationDataExtractor\Test\TestCase;
-use XavRsl\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\ApiDataFetcher;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class ApiDataFetcherTest extends TestCase
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Resources\Extractors;
+namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use XavRsl\PublicationDataExtractor\Helpers\DateHelper;
+use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
 
 class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData, ProvidesTypesData
 {

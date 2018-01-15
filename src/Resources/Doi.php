@@ -1,6 +1,6 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Resources;
+namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
 class Doi extends Crossref
 {

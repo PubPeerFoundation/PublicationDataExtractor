@@ -1,8 +1,8 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Resources\Extractors;
+namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use XavRsl\PublicationDataExtractor\Helpers\DateHelper;
+use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
 
 class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData
 {
@@ -43,7 +43,7 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
     {
         $this->output['publication'] = [
             'title' => (string) $this->searchTree->MedlineCitation->Article->ArticleTitle ?? null,
-            'url' => $this->identifier->getUrl(),
+            'url' => (string) 'http://www.ncbi.nlm.nih.gov/pubmed/' . $this->searchTree->MedlineCitation->PMID,
             'published_at' => (new DateHelper)->dateFromPubDate($this->searchTree->MedlineCitation->Article->Journal->JournalIssue->PubDate),
             'abstract' => (string) $this->searchTree->MedlineCitation->Article->Abstract->AbstractText ?? null,
         ];

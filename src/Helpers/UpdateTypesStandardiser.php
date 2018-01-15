@@ -1,6 +1,6 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Helpers;
+namespace PubPeerFoundation\PublicationDataExtractor\Helpers;
 
 class UpdateTypesStandardiser
 {

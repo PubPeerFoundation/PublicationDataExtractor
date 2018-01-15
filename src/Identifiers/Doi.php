@@ -1,6 +1,6 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Identifiers;
+namespace PubPeerFoundation\PublicationDataExtractor\Identifiers;
 
 class Doi extends Identifier
 {
@@ -10,8 +10,8 @@ class Doi extends Identifier
      * @var array
      */
     protected $resources = [
-        \XavRsl\PublicationDataExtractor\Resources\Doi::class,
-        \XavRsl\PublicationDataExtractor\Resources\Crossref::class,
+        \PubPeerFoundation\PublicationDataExtractor\Resources\Doi::class,
+        \PubPeerFoundation\PublicationDataExtractor\Resources\Crossref::class,
     ];
 
     /**

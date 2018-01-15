@@ -1,10 +1,10 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Test\Integration;
+namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use XavRsl\PublicationDataExtractor\Identifiers\Identifier;
-use XavRsl\PublicationDataExtractor\Resources\Arxiv;
-use XavRsl\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Arxiv;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class ArxivResourceTest extends TestCase
 {

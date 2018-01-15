@@ -1,10 +1,10 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Resources\Extractors;
+namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use XavRsl\PublicationDataExtractor\Exceptions\UnparseableApiException;
-use XavRsl\PublicationDataExtractor\Helpers\DateHelper;
-use XavRsl\PublicationDataExtractor\Helpers\UpdateTypesStandardiser;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
+use PubPeerFoundation\PublicationDataExtractor\Helpers\UpdateTypesStandardiser;
 
 class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesUpdatesData
 {

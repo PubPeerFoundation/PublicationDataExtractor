@@ -1,11 +1,11 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Identifiers;
+namespace PubPeerFoundation\PublicationDataExtractor\Identifiers;
 
 class Arxiv extends Identifier
 {
     protected $resources = [
-        'arxiv' => \XavRsl\PublicationDataExtractor\Resources\Arxiv::class,
+        'arxiv' => \PubPeerFoundation\PublicationDataExtractor\Resources\Arxiv::class,
     ];
 
     protected $regex = '/\d{2}(0|1)[0-9]\.\d{4,5}(v|V)?(\d)?/';

@@ -1,9 +1,9 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Test\Unit;
+namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
-use XavRsl\PublicationDataExtractor\Helpers\DateHelper;
-use XavRsl\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class DateHelperTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Identifiers;
+namespace PubPeerFoundation\PublicationDataExtractor\Identifiers;
 
 class BioArxiv extends Doi
 {

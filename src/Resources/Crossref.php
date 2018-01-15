@@ -1,9 +1,9 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor\Resources;
+namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
-use XavRsl\PublicationDataExtractor\Exceptions\UnparseableApiException;
-use XavRsl\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class Crossref implements Resource
 {
