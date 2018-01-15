@@ -44,7 +44,7 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
             'title' => (string) $this->searchTree->title[0] ?? null,
             'abstract' => (string) trim($this->searchTree->summary[0]) ?? null,
             'url' => (string) $this->searchTree->id[0] ?? null,
-            'published_at' => (new DateHelper)->dateFromCommonFormat($this->searchTree->published)
+            'published_at' => (new DateHelper)->dateFromCommonFormat($this->searchTree->published),
         ];
     }
 
@@ -106,6 +106,7 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
     protected function getIdentifier()
     {
         $urlParts = explode('/', $this->searchTree->id[0]);
+
         return array_pop($urlParts);
     }
 }

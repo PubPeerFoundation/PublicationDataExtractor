@@ -25,7 +25,7 @@ class DateHelper
 
     public function dateFromPubDate($pubDateObject)
     {
-        if (!isset($pubDateObject->Year) || empty($pubDateObject->Year)) {
+        if (! isset($pubDateObject->Year) || empty($pubDateObject->Year)) {
             return '';
         }
 
@@ -40,11 +40,11 @@ class DateHelper
 
     protected function getPubDateMonth($pubDateObject)
     {
-        if (!isset($pubDateObject->Month)) {
+        if (! isset($pubDateObject->Month)) {
             return 1;
         }
 
-        return !is_numeric((string) $pubDateObject->Month)
+        return ! is_numeric((string) $pubDateObject->Month)
             ? Carbon::createFromFormat('M', (string) $pubDateObject->Month)->format('n')
             : $pubDateObject->Month;
     }

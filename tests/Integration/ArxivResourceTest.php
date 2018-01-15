@@ -2,9 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
-use PubPeerFoundation\PublicationDataExtractor\Resources\Arxiv;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Arxiv;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class ArxivResourceTest extends TestCase
 {

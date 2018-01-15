@@ -2,16 +2,16 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
-use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
 
 class CrossrefJournalExtractorTest extends TestCase
 {
     use TestHelpers;
 
     /** @test */
-    function it_will_extract_an_ISSN_as_an_array()
+    public function it_will_extract_an_ISSN_as_an_array()
     {
         // Arrange
         $extractor = new Crossref('');
@@ -19,7 +19,7 @@ class CrossrefJournalExtractorTest extends TestCase
         $this->setProtectedProperty($extractor, 'searchTree', [
             'container-title' => 'blabla',
             'ISSN' => ['4561-1234'],
-            'publisher' => 'blibli'
+            'publisher' => 'blibli',
         ]);
 
         // Act
@@ -30,13 +30,13 @@ class CrossrefJournalExtractorTest extends TestCase
             'journal' => [
                 'title' => 'blabla',
                 'issn' => ['4561-1234'],
-                'publisher' => 'blibli'
-            ]
+                'publisher' => 'blibli',
+            ],
         ], $this->getProtectedProperty($extractor, 'output'));
     }
 
     /** @test */
-    function it_will_extract_multiple_ISSNs_as_an_array()
+    public function it_will_extract_multiple_ISSNs_as_an_array()
     {
         // Arrange
         $extractor = new Crossref('');
@@ -47,7 +47,7 @@ class CrossrefJournalExtractorTest extends TestCase
             'ISSN' => [
                 '4561-1234',
                 '4561-1235',
-            ]
+            ],
         ]);
 
         // Act
@@ -61,13 +61,13 @@ class CrossrefJournalExtractorTest extends TestCase
                 'issn' => [
                     '4561-1234',
                     '4561-1235',
-                ]
-            ]
+                ],
+            ],
         ], $this->getProtectedProperty($extractor, 'output'));
     }
 
     /** @test */
-    function it_will_extract_an_ISSN_as_a_string()
+    public function it_will_extract_an_ISSN_as_a_string()
     {
         // Arrange
         $extractor = new Crossref('');
@@ -75,7 +75,7 @@ class CrossrefJournalExtractorTest extends TestCase
         $this->setProtectedProperty($extractor, 'searchTree', [
             'container-title' => 'blabla',
             'publisher' => 'blibli',
-            'ISSN' => '4561-1234'
+            'ISSN' => '4561-1234',
         ]);
 
         // Act
@@ -88,8 +88,8 @@ class CrossrefJournalExtractorTest extends TestCase
                 'publisher' => 'blibli',
                 'issn' => [
                     '4561-1234',
-                ]
-            ]
+                ],
+            ],
         ], $this->getProtectedProperty($extractor, 'output'));
     }
 }

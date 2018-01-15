@@ -3,8 +3,8 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
 use SimpleXMLElement;
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Arxiv;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Arxiv;
 
 class ArxivDataExtractorTest extends TestCase
 {

@@ -2,9 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
 use PubPeerFoundation\PublicationDataExtractor\Helpers\UpdateTypesStandardiser;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 
 class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesUpdatesData
 {
@@ -72,14 +72,14 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
      */
     public function extractIdentifiersData()
     {
-        if(!empty($this->searchTree['DOI'])) {
+        if (! empty($this->searchTree['DOI'])) {
             $this->output['identifiers'][] = [
                 'value' => $this->searchTree['DOI'],
                 'type' => 'doi',
             ];
         }
 
-        if (!empty($this->searchTree['ISSN'])) {
+        if (! empty($this->searchTree['ISSN'])) {
             if (is_array($this->searchTree['ISSN'])) {
                 foreach ($this->searchTree['ISSN'] as $issn) {
                     $this->output['identifiers'][] = [
@@ -102,7 +102,7 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
      */
     public function extractJournalData()
     {
-        if (array_key_exists('ISSN', $this->searchTree) && !is_array($this->searchTree['ISSN'])) {
+        if (array_key_exists('ISSN', $this->searchTree) && ! is_array($this->searchTree['ISSN'])) {
             $this->searchTree['ISSN'] = [$this->searchTree['ISSN']];
         }
 
