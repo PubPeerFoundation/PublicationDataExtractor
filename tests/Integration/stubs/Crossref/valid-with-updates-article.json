@@ -1,0 +1,235 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2017,
+          12,
+          23
+        ]
+      ],
+      "date-time": "2017-12-23T17:10:37Z",
+      "timestamp": 1514049037633
+    },
+    "update-to": [
+      {
+        "updated": {
+          "date-parts": [
+            [
+              2018,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2018-02-01T00:00:00Z",
+          "timestamp": 1517443200000
+        },
+        "DOI": "10.1016/j.canlet.2012.01.013",
+        "type": "erratum",
+        "label": "Erratum"
+      }
+    ],
+    "reference-count": 0,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "URL": "http://www.elsevier.com/tdm/userlicense/1.0/",
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2018-02-01T00:00:00Z",
+          "timestamp": 1517443200000
+        },
+        "delay-in-days": 0,
+        "content-version": "tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "clinicalkey.jp",
+        "clinicalkey.com",
+        "clinicalkey.es",
+        "clinicalkey.fr",
+        "clinicalkey.com.au",
+        "cancerletters.info",
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Cancer Letters"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          2
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.canlet.2017.11.030",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2017,
+          12,
+          22
+        ]
+      ],
+      "date-time": "2017-12-22T19:47:19Z",
+      "timestamp": 1513972039000
+    },
+    "page": "313",
+    "update-policy": "http://dx.doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "Retraction notice to “Increased Ras GTPase activity is regulated by miRNAs that can be attenuated by CDF treatment in pancreatic cancer cells” [Cancer Lett. 319(2) (2012) 173–181]"
+    ],
+    "prefix": "10.1016",
+    "volume": "414",
+    "author": [
+      {
+        "given": "Shadan",
+        "family": "Ali",
+        "affiliation": []
+      },
+      {
+        "given": "Aamir",
+        "family": "Ahmad",
+        "affiliation": []
+      },
+      {
+        "given": "Amro",
+        "family": "Aboukameel",
+        "affiliation": []
+      },
+      {
+        "given": "Bin",
+        "family": "Bao",
+        "affiliation": []
+      },
+      {
+        "given": "Subhash",
+        "family": "Padhye",
+        "affiliation": []
+      },
+      {
+        "given": "Philip A.",
+        "family": "Philip",
+        "affiliation": []
+      },
+      {
+        "given": "Fazlul H.",
+        "family": "Sarkar",
+        "affiliation": []
+      }
+    ],
+    "member": "78",
+    "container-title": [
+      "Cancer Letters"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://api.elsevier.com/content/article/PII:S030438351730753X?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://api.elsevier.com/content/article/PII:S030438351730753X?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2017,
+          12,
+          23
+        ]
+      ],
+      "date-time": "2017-12-23T16:57:28Z",
+      "timestamp": 1514048248000
+    },
+    "score": 1,
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          2
+        ]
+      ]
+    },
+    "references-count": 0,
+    "alternative-id": [
+      "S030438351730753X"
+    ],
+    "URL": "http://dx.doi.org/10.1016/j.canlet.2017.11.030",
+    "relation": {},
+    "ISSN": [
+      "0304-3835"
+    ],
+    "issn-type": [
+      {
+        "value": "0304-3835",
+        "type": "print"
+      }
+    ],
+    "subject": [
+      "Cancer Research",
+      "Oncology"
+    ],
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Retraction notice to “Increased Ras GTPase activity is regulated by miRNAs that can be attenuated by CDF treatment in pancreatic cancer cells” [Cancer Lett. 319(2) (2012) 173–181]",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Cancer Letters",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "http://dx.doi.org/10.1016/j.canlet.2017.11.030",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "http://dx.doi.org/10.1016/j.canlet.2012.01.013",
+        "name": "associatedlink",
+        "label": "CrossRef DOI link to the associated document"
+      },
+      {
+        "value": "simple-article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

@@ -2,28 +2,26 @@
 
 namespace XavRsl\PublicationDataExtractor\Resources;
 
-use XavRsl\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use SimpleXMLElement;
 use XavRsl\PublicationDataExtractor\Identifiers\Identifier;
 
-class Crossref implements Resource
+class Arxiv implements Resource
 {
-    protected $url = 'https://api.crossref.org/works/';
+    protected $url = 'http://export.arxiv.org/api/query';
 
     protected $queryStringParameters = [
-        'headers' => [
-            'User-Agent'    =>  'PubPeer/2.0 (https://pubpeer.com; mailto:contact@pubpeer.com)'
-        ]
+        'query' => [
+            'id_list' => '',
+        ],
     ];
 
     protected $input;
 
     protected $identifier;
 
-    protected $extractor = Extractors\Crossref::class;
-
     public function __construct(Identifier $identifier)
     {
-        $this->identifier = $identifier;
+        $this->queryStringParameters['query']['id_list'] = $identifier->getQueryString();
     }
 
     /**
@@ -31,7 +29,7 @@ class Crossref implements Resource
      */
     public function getApiUrl(): string
     {
-        return $this->url . $this->identifier->getQueryString();
+        return $this->url;
     }
 
     /**
@@ -49,17 +47,12 @@ class Crossref implements Resource
      */
     public function getDataFrom(string $document): array
     {
-        $baseTree = json_decode($document, true);
-
-        if (is_null($baseTree)) {
-            return [];
-        }
-
         try {
-            $extractor = new $this->extractor($baseTree);
+            $baseTree = new SimpleXMLElement($document);
+            $extractor = new Extractors\Arxiv($baseTree);
 
             return $extractor->extract();
-        } catch (UnparseableApiException $e) {
+        } catch (\Exception $e) {
             return [];
         }
     }

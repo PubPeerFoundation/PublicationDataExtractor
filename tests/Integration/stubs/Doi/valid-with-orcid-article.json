@@ -1,0 +1,148 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2017,
+        10,
+        24
+      ]
+    ],
+    "date-time": "2017-10-24T02:03:28Z",
+    "timestamp": 1508810608881
+  },
+  "reference-count": 0,
+  "publisher": "Hindawi Limited",
+  "issue": "4",
+  "license": [
+    {
+      "URL": "http://creativecommons.org/licenses/by/3.0/",
+      "start": {
+        "date-parts": [
+          [
+            2002,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2002-01-01T00:00:00Z",
+        "timestamp": 1009843200000
+      },
+      "delay-in-days": 0,
+      "content-version": "vor"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2002
+      ]
+    ]
+  },
+  "abstract": "<jats:p>It is shown that every asymptotically regular or<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$\\lambda$\"><mml:mi>λ</mml:mi></mml:math>-firmly nonexpansive mapping<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$T:C \\rightarrow C$\"><mml:mrow><mml:mi>T</mml:mi><mml:mo>:</mml:mo><mml:mi>C</mml:mi><mml:mo>→</mml:mo><mml:mi>C</mml:mi></mml:mrow></mml:math>has a fixed point whenever<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$C$\"><mml:mi>C</mml:mi></mml:math>is a finite union of nonempty weakly compact convex subsets of a Banach space<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$X$\"><mml:mi>X</mml:mi></mml:math>which is uniformly convex in every direction. Furthermore, if<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$\\{T_i\\}_{i\\in I}$\"><mml:mrow><mml:msub><mml:mrow><mml:mrow><mml:mo>{</mml:mo><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mtext> </mml:mtext><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>}</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>∈</mml:mo><mml:mi>I</mml:mi></mml:mrow></mml:mrow></mml:msub></mml:mrow></mml:math>is any compatible family of strongly nonexpansive self-mappings on such a<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$C$\"><mml:mi>C</mml:mi></mml:math>and the graphs of<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$T_i$\"><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mtext> </mml:mtext><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math>,<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$i\\in I$\"><mml:mrow><mml:mi>i</mml:mi><mml:mo>∈</mml:mo><mml:mi>I</mml:mi></mml:mrow></mml:math>, have a nonempty intersection, then<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$T_i$\"><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mtext> </mml:mtext><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math>,<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$i\\in I$\"><mml:mrow><mml:mi>i</mml:mi><mml:mo>∈</mml:mo><mml:mi>I</mml:mi></mml:mrow></mml:math>, have a common fixed point in<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" alttext=\"$C$\"><mml:mi>C</mml:mi></mml:math>.</jats:p>",
+  "DOI": "10.1155/s0161171202107113",
+  "type": "article-journal",
+  "created": {
+    "date-parts": [
+      [
+        2002,
+        9,
+        16
+      ]
+    ],
+    "date-time": "2002-09-16T12:00:16Z",
+    "timestamp": 1032177616000
+  },
+  "page": "251-257",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": "Fixed point theorems for nonexpansive mappings on nonconvex sets in UCED Banach spaces",
+  "prefix": "10.1155",
+  "volume": "31",
+  "author": [
+    {
+      "given": "Wei-Shih",
+      "family": "Du",
+      "affiliation": [
+        {
+          "name": "Department of Mathematics, National Changhua University of Education, Changhua 500, Taiwan"
+        }
+      ]
+    },
+    {
+      "ORCID": "http://orcid.org/0000-0002-0779-4566",
+      "authenticated-orcid": true,
+      "given": "Young-Ye",
+      "family": "Huang",
+      "affiliation": [
+        {
+          "name": "Department of Mathematics, National Cheng Kung University, Tainan 701, Taiwan"
+        }
+      ]
+    },
+    {
+      "given": "Chi-Lin",
+      "family": "Yen",
+      "affiliation": [
+        {
+          "name": "Department of Mathematics and Science Education, National Hsinchu Teacher's College, Hsinchu 300, Taiwan"
+        }
+      ]
+    }
+  ],
+  "member": "98",
+  "container-title": "International Journal of Mathematics and Mathematical Sciences",
+  "original-title": [],
+  "link": [
+    {
+      "URL": "http://downloads.hindawi.com/journals/ijmms/2002/146534.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://downloads.hindawi.com/journals/ijmms/2002/146534.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2016,
+        8,
+        23
+      ]
+    ],
+    "date-time": "2016-08-23T06:50:13Z",
+    "timestamp": 1471935013000
+  },
+  "score": 1,
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2002
+      ]
+    ]
+  },
+  "references-count": 0,
+  "alternative-id": [
+    "146534"
+  ],
+  "URL": "http://dx.doi.org/10.1155/s0161171202107113",
+  "relation": {},
+  "ISSN": [
+    "0161-1712",
+    "1687-0425"
+  ],
+  "subject": [
+    "Mathematics (miscellaneous)"
+  ],
+  "container-title-short": "International Journal of Mathematics and Mathematical Sciences"
+}

@@ -1,6 +1,6 @@
 <?php
 
-namespace XavRsl\PublicationDataExtractor;
+namespace XavRsl\PublicationDataExtractor\Identifiers;
 
 use XavRsl\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
 
@@ -12,7 +12,11 @@ class Identifier
      * @var array
      */
     protected $identifiers = [
-        Identifiers\Doi::class, // 10.1152/jn.00446.2010
+        BioArxiv::class,
+        Figshare::class,
+        Doi::class,
+        Arxiv::class,
+        Pubmed::class,
     ];
 
     /**
@@ -80,23 +84,13 @@ class Identifier
     }
 
     /**
-     * Array of resources setter.
-     *
-     * @param array $resources
-     */
-    public function setResources(array $resources)
-    {
-        $this->resources = $resources;
-    }
-
-    /**
-     * QueryString getter.
+     * Return URL to the identifier's publication website.
      *
      * @return string
      */
-    public function getQueryString(): string
+    public function getUrl()
     {
-        return rtrim($this->queryString, ' .');
+        return $this->baseUrl . $this->getQueryString();
     }
 
     /**
@@ -107,5 +101,15 @@ class Identifier
     public function __toString(): string
     {
         return $this->getQueryString();
+    }
+
+    /**
+     * QueryString getter.
+     *
+     * @return string
+     */
+    public function getQueryString()
+    {
+        return rtrim($this->queryString, ' .');
     }
 }

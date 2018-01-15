@@ -2,8 +2,6 @@
 
 namespace XavRsl\PublicationDataExtractor\Identifiers;
 
-use XavRsl\PublicationDataExtractor\Identifier;
-
 class Doi extends Identifier
 {
     /**
@@ -23,15 +21,7 @@ class Doi extends Identifier
      */
     protected $regex = '/\b(10[.][0-9]{3,}(?:[.][0-9]+)*\/(?:(?!["&\'])\S)+)\b/';
 
-    /**
-     * Get URL based on Identifier.
-     *
-     * @return string
-     */
-    public function getUrl(): string
-    {
-        return 'http://dx.doi.org/'.$this->getQueryString();
-    }
+    protected $baseUrl = 'http://dx.doi.org/';
 
     /**
      * QueryString getter.

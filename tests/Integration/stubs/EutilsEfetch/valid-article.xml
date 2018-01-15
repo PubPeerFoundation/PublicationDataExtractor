@@ -1,0 +1,207 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2018//EN" "https://dtd.nlm.nih.gov/ncbi/pubmed/out/pubmed_180101.dtd">
+<PubmedArticleSet>
+    <PubmedArticle>
+        <MedlineCitation Status="MEDLINE" Owner="NLM">
+            <PMID Version="1">145268</PMID>
+            <DateCompleted>
+                <Year>1978</Year>
+                <Month>02</Month>
+                <Day>18</Day>
+            </DateCompleted>
+            <DateRevised>
+                <Year>2013</Year>
+                <Month>11</Month>
+                <Day>21</Day>
+            </DateRevised>
+            <Article PubModel="Print">
+                <Journal>
+                    <ISSN IssnType="Print">0007-1447</ISSN>
+                    <JournalIssue CitedMedium="Print">
+                        <Volume>2</Volume>
+                        <Issue>6102</Issue>
+                        <PubDate>
+                            <Year>1977</Year>
+                            <Month>Dec</Month>
+                            <Day>17</Day>
+                        </PubDate>
+                    </JournalIssue>
+                    <Title>British medical journal</Title>
+                    <ISOAbbreviation>Br Med J</ISOAbbreviation>
+                </Journal>
+                <ArticleTitle>Effect of oral contraceptives on sebum excretion rate.</ArticleTitle>
+                <Pagination>
+                    <MedlinePgn>1581-2</MedlinePgn>
+                </Pagination>
+                <Abstract>
+                    <AbstractText>Oral contraceptives containing a high dose of oestrogen reduce the sebum excretion rate (SER) and improve acne vulgaris, but more progestogenic preparations may exacerbate acne. The effect on the SER of several oral contraceptives with varying progestogenic potencies was studied in 81 women. The predominantly progestogenic pills (Eugynon 30, Gynovlar) produced no significant change in SER, whereas the rate in women taking a more oestrogenic pill (Minovlar) was significantly reduced compared with the rate in controls. Progestogens therefore do not exacerbate acne by inducing seborrhoea, but in the doses we studied they nullified the inhibitory effect of oestrogens on the sebaceous glands. Acne-prone women who require an oral contraceptive should be given a predominantly oestrogenic preparation.</AbstractText>
+                </Abstract>
+                <AuthorList CompleteYN="Y">
+                    <Author ValidYN="Y">
+                        <LastName>Pye</LastName>
+                        <ForeName>R J</ForeName>
+                        <Initials>RJ</Initials>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Meyrick</LastName>
+                        <ForeName>G</ForeName>
+                        <Initials>G</Initials>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Pye</LastName>
+                        <ForeName>M J</ForeName>
+                        <Initials>MJ</Initials>
+                    </Author>
+                    <Author ValidYN="Y">
+                        <LastName>Burton</LastName>
+                        <ForeName>J L</ForeName>
+                        <Initials>JL</Initials>
+                    </Author>
+                </AuthorList>
+                <Language>eng</Language>
+                <PublicationTypeList>
+                    <PublicationType UI="D016428">Journal Article</PublicationType>
+                </PublicationTypeList>
+            </Article>
+            <MedlineJournalInfo>
+                <Country>England</Country>
+                <MedlineTA>Br Med J</MedlineTA>
+                <NlmUniqueID>0372673</NlmUniqueID>
+                <ISSNLinking>0007-1447</ISSNLinking>
+            </MedlineJournalInfo>
+            <ChemicalList>
+                <Chemical>
+                    <RegistryNumber>0</RegistryNumber>
+                    <NameOfSubstance UI="D003276">Contraceptives, Oral</NameOfSubstance>
+                </Chemical>
+                <Chemical>
+                    <RegistryNumber>0</RegistryNumber>
+                    <NameOfSubstance UI="D003278">Contraceptives, Oral, Hormonal</NameOfSubstance>
+                </Chemical>
+                <Chemical>
+                    <RegistryNumber>0</RegistryNumber>
+                    <NameOfSubstance UI="D045167">Progesterone Congeners</NameOfSubstance>
+                </Chemical>
+                <Chemical>
+                    <RegistryNumber>423D2T571U</RegistryNumber>
+                    <NameOfSubstance UI="D004997">Ethinyl Estradiol</NameOfSubstance>
+                </Chemical>
+            </ChemicalList>
+            <CitationSubset>AIM</CitationSubset>
+            <CitationSubset>IM</CitationSubset>
+            <CommentsCorrectionsList>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>Br Med J. 1976 Dec 4;2(6048):1354-6</RefSource>
+                    <PMID Version="1">1000230</PMID>
+                </CommentsCorrections>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>JAMA. 1964 Nov 30;190(9):815-9</RefSource>
+                    <PMID Version="1">12254865</PMID>
+                </CommentsCorrections>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>J Invest Dermatol. 1953 Mar;20(3):207-12</RefSource>
+                    <PMID Version="1">13044989</PMID>
+                </CommentsCorrections>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>J Invest Dermatol. 1954 Jan;22(1):25-9; discussion, 29-31</RefSource>
+                    <PMID Version="1">13118252</PMID>
+                </CommentsCorrections>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>Br J Dermatol. 1959 Mar;71(3):102-16</RefSource>
+                    <PMID Version="1">13628922</PMID>
+                </CommentsCorrections>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>J Invest Dermatol. 1962 Aug;39:139-55</RefSource>
+                    <PMID Version="1">13917704</PMID>
+                </CommentsCorrections>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>Lancet. 1973 Nov 10;2(7837):1055-7</RefSource>
+                    <PMID Version="1">4127313</PMID>
+                </CommentsCorrections>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>Br J Dermatol. 1969 Sep;81(9):697-704</RefSource>
+                    <PMID Version="1">4243403</PMID>
+                </CommentsCorrections>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>Arch Dermatol. 1973 Aug;108(2):210-4</RefSource>
+                    <PMID Version="1">4269283</PMID>
+                </CommentsCorrections>
+                <CommentsCorrections RefType="Cites">
+                    <RefSource>South Med J. 1974 Jun;67(6):703-6</RefSource>
+                    <PMID Version="1">4275275</PMID>
+                </CommentsCorrections>
+            </CommentsCorrectionsList>
+            <MeshHeadingList>
+                <MeshHeading>
+                    <DescriptorName UI="D000152" MajorTopicYN="N">Acne Vulgaris</DescriptorName>
+                    <QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D000293" MajorTopicYN="N">Adolescent</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D000328" MajorTopicYN="N">Adult</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D003276" MajorTopicYN="N">Contraceptives, Oral</DescriptorName>
+                    <QualifierName UI="Q000494" MajorTopicYN="Y">pharmacology</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D003278" MajorTopicYN="N">Contraceptives, Oral, Hormonal</DescriptorName>
+                    <QualifierName UI="Q000494" MajorTopicYN="Y">pharmacology</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D004997" MajorTopicYN="N">Ethinyl Estradiol</DescriptorName>
+                    <QualifierName UI="Q000494" MajorTopicYN="N">pharmacology</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D005260" MajorTopicYN="N">Female</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D006801" MajorTopicYN="N">Humans</DescriptorName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D045167" MajorTopicYN="N">Progesterone Congeners</DescriptorName>
+                    <QualifierName UI="Q000494" MajorTopicYN="N">pharmacology</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D012629" MajorTopicYN="N">Sebum</DescriptorName>
+                    <QualifierName UI="Q000557" MajorTopicYN="Y">secretion</QualifierName>
+                </MeshHeading>
+                <MeshHeading>
+                    <DescriptorName UI="D012636" MajorTopicYN="N">Secretory Rate</DescriptorName>
+                    <QualifierName UI="Q000187" MajorTopicYN="N">drug effects</QualifierName>
+                </MeshHeading>
+            </MeshHeadingList>
+            <OtherID Source="NLM">PMC1632706</OtherID>
+        </MedlineCitation>
+        <PubmedData>
+            <History>
+                <PubMedPubDate PubStatus="pubmed">
+                    <Year>1977</Year>
+                    <Month>12</Month>
+                    <Day>17</Day>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="medline">
+                    <Year>1977</Year>
+                    <Month>12</Month>
+                    <Day>17</Day>
+                    <Hour>0</Hour>
+                    <Minute>1</Minute>
+                </PubMedPubDate>
+                <PubMedPubDate PubStatus="entrez">
+                    <Year>1977</Year>
+                    <Month>12</Month>
+                    <Day>17</Day>
+                    <Hour>0</Hour>
+                    <Minute>0</Minute>
+                </PubMedPubDate>
+            </History>
+            <PublicationStatus>ppublish</PublicationStatus>
+            <ArticleIdList>
+                <ArticleId IdType="pubmed">145268</ArticleId>
+                <ArticleId IdType="pmc">PMC1632706</ArticleId>
+            </ArticleIdList>
+        </PubmedData>
+    </PubmedArticle>
+</PubmedArticleSet>

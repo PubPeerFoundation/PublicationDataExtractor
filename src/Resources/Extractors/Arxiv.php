@@ -2,9 +2,9 @@
 
 namespace XavRsl\PublicationDataExtractor\Resources\Extractors;
 
-use SimpleXMLElement;
+use XavRsl\PublicationDataExtractor\Helpers\DateHelper;
 
-class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalsData, ProvidesTypesData
+class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData, ProvidesTypesData
 {
     private $document;
 
@@ -19,11 +19,20 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
 
     public function extract(): array
     {
-        $query = new SimpleXMLElement($this->document);
+        $this->getDataFromDocument();
 
-        $this->searchTree = $query->entry;
+        $this->extractAuthorsData();
+        $this->extractIdentifiersData();
+        $this->extractJournalData();
+        $this->extractPublicationData();
+        $this->extractTypesData();
 
         return $this->output;
+    }
+
+    protected function getDataFromDocument()
+    {
+        $this->searchTree = $this->document->entry;
     }
 
     /**
@@ -33,8 +42,9 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
     {
         $this->output['publication'] = [
             'title' => (string) $this->searchTree->title[0] ?? null,
-            'abstract' => (string) $this->searchTree->summary[0] ?? null,
+            'abstract' => (string) trim($this->searchTree->summary[0]) ?? null,
             'url' => (string) $this->searchTree->id[0] ?? null,
+            'published_at' => (new DateHelper)->dateFromCommonFormat($this->searchTree->published)
         ];
     }
 
@@ -45,8 +55,13 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
     public function extractIdentifiersData()
     {
         $this->output['identifiers'][] = [
-            'value' => (string) $this->identifier->getQueryString(),
+            'value' => (string) $this->getIdentifier(),
             'type' => 'arxiv',
+        ];
+
+        $this->output['identifiers'][] = [
+            'value' => '2331-8422',
+            'type' => 'issn',
         ];
     }
 
@@ -54,7 +69,7 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
      * Extract and format data needed for the Journals Relationship
      * on the Publication Model.
      */
-    public function extractJournalsData()
+    public function extractJournalData()
     {
         $this->output['journals'] = [
             'title' => 'arXiv',
@@ -86,5 +101,11 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
         $this->output['types'][] = [
             'name' => 'arxiv',
         ];
+    }
+
+    protected function getIdentifier()
+    {
+        $urlParts = explode('/', $this->searchTree->id[0]);
+        return array_pop($urlParts);
     }
 }

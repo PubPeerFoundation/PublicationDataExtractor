@@ -1,0 +1,434 @@
+{
+    "indexed": {
+        "date-parts": [
+            [
+                2018,
+                1,
+                6
+            ]
+        ],
+        "date-time": "2018-01-06T08:10:11Z",
+        "timestamp": 1515226211232
+    },
+    "reference-count": 58,
+    "publisher": "American Physiological Society",
+    "issue": "6",
+    "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+    },
+    "published-print": {
+        "date-parts": [
+            [
+                2010,
+                12
+            ]
+        ]
+    },
+    "DOI": "10.1152/jn.00446.2010",
+    "type": "article-journal",
+    "created": {
+        "date-parts": [
+            [
+                2010,
+                9,
+                23
+            ]
+        ],
+        "date-time": "2010-09-23T05:11:15Z",
+        "timestamp": 1285218675000
+    },
+    "page": "2963-2974",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": "Cholinergic Modulation of Neuronal Excitability in the Accessory Olfactory Bulb",
+    "prefix": "10.1152",
+    "volume": "104",
+    "author": [
+        {
+            "given": "Richard S.",
+            "family": "Smith",
+            "affiliation": [
+                {
+                    "name": "Department of Biology, University of Maryland, College Park, Maryland"
+                }
+            ]
+        },
+        {
+            "given": "Ricardo C.",
+            "family": "Araneda",
+            "affiliation": [
+                {
+                    "name": "Department of Biology, University of Maryland, College Park, Maryland"
+                }
+            ]
+        }
+    ],
+    "member": "24",
+    "reference": [
+        {
+            "key": "B1",
+            "DOI": "10.1152/physrev.00015.2008",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B2",
+            "DOI": "10.1016/j.yhbeh.2004.01.010",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B3",
+            "DOI": "10.1016/S0301-0082(96)00069-X",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B4",
+            "DOI": "10.1042/bst0310152",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B5",
+            "author": "Buckley NJ",
+            "volume": "8",
+            "first-page": "4646",
+            "year": "1988",
+            "journal-title": "J Neurosci"
+        },
+        {
+            "key": "B6",
+            "author": "Castillo PE",
+            "volume": "19",
+            "first-page": "9180",
+            "year": "1999",
+            "journal-title": "J Neurosci"
+        },
+        {
+            "key": "B7",
+            "DOI": "10.1523/JNEUROSCI.4036-08.2009",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B8",
+            "DOI": "10.1016/0306-4522(93)90135-3",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B9",
+            "DOI": "10.1111/j.1460-9568.2006.05200.x",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B10",
+            "DOI": "10.1097/00001756-199201000-00002",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B11",
+            "DOI": "10.1016/0306-4522(91)90278-V",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B12",
+            "DOI": "10.1007/978-0-387-30374-1_6",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B13",
+            "DOI": "10.1152/jn.90734.2008",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B14",
+            "DOI": "10.1152/jn.00757.2005",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B15",
+            "DOI": "10.1016/j.bcp.2007.05.023",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B16",
+            "DOI": "10.1016/j.tips.2006.07.004",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B17",
+            "author": "Haj-Dahmane S",
+            "volume": "16",
+            "first-page": "3848",
+            "year": "1996",
+            "journal-title": "J Neurosci"
+        },
+        {
+            "key": "B18",
+            "DOI": "10.1046/j.1460-9568.1999.00612.x",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B19",
+            "DOI": "10.1016/S0301-0082(03)00103-5",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B20",
+            "DOI": "10.1523/JNEUROSCI.2715-08.2008",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B21",
+            "author": "Hill JA",
+            "volume": "13",
+            "first-page": "1551",
+            "year": "1993",
+            "journal-title": "J Neurosci"
+        },
+        {
+            "key": "B22",
+            "DOI": "10.1007/s10254-003-0005-1",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B23",
+            "DOI": "10.1016/0306-4522(95)00031-D",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B24",
+            "DOI": "10.1016/S0006-2952(99)00326-3",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B25",
+            "DOI": "10.1113/jphysiol.1971.sp009467",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B26",
+            "DOI": "10.1016/0306-4522(91)90171-J",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B27",
+            "DOI": "10.1016/0306-4522(92)90496-O",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B28",
+            "DOI": "10.1080/10606820308263",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B29",
+            "DOI": "10.1016/0891-0618(95)00070-N",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B30",
+            "DOI": "10.1002/(SICI)1096-9861(19960923)373:3<433::AID-CNE8>3.0.CO;2-3",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B31",
+            "DOI": "10.1002/cne.903140212",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B32",
+            "DOI": "10.1007/s002130050166",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B33",
+            "DOI": "10.1016/0306-4522(94)90600-9",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B34",
+            "DOI": "10.1016/S0893-6080(02)00061-8",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B35",
+            "DOI": "10.1037/0735-7044.115.4.826",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B36",
+            "DOI": "10.1093/cercor/bhn258",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B37",
+            "author": "Luetje CW",
+            "volume": "11",
+            "first-page": "837",
+            "year": "1991",
+            "journal-title": "J Neurosci"
+        },
+        {
+            "key": "B38",
+            "DOI": "10.1111/j.1460-9568.2006.05212.x",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B39",
+            "DOI": "10.1111/j.1749-6632.2009.03913.x",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B40",
+            "author": "Nickell WT",
+            "volume": "8",
+            "first-page": "4482",
+            "year": "1988",
+            "journal-title": "J Neurosci"
+        },
+        {
+            "key": "B41",
+            "DOI": "10.1007/BF00305035",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B42",
+            "DOI": "10.1093/chemse/bjm091",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B43",
+            "DOI": "10.1523/JNEUROSCI.2961-07.2007",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B44",
+            "DOI": "10.1037/0735-7044.108.2.317",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B45",
+            "DOI": "10.1037/0735-7044.107.1.72",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B46",
+            "DOI": "10.1002/ar.a.20366",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B47",
+            "DOI": "10.1016/S0166-2236(03)00228-5",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B48",
+            "author": "Schwindt PC",
+            "volume": "59",
+            "first-page": "450",
+            "year": "1988",
+            "journal-title": "J Neurophysiol",
+            "DOI": "10.1152/jn.1988.59.2.450",
+            "doi-asserted-by": "crossref"
+        },
+        {
+            "key": "B49",
+            "author": "Shepherd GM",
+            "year": "1998",
+            "edition": "4",
+            "volume-title": "The Synaptic Organization of the Brain"
+        },
+        {
+            "key": "B50",
+            "DOI": "10.1152/jn.91093.2008",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B51",
+            "DOI": "10.1016/0006-8993(86)91429-0",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B52",
+            "DOI": "10.1016/j.brainres.2010.03.104",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B53",
+            "DOI": "10.1523/JNEUROSCI.1576-08.2008",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B54",
+            "DOI": "10.1038/aps.2009.68",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B55",
+            "DOI": "10.1002/dneu.20389",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B56",
+            "DOI": "10.1101/lm.66404",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B57",
+            "DOI": "10.1523/JNEUROSCI.1042-09.2009",
+            "doi-asserted-by": "publisher"
+        },
+        {
+            "key": "B58",
+            "DOI": "10.1002/cne.902430405",
+            "doi-asserted-by": "publisher"
+        }
+    ],
+    "container-title": "Journal of Neurophysiology",
+    "original-title": [],
+    "link": [
+        {
+            "URL": "http://www.physiology.org/doi/pdf/10.1152/jn.00446.2010",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+        }
+    ],
+    "deposited": {
+        "date-parts": [
+            [
+                2018,
+                1,
+                6
+            ]
+        ],
+        "date-time": "2018-01-06T07:29:15Z",
+        "timestamp": 1515223755000
+    },
+    "score": 1,
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+        "date-parts": [
+            [
+                2010,
+                12
+            ]
+        ]
+    },
+    "references-count": 58,
+    "alternative-id": [
+        "10.1152/jn.00446.2010"
+    ],
+    "URL": "http://dx.doi.org/10.1152/jn.00446.2010",
+    "relation": {
+        "cites": []
+    },
+    "ISSN": [
+        "0022-3077",
+        "1522-1598"
+    ],
+    "subject": [
+        "Physiology",
+        "General Neuroscience"
+    ],
+    "container-title-short": "Journal of Neurophysiology"
+}

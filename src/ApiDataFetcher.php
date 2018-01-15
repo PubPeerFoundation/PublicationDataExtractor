@@ -8,6 +8,7 @@ use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 use GrahamCampbell\GuzzleFactory\GuzzleFactory;
 use XavRsl\PublicationDataExtractor\Resources\Resource;
+use XavRsl\PublicationDataExtractor\Identifiers\Identifier;
 
 class ApiDataFetcher
 {
@@ -51,7 +52,7 @@ class ApiDataFetcher
 
             $promise = $client->requestAsync(
                 'GET',
-                $resource->getUrl(),
+                $resource->getApiUrl(),
                 $resource->getRequestOptions()
             );
 

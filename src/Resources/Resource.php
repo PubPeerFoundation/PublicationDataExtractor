@@ -9,7 +9,7 @@ interface Resource
      *
      * @return string
      */
-    public function getUrl(): string;
+    public function getApiUrl(): string;
 
     /**
      * Request Options Array used to fetch the resource.

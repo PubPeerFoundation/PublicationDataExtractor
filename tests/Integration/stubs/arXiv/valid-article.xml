@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <link href="http://arxiv.org/api/query?search_query%3D%26id_list%3D1708.03486%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
+    <title type="html">ArXiv Query: search_query=&amp;id_list=1708.03486&amp;start=0&amp;max_results=10</title>
+    <id>http://arxiv.org/api/ayHNPyGN0CeMxncsoPgRWJtDupE</id>
+    <updated>2018-01-11T00:00:00-05:00</updated>
+    <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">1</opensearch:totalResults>
+    <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
+    <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
+    <entry>
+        <id>http://arxiv.org/abs/1708.03486v2</id>
+        <updated>2017-08-30T10:41:27Z</updated>
+        <published>2017-08-11T09:38:56Z</published>
+        <title>A Solution of the P versus NP Problem</title>
+        <summary>  Berg and Ulfberg and Amano and Maruoka have used CNF-DNF-approximators to
+            prove exponential lower bounds for the monotone network complexity of the
+            clique function and of Andreev's function. We show that these approximators can
+            be used to prove the same lower bound for their non-monotone network
+            complexity. This implies P not equal NP.
+        </summary>
+        <author>
+            <name>Norbert Blum</name>
+        </author>
+        <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The proof is wrong. I shall elaborate precisely what the mistake is.
+            For doing this, I need some time. I shall put the explanation on my homepage
+            http://theory.cs.uni-bonn.de/blum/blum.var</arxiv:comment>
+        <link href="http://arxiv.org/abs/1708.03486v2" rel="alternate" type="text/html"/>
+        <link title="pdf" href="http://arxiv.org/pdf/1708.03486v2" rel="related" type="application/pdf"/>
+        <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+        <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    </entry>
+</feed>

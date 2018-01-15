@@ -2,7 +2,7 @@
 
 namespace XavRsl\PublicationDataExtractor\Resources\Extractors;
 
-interface ProvidesJournalsData
+interface ProvidesJournalData
 {
-    public function extractJournalsData();
+    public function extractJournalData();
 }

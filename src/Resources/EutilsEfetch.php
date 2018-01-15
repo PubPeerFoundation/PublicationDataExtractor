@@ -2,28 +2,29 @@
 
 namespace XavRsl\PublicationDataExtractor\Resources;
 
-use XavRsl\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use SimpleXMLElement;
 use XavRsl\PublicationDataExtractor\Identifiers\Identifier;
 
-class Crossref implements Resource
+class EutilsEfetch implements Resource
 {
-    protected $url = 'https://api.crossref.org/works/';
+    protected $url = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi';
 
     protected $queryStringParameters = [
-        'headers' => [
-            'User-Agent'    =>  'PubPeer/2.0 (https://pubpeer.com; mailto:contact@pubpeer.com)'
-        ]
+        'query' => [
+            'db' => 'pubmed',
+            'version' => '2.0',
+            'retmode' => 'xml',
+            'id' => '',
+        ],
     ];
 
     protected $input;
 
     protected $identifier;
 
-    protected $extractor = Extractors\Crossref::class;
-
     public function __construct(Identifier $identifier)
     {
-        $this->identifier = $identifier;
+        $this->queryStringParameters['query']['id'] = $identifier->getQueryString();
     }
 
     /**
@@ -31,7 +32,7 @@ class Crossref implements Resource
      */
     public function getApiUrl(): string
     {
-        return $this->url . $this->identifier->getQueryString();
+        return $this->url;
     }
 
     /**
@@ -49,17 +50,12 @@ class Crossref implements Resource
      */
     public function getDataFrom(string $document): array
     {
-        $baseTree = json_decode($document, true);
-
-        if (is_null($baseTree)) {
-            return [];
-        }
-
         try {
-            $extractor = new $this->extractor($baseTree);
+            $baseTree = new SimpleXMLElement($document);
+            $extractor = new Extractors\EutilsEfetch($baseTree, $this->identifier);
 
             return $extractor->extract();
-        } catch (UnparseableApiException $e) {
+        } catch (\Exception $e) {
             return [];
         }
     }
