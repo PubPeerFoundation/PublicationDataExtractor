@@ -12,7 +12,7 @@ class ArxivDataExtractorTest extends TestCase
     public function it_can_extract_publication_data_from_arxiv_api()
     {
         // Arrange
-        $file = $this->loadJson('Arxiv/valid-article');
+        $file = $this->loadJson('arXiv/valid-article');
 
         // Act
         $extracted = (new Arxiv($file))->extract();
@@ -34,7 +34,7 @@ class ArxivDataExtractorTest extends TestCase
     public function it_can_extract_identifiers_data_from_arxiv_api()
     {
         // Arrange
-        $file = $this->loadJson('Arxiv/valid-article');
+        $file = $this->loadJson('arXiv/valid-article');
 
         // Act
         $extracted = (new Arxiv($file))->extract();
@@ -56,7 +56,7 @@ class ArxivDataExtractorTest extends TestCase
     public function it_can_extract_authors_from_arxiv_api()
     {
         // Arrange
-        $file = $this->loadJson('Arxiv/valid-article');
+        $file = $this->loadJson('arXiv/valid-article');
 
         // Act
         $extracted = (new Arxiv($file))->extract();
