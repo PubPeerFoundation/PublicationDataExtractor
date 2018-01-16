@@ -14,6 +14,8 @@ class ApiDataFetcher
 {
     private $identifier;
 
+    private $client;
+
     private $resources = [];
 
     public $apiData;
@@ -21,6 +23,7 @@ class ApiDataFetcher
     public function __construct(Identifier $identifier)
     {
         $this->identifier = $identifier;
+        $this->client = GuzzleFactory::make(compact('headers'), 100);
     }
 
     /**
@@ -45,12 +48,10 @@ class ApiDataFetcher
      */
     protected function getPromises(): Generator
     {
-        $client = GuzzleFactory::make(compact('headers'), 100);
-
         foreach ($this->identifier->getRelatedResources() as $resourceClass) {
             $resource = $this->instantiateResource($resourceClass);
 
-            $promise = $client->requestAsync(
+            $promise = $this->client->requestAsync(
                 'GET',
                 $resource->getApiUrl(),
                 $resource->getRequestOptions()

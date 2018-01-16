@@ -8,7 +8,10 @@ use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class ApiDataFetcherTest extends TestCase
 {
-    /** @test */
+    /**
+     * @test
+     * @group internet
+     */
     public function it_fetches_data_from_a_doi_identifier()
     {
         // Arrange
@@ -22,7 +25,10 @@ class ApiDataFetcherTest extends TestCase
         $this->assertCount(2, $dataFetcher->apiData);
     }
 
-    /** @test */
+    /**
+     * @test
+     * @group internet
+     */
     public function it_fetches_data_from_a_arxiv_identifier()
     {
         // Arrange
@@ -36,7 +42,10 @@ class ApiDataFetcherTest extends TestCase
         $this->assertCount(1, $dataFetcher->apiData);
     }
 
-    /** @test */
+    /**
+     * @test
+     * @group internet
+     */
     public function it_fetches_data_from_a_pubmed_identifier()
     {
         // Arrange
