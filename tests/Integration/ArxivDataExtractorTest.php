@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Arxiv;
 
 class ArxivDataExtractorTest extends TestCase

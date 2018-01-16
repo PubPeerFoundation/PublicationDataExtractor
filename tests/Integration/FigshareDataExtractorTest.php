@@ -2,9 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Figshare;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Figshare;
 
 class FigshareDataExtractorTest extends TestCase
 {

@@ -3,9 +3,9 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\EutilsEfetch;
-use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 
 class EutilsEfetchDataExtractorTest extends TestCase
 {
