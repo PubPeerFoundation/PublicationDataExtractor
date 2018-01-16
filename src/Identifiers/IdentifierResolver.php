@@ -49,7 +49,7 @@ class IdentifierResolver
             $identifier = new $identifierClass($this->queryString);
 
             if ($identifier->isValid()) {
-                return $this->validIdentifier = $identifier;
+                return $identifier;
             }
         }
 
