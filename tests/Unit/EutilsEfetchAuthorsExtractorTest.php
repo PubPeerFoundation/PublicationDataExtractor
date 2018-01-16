@@ -3,6 +3,7 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\EutilsEfetch;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
@@ -15,7 +16,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
     public function it_will_extract_authors_from_EutilsEfetch_without_affiliation()
     {
         // Arrange
-        $identifier = (new Identifier('145268'))->resolve();
+        $identifier = (new IdentifierResolver('145268'))->handle();
         $extractor = new EutilsEfetch('', $identifier);
 
         $this->setProtectedProperty($extractor, 'searchTree', new \SimpleXMLElement('
@@ -52,7 +53,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
     public function it_will_extract_authors_from_EutilsEfetch_with_affiliation()
     {
         // Arrange
-        $identifier = (new Identifier('145268'))->resolve();
+        $identifier = (new IdentifierResolver('145268'))->handle();
         $extractor = new EutilsEfetch('', $identifier);
 
         $this->setProtectedProperty($extractor, 'searchTree', new \SimpleXMLElement('
@@ -93,7 +94,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
     public function it_will_extract_authors_from_EutilsEfetch_without_forename()
     {
         // Arrange
-        $identifier = (new Identifier('145268'))->resolve();
+        $identifier = (new IdentifierResolver('145268'))->handle();
         $extractor = new EutilsEfetch('', $identifier);
 
         $this->setProtectedProperty($extractor, 'searchTree', new \SimpleXMLElement('
@@ -132,7 +133,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
     public function it_wont_extract_authors_from_EutilsEfetch_without_author_list()
     {
         // Arrange
-        $identifier = (new Identifier('145268'))->resolve();
+        $identifier = (new IdentifierResolver('145268'))->handle();
         $extractor = new EutilsEfetch('', $identifier);
 
         $this->setProtectedProperty($extractor, 'searchTree', new \SimpleXMLElement('

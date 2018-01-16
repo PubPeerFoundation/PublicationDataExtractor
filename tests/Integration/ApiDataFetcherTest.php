@@ -2,9 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\ApiDataFetcher;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class ApiDataFetcherTest extends TestCase
 {
@@ -15,8 +15,8 @@ class ApiDataFetcherTest extends TestCase
     public function it_fetches_data_from_a_doi_identifier()
     {
         // Arrange
-        $identifier = new Identifier('10.1152/jn.00446.2010');
-        $dataFetcher = new ApiDataFetcher($identifier->resolve());
+        $identifier = new IdentifierResolver('10.1152/jn.00446.2010');
+        $dataFetcher = new ApiDataFetcher($identifier->handle());
 
         // Act
         $dataFetcher->getData();
@@ -32,8 +32,8 @@ class ApiDataFetcherTest extends TestCase
     public function it_fetches_data_from_a_arxiv_identifier()
     {
         // Arrange
-        $identifier = new Identifier('1708.03486');
-        $dataFetcher = new ApiDataFetcher($identifier->resolve());
+        $identifier = new IdentifierResolver('1708.03486');
+        $dataFetcher = new ApiDataFetcher($identifier->handle());
 
         // Act
         $dataFetcher->getData();
@@ -49,8 +49,8 @@ class ApiDataFetcherTest extends TestCase
     public function it_fetches_data_from_a_pubmed_identifier()
     {
         // Arrange
-        $identifier = new Identifier('28658642');
-        $dataFetcher = new ApiDataFetcher($identifier->resolve());
+        $identifier = new IdentifierResolver('28658642');
+        $dataFetcher = new ApiDataFetcher($identifier->handle());
 
         // Act
         $dataFetcher->getData();

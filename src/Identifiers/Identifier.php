@@ -2,23 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Identifiers;
 
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
-
-class Identifier
+abstract class Identifier
 {
-    /**
-     * List of available Identifiers.
-     *
-     * @var array
-     */
-    protected $identifiers = [
-        BioArxiv::class,
-        Figshare::class,
-        Doi::class,
-        Arxiv::class,
-        Pubmed::class,
-    ];
-
     /**
      * The query string.
      *
@@ -34,6 +19,27 @@ class Identifier
     protected $matches;
 
     /**
+     * The regex to identify an identifier.
+     *
+     * @var string
+     */
+    protected $regex;
+
+    /**
+     * Array containing API resources to be fetched.
+     *
+     * @var array
+     */
+    protected $resources;
+
+    /**
+     * Base resource webpage URL.
+     *
+     * @var string
+     */
+    protected $baseUrl;
+
+    /**
      * Identifier constructor.
      *
      * @param string $queryString
@@ -41,26 +47,6 @@ class Identifier
     public function __construct(string $queryString)
     {
         $this->queryString = $queryString;
-    }
-
-    /**
-     * Resolves the Identifier;.
-     *
-     * @return Identifier
-     *
-     * @throws UnknownIdentifierException
-     */
-    public function resolve()
-    {
-        foreach ($this->identifiers as $identifierClass) {
-            $identifier = new $identifierClass($this->queryString);
-
-            if ($identifier->isValid()) {
-                return $identifier;
-            }
-        }
-
-        throw new UnknownIdentifierException();
     }
 
     /**

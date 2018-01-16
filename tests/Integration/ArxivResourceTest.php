@@ -2,9 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Arxiv;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class ArxivResourceTest extends TestCase
 {
@@ -12,7 +12,7 @@ class ArxivResourceTest extends TestCase
     public function it_returns_empty_array_if_document_is_empty()
     {
         // Arrange
-        $identifier = new Identifier('1708.03486v2');
+        $identifier = (new IdentifierResolver('1708.03486v2'))->handle();
 
         // Act
         $result = (new Arxiv($identifier))->getDataFrom('');

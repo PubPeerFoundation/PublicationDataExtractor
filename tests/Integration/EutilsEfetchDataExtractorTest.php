@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\EutilsEfetch;
 
 class EutilsEfetchDataExtractorTest extends TestCase
@@ -15,7 +15,7 @@ class EutilsEfetchDataExtractorTest extends TestCase
         $file = $this->loadXml('EutilsEfetch/valid-article');
 
         // Act
-        $identifier = (new Identifier('145268'))->resolve();
+        $identifier = (new IdentifierResolver('145268'))->handle();
         $extracted = (new EutilsEfetch($file, $identifier))->extract();
 
         // Assert
@@ -34,7 +34,7 @@ class EutilsEfetchDataExtractorTest extends TestCase
         $file = $this->loadXml('EutilsEfetch/valid-article');
 
         // Act
-        $identifier = (new Identifier('145268'))->resolve();
+        $identifier = (new IdentifierResolver('145268'))->handle();
         $extracted = (new EutilsEfetch($file, $identifier))->extract();
 
         // Assert
@@ -62,7 +62,7 @@ class EutilsEfetchDataExtractorTest extends TestCase
         $file = $this->loadXml('EutilsEfetch/valid-article');
 
         // Act
-        $identifier = (new Identifier('145268'))->resolve();
+        $identifier = (new IdentifierResolver('145268'))->handle();
         $extracted = (new EutilsEfetch($file, $identifier))->extract();
 
         // Assert

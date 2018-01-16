@@ -2,9 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Crossref;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class CrossrefResourceTest extends TestCase
 {
@@ -12,7 +12,7 @@ class CrossrefResourceTest extends TestCase
     public function it_returns_empty_array_if_status_is_not_ok()
     {
         // Arrange
-        $identifier = new Identifier('10.123/4567');
+        $identifier = (new IdentifierResolver('10.123/4567'))->handle();
 
         // Act
         $result = (new Crossref($identifier))->getDataFrom('{"status":"not-ok"}');
@@ -25,7 +25,7 @@ class CrossrefResourceTest extends TestCase
     public function it_returns_empty_array_if_document_is_empty()
     {
         // Arrange
-        $identifier = new Identifier('10.123/4567');
+        $identifier = (new IdentifierResolver('10.123/4567'))->handle();
 
         // Act
         $result = (new Crossref($identifier))->getDataFrom('');

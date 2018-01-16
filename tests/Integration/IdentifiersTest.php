@@ -2,13 +2,13 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Doi;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Arxiv;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Pubmed;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\BioArxiv;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Figshare;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
 
 class IdentifiersTest extends TestCase
@@ -18,10 +18,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validArxiv = '1712.05752';
-        $result = new Identifier($validArxiv);
+        $result = new IdentifierResolver($validArxiv);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('1712.05752', $identifier);
@@ -34,10 +34,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validBioArxiv = '10.1101/234369';
-        $result = new Identifier($validBioArxiv);
+        $result = new IdentifierResolver($validBioArxiv);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('10.1101/234369', $identifier);
@@ -50,10 +50,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validDoi = '10.1038/srep07802';
-        $result = new Identifier($validDoi);
+        $result = new IdentifierResolver($validDoi);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('10.1038/srep07802', $identifier);
@@ -66,10 +66,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validFigshare = '10.6084/m9.figshare.5673715.v2';
-        $result = new Identifier($validFigshare);
+        $result = new IdentifierResolver($validFigshare);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('10.6084/m9.figshare.5673715.v2', $identifier);
@@ -82,10 +82,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validPubmed = '28658642';
-        $result = new Identifier($validPubmed);
+        $result = new IdentifierResolver($validPubmed);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('28658642', $identifier);
@@ -98,10 +98,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validArxiv = 'arxiv: 1712.05752';
-        $result = new Identifier($validArxiv);
+        $result = new IdentifierResolver($validArxiv);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('1712.05752', $identifier);
@@ -114,10 +114,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validBioArxiv = 'bioarxiv: 10.1101/234369';
-        $result = new Identifier($validBioArxiv);
+        $result = new IdentifierResolver($validBioArxiv);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('10.1101/234369', $identifier);
@@ -130,10 +130,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validDoi = 'doi: 10.1038/srep07802';
-        $result = new Identifier($validDoi);
+        $result = new IdentifierResolver($validDoi);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('10.1038/srep07802', $identifier);
@@ -146,10 +146,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validFigshare = 'figshare: 10.6084/m9.figshare.5673715.v2';
-        $result = new Identifier($validFigshare);
+        $result = new IdentifierResolver($validFigshare);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('10.6084/m9.figshare.5673715.v2', $identifier);
@@ -162,10 +162,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validArxiv = '1712.05752';
-        $result = new Identifier($validArxiv);
+        $result = new IdentifierResolver($validArxiv);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('https://arxiv.org/abs/1712.05752', $identifier->getUrl());
@@ -176,10 +176,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validBioArxiv = '10.1101/234369';
-        $result = new Identifier($validBioArxiv);
+        $result = new IdentifierResolver($validBioArxiv);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('http://dx.doi.org/10.1101/234369', $identifier->getUrl());
@@ -190,10 +190,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validDoi = '10.1038/srep07802';
-        $result = new Identifier($validDoi);
+        $result = new IdentifierResolver($validDoi);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('http://dx.doi.org/10.1038/srep07802', $identifier->getUrl());
@@ -204,10 +204,10 @@ class IdentifiersTest extends TestCase
     {
         // Arrange
         $validFigshare = '10.6084/m9.figshare.5673715.v2';
-        $result = new Identifier($validFigshare);
+        $result = new IdentifierResolver($validFigshare);
 
         // Act
-        $identifier = $result->resolve();
+        $identifier = $result->handle();
 
         // Assert
         $this->assertEquals('http://dx.doi.org/10.6084/m9.figshare.5673715.v2', $identifier->getUrl());
@@ -221,9 +221,9 @@ class IdentifiersTest extends TestCase
 
         // Arrange
         $validPubmed = 'FakeIdentifier';
-        $result = new Identifier($validPubmed);
+        $result = new IdentifierResolver($validPubmed);
 
         // Act
-        $result->resolve();
+        $result->handle();
     }
 }

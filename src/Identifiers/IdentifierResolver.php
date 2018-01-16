@@ -4,7 +4,7 @@ namespace PubPeerFoundation\PublicationDataExtractor\Identifiers;
 
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
 
-class Identifier
+class IdentifierResolver
 {
     /**
      * List of available Identifiers.
@@ -27,17 +27,6 @@ class Identifier
     private $queryString;
 
     /**
-     * The regex matches.
-     *
-     * @var array
-     */
-    protected $matches;
-
-    protected $regex;
-    protected $resources;
-    protected $regex;
-
-    /**
      * Identifier constructor.
      *
      * @param string $queryString
@@ -54,66 +43,17 @@ class Identifier
      *
      * @throws UnknownIdentifierException
      */
-    public function resolve()
+    public function handle()
     {
         foreach ($this->identifiers as $identifierClass) {
             $identifier = new $identifierClass($this->queryString);
 
             if ($identifier->isValid()) {
-                return $identifier;
+                return $this->validIdentifier = $identifier;
             }
         }
 
         throw new UnknownIdentifierException();
     }
 
-    /**
-     * Does the query contain a valid Identifier?
-     *
-     * @return bool
-     */
-    public function isValid(): bool
-    {
-        return (bool) preg_match($this->regex, $this->queryString, $this->matches);
-    }
-
-    /**
-     * Resources getter.
-     *
-     * @return array
-     */
-    public function getRelatedResources(): array
-    {
-        return $this->resources;
-    }
-
-    /**
-     * Return URL to the identifier's publication website.
-     *
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->baseUrl.$this->getQueryString();
-    }
-
-    /**
-     * Class to String.
-     *
-     * @return string
-     */
-    public function __toString(): string
-    {
-        return $this->getQueryString();
-    }
-
-    /**
-     * QueryString getter.
-     *
-     * @return string
-     */
-    public function getQueryString()
-    {
-        return rtrim($this->queryString, ' .');
-    }
 }
