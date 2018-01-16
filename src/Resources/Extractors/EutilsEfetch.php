@@ -107,6 +107,7 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
                 ];
             }
         } catch (\Exception $e) {
+            // If can't find authors, just don't do anything.
         }
     }
 }
