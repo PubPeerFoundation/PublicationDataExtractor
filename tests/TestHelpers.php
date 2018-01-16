@@ -3,6 +3,7 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test;
 
 use ReflectionClass;
+use SimpleXMLElement;
 
 trait TestHelpers
 {
@@ -54,5 +55,27 @@ trait TestHelpers
         $method->setAccessible(true);
 
         return $method->invokeArgs($object, $parameters);
+    }
+
+    /**
+     * Loads and decodes Json file.
+     *
+     * @param $name
+     * @return mixed
+     */
+    public function loadJson($name)
+    {
+        return json_decode(file_get_contents(__DIR__.'/Integration/stubs/'.$name.'.json'), true);
+    }
+
+    /**
+     * Loads and decodes Xml file.
+     *
+     * @param $name
+     * @return SimpleXMLElement
+     */
+    public function loadXml($name)
+    {
+        return new SimpleXMLElement(file_get_contents(__DIR__.'/Integration/stubs/'.$name.'.xml'));
     }
 }

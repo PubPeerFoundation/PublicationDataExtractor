@@ -2,17 +2,19 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use SimpleXMLElement;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Arxiv;
 
 class ArxivDataExtractorTest extends TestCase
 {
+    use TestHelpers;
+
     /** @test */
     public function it_can_extract_publication_data_from_arxiv_api()
     {
         // Arrange
-        $file = $this->loadJson('arXiv/valid-article');
+        $file = $this->loadXml('arXiv/valid-article');
 
         // Act
         $extracted = (new Arxiv($file))->extract();
@@ -34,7 +36,7 @@ class ArxivDataExtractorTest extends TestCase
     public function it_can_extract_identifiers_data_from_arxiv_api()
     {
         // Arrange
-        $file = $this->loadJson('arXiv/valid-article');
+        $file = $this->loadXml('arXiv/valid-article');
 
         // Act
         $extracted = (new Arxiv($file))->extract();
@@ -56,7 +58,7 @@ class ArxivDataExtractorTest extends TestCase
     public function it_can_extract_authors_from_arxiv_api()
     {
         // Arrange
-        $file = $this->loadJson('arXiv/valid-article');
+        $file = $this->loadXml('arXiv/valid-article');
 
         // Act
         $extracted = (new Arxiv($file))->extract();
@@ -68,10 +70,5 @@ class ArxivDataExtractorTest extends TestCase
                 'last_name' => 'Blum',
             ],
         ], $extracted['authors']);
-    }
-
-    public function loadJson($name)
-    {
-        return new SimpleXMLElement(file_get_contents(__DIR__.'/stubs/'.$name.'.xml'));
     }
 }

@@ -4,9 +4,12 @@ namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Doi;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 
 class DoiDataExtractorTest extends TestCase
 {
+    use TestHelpers;
+
     /** @test */
     public function it_can_extract_publication_data_from_doi_api()
     {
@@ -112,10 +115,5 @@ class DoiDataExtractorTest extends TestCase
                 'type' => 'Erratum',
             ],
         ], $extracted['updates']);
-    }
-
-    public function loadJson($name)
-    {
-        return json_decode(file_get_contents(__DIR__.'/stubs/'.$name.'.json'), true);
     }
 }

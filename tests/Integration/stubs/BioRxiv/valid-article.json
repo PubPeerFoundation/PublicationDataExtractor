@@ -1,0 +1,113 @@
+{
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+        "indexed": {
+            "date-parts": [
+                [
+                    2018,
+                    1,
+                    2
+                ]
+            ],
+            "date-time": "2018-01-02T06:40:18Z",
+            "timestamp": 1514875218898
+        },
+        "posted": {
+            "date-parts": [
+                [
+                    2018,
+                    1,
+                    1
+                ]
+            ]
+        },
+        "group-title": "Animal Behavior and Cognition",
+        "reference-count": 0,
+        "publisher": "Cold Spring Harbor Laboratory",
+        "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+        },
+        "short-container-title": [],
+        "accepted": {
+            "date-parts": [
+                [
+                    2018,
+                    1,
+                    1
+                ]
+            ]
+        },
+        "abstract": "<jats:p>Division of labour is a hallmark of eusocial insect colonies, with different groups of workers engaged in different tasks at the same time. Foraging is a task done by older workers in honey bee colonies. Foragers use the waggle dance behaviour to inform and recruit nest mates about food sources in the environment. The recruitment process incorporates information about the food reward, the colony food stores and the environmental food availability and plays a major role in ensuring efficient exploitation of the food sources available to the colony. However, the role that individual foragers play in driving recruitment is largely unexplored. We observed the dance activity of individual foragers from the same foraging group and showed that there are consistent inter-individual differences within a foraging group leading to a division of labour in the recruitment activity. Next, we studied the effect of changing social interactions on these individual differences. Removing foragers from the group led to an increase in the dance activity of the group of remaining foragers. This was mainly driven by an increase in the dance activity of certain individuals within the foraging groups. In contrast, allowing recruits to join the foraging group had a strong negative effect on the dance activity of all the individual foragers. Our study shows that there is a fine scale division of labour in the recruitment activity within foraging groups and that this is further regulated by changing social interactions. Thus, a complex interplay between individual differences and social interactions drive recruitment activity in honey bees.</jats:p>",
+        "DOI": "10.1101/241679",
+        "type": "posted-content",
+        "created": {
+            "date-parts": [
+                [
+                    2018,
+                    1,
+                    2
+                ]
+            ],
+            "date-time": "2018-01-02T06:10:19Z",
+            "timestamp": 1514873419000
+        },
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+            "Regulation of individual differences in recruitment behaviour within honey bee foraging groups"
+        ],
+        "prefix": "10.1101",
+        "author": [
+            {
+                "given": "Ebi Antony",
+                "family": "George",
+                "affiliation": []
+            },
+            {
+                "given": "Axel",
+                "family": "Brockmann",
+                "affiliation": []
+            }
+        ],
+        "member": "246",
+        "container-title": [],
+        "original-title": [],
+        "link": [
+            {
+                "URL": "https://syndication.highwire.org/content/doi/10.1101/241679",
+                "content-type": "unspecified",
+                "content-version": "vor",
+                "intended-application": "similarity-checking"
+            }
+        ],
+        "deposited": {
+            "date-parts": [
+                [
+                    2018,
+                    1,
+                    2
+                ]
+            ],
+            "date-time": "2018-01-02T06:10:56Z",
+            "timestamp": 1514873456000
+        },
+        "score": 1,
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+            "date-parts": [
+                [
+                    2018,
+                    1,
+                    1
+                ]
+            ]
+        },
+        "references-count": 0,
+        "URL": "http://dx.doi.org/10.1101/241679",
+        "relation": {}
+    }
+}

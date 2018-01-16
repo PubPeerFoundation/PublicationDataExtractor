@@ -12,7 +12,7 @@ class IdentifierResolver
      * @var array
      */
     protected $identifiers = [
-        BioArxiv::class,
+        BioRxiv::class,
         Figshare::class,
         Doi::class,
         Arxiv::class,

@@ -5,9 +5,12 @@ namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 
 class CrossrefDataExtractorTest extends TestCase
 {
+    use TestHelpers;
+
     /** @test */
     public function it_throws_an_exception_if_status_is_not_ok()
     {
@@ -32,9 +35,9 @@ class CrossrefDataExtractorTest extends TestCase
 
         // Assert
         $this->assertArraySubset([
-            'title' =>  'Cholinergic Modulation of Neuronal Excitability in the Accessory Olfactory Bulb',
-            'url'   =>  'http://dx.doi.org/10.1152/jn.00446.2010',
-            'published_at'  =>  '2010-12',
+            'title' => 'Cholinergic Modulation of Neuronal Excitability in the Accessory Olfactory Bulb',
+            'url' => 'http://dx.doi.org/10.1152/jn.00446.2010',
+            'published_at' => '2010-12',
             'abstract' => null,
         ], $extracted['publication']);
     }
@@ -126,10 +129,5 @@ class CrossrefDataExtractorTest extends TestCase
                 'type' => 'Erratum',
             ],
         ], $extracted['updates']);
-    }
-
-    public function loadJson($name)
-    {
-        return json_decode(file_get_contents(__DIR__.'/stubs/'.$name.'.json'), true);
     }
 }

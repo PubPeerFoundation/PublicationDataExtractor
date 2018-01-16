@@ -5,9 +5,12 @@ namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\EutilsEfetch;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 
 class EutilsEfetchDataExtractorTest extends TestCase
 {
+    use TestHelpers;
+
     /** @test */
     public function it_can_extract_publication_data_from_efetch_api()
     {
@@ -84,10 +87,5 @@ class EutilsEfetchDataExtractorTest extends TestCase
                 'last_name' => 'Burton',
             ],
         ], $extracted['authors']);
-    }
-
-    public function loadXml($name)
-    {
-        return new \SimpleXMLElement(file_get_contents(__DIR__.'/stubs/'.$name.'.xml'));
     }
 }

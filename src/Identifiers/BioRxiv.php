@@ -2,10 +2,10 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Identifiers;
 
-class BioArxiv extends Doi
+class BioRxiv extends Doi
 {
     protected $resources = [
-        'bioarxivdoi' => \App\Resources\BioArxivDoi::class,
+        \PubPeerFoundation\PublicationDataExtractor\Resources\BioRxiv::class
     ];
 
     protected $regex = '/(10.1101\/(?:([[:alnum:]]|-|\(|\)|\.|\/))+)/';

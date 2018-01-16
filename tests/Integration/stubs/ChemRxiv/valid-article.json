@@ -1,0 +1,101 @@
+{
+    "indexed": {
+        "date-parts": [
+            [
+                2018,
+                1,
+                16
+            ]
+        ],
+        "date-time": "2018-01-16T16:10:48Z",
+        "timestamp": 1516119048613
+    },
+    "posted": {
+        "date-parts": [
+            [
+                2018
+            ]
+        ]
+    },
+    "reference-count": 0,
+    "publisher": "American Chemical Society (ACS)",
+    "license": [
+        {
+            "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "start": {
+                "date-parts": [
+                    [
+                        2018,
+                        1,
+                        1
+                    ]
+                ],
+                "date-time": "2018-01-01T00:00:00Z",
+                "timestamp": 1514764800000
+            },
+            "delay-in-days": 0,
+            "content-version": "unspecified"
+        }
+    ],
+    "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+    },
+    "abstract": "<jats:p>A mechanistic rationalization is given for how asymmetric amplification is induced with fidelity in the Soai autocatalytic reaction by chiral initiators that are enantiomeric only by virtue of an isotope, e.g. – CH3 vs.CD3. A transient &lt;i&gt;inhibition&lt;/i&gt; of the autocatalytic pathway at the outset of the reaction implicates an interaction between initiator and product initially formed in the uncatalyzed background reaction. Selectivity in formation of the product-initiator complex ultimately induces a slight enantioenrichment in the active dimer catalysts that trigger and direct the autocatalytic pathway.&lt;br&gt;</jats:p>",
+    "DOI": "10.26434/chemrxiv.5787984.v1",
+    "type": "posted-content",
+    "created": {
+        "date-parts": [
+            [
+                2018,
+                1,
+                16
+            ]
+        ],
+        "date-time": "2018-01-16T15:38:22Z",
+        "timestamp": 1516117102000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": "Elucidating the Role of Isotopically Chiral Initiators in the Soai Asymmetric Autocatalytic Reaction",
+    "prefix": "10.26434",
+    "author": [
+        {
+            "given": "Neil",
+            "family": "Hawbaker",
+            "affiliation": []
+        },
+        {
+            "given": "Donna",
+            "family": "Blackmond",
+            "affiliation": []
+        }
+    ],
+    "member": "316",
+    "container-title": [],
+    "original-title": [],
+    "deposited": {
+        "date-parts": [
+            [
+                2018,
+                1,
+                16
+            ]
+        ],
+        "date-time": "2018-01-16T15:38:23Z",
+        "timestamp": 1516117103000
+    },
+    "score": 1,
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+        "date-parts": [
+            [
+                2018
+            ]
+        ]
+    },
+    "references-count": 0,
+    "URL": "http://dx.doi.org/10.26434/chemrxiv.5787984.v1",
+    "relation": {}
+}

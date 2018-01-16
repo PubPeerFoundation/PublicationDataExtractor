@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
 use PubPeerFoundation\PublicationDataExtractor\Helpers\UpdateTypesStandardiser;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
@@ -102,6 +103,9 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
      */
     public function extractJournalData()
     {
+        if(empty($this->searchTree['container-title']) && empty($this->searchTree['ISSN'])) {
+            throw new JournalTitleNotFoundException;
+        }
         if (array_key_exists('ISSN', $this->searchTree) && ! is_array($this->searchTree['ISSN'])) {
             $this->searchTree['ISSN'] = [$this->searchTree['ISSN']];
         }
@@ -161,9 +165,9 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
 
     protected function extractDateFrom($array)
     {
-        $datePartsContainer = array_filter($array, function ($string) {
+        $datePartsContainer = array_values(array_filter($array, function ($string) {
             return isset($this->searchTree[$string]);
-        })[0];
+        }))[0];
 
         return (new DateHelper())
             ->dateFromDateParts($this->searchTree[$datePartsContainer]['date-parts'][0]);
