@@ -55,5 +55,4 @@ class IdentifierResolver
 
         throw new UnknownIdentifierException();
     }
-
 }
