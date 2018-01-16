@@ -1,4 +1,7 @@
 # Publication Data Extractor
+[![Build Status](https://travis-ci.org/PubPeerFoundation/PublicationDataExtractor.svg?branch=master)](https://travis-ci.org/PubPeerFoundation/PublicationDataExtractor)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PubPeerFoundation/PublicationDataExtractor/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PubPeerFoundation/PublicationDataExtractor/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/PubPeerFoundation/PublicationDataExtractor/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/PubPeerFoundation/PublicationDataExtractor/?branch=master)
 
 The main idea behind this package is to allow the extraction of Research Publication data from any external API into a simple common structure.
 
