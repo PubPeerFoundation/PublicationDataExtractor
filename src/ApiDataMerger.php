@@ -12,8 +12,8 @@ class ApiDataMerger
     protected static function mergeData($data)
     {
         $tmp = [];
-        foreach($data as $resourceData) {
-            foreach($resourceData as $key => $value) {
+        foreach ($data as $resourceData) {
+            foreach ($resourceData as $key => $value) {
                 $tmp[$key][] = $value;
             }
         }

@@ -2,9 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\ApiDataFetcher;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
 
 class ApiDataFetcherTest extends TestCase
 {
