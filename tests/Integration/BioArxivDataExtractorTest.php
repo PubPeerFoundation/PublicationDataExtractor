@@ -2,9 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\BioRxiv;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\BioRxiv;
 
 class BioArxivDataExtractorTest extends TestCase
 {

@@ -2,10 +2,10 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
 use PubPeerFoundation\PublicationDataExtractor\Helpers\UpdateTypesStandardiser;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 
 class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesUpdatesData
 {
@@ -103,7 +103,7 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
      */
     public function extractJournalData()
     {
-        if(empty($this->searchTree['container-title']) && empty($this->searchTree['ISSN'])) {
+        if (empty($this->searchTree['container-title']) && empty($this->searchTree['ISSN'])) {
             throw new JournalTitleNotFoundException;
         }
         if (array_key_exists('ISSN', $this->searchTree) && ! is_array($this->searchTree['ISSN'])) {
