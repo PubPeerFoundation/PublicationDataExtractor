@@ -1,4 +1,5 @@
 # Publication Data Extractor
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://travis-ci.org/PubPeerFoundation/PublicationDataExtractor.svg?branch=master)](https://travis-ci.org/PubPeerFoundation/PublicationDataExtractor)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PubPeerFoundation/PublicationDataExtractor/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PubPeerFoundation/PublicationDataExtractor/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/PubPeerFoundation/PublicationDataExtractor/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/PubPeerFoundation/PublicationDataExtractor/?branch=master)
@@ -71,3 +72,30 @@ The resulting structure looks like this:
     ]
 }
 ```
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Security
+
+If you discover any security related issues, please use the issue tracker.
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+## Support us
+
+You wish to donate to the PubPeer Foundation? Reach out and support us on [Patreon](https://www.patreon.com/pubpeer).
+
+## Credits
+
+- [Xavier Roussel](https://github.com/XavRsl)
+
+## About the PubPeer Foundation
+
+The PubPeer Foundation is a California-registered public-benefit corporation with 501(c)(3) nonprofit status in the United States. The overarching goal of the Foundation is to improve the quality of scientific research by enabling innovative approaches for community interaction. The bylaws of the Foundation establish pubpeer.com as a service run for the benefit of its readers and commenters, who create its content. Our current focus is maintaining and developing the PubPeer online platform for post-publication peer review.
+
+## Contact us
+For anything related to the PubPeer Foundation or PubPeer web site, please contact us through **contact at pubpeer dot com**.
