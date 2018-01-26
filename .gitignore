@@ -2,4 +2,4 @@ phpunit.xml
 vendor
 .idea
 coverage
-
+.php_cs.cache
