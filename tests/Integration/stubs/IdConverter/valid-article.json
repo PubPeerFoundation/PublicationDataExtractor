@@ -1,0 +1,14 @@
+{
+    "status": "ok",
+    "responseDate": "2018-01-26 09:06:41",
+    "request": "format=json;tool=pubpeer;email=contact%40pubpeer.com;versions=no;ids=10.1016%2Fj.molcel.2017.01.013",
+    "records": [
+        {
+            "pmcid": "PMC5404503",
+            "pmid": "28157506",
+            "doi": "10.1016/j.molcel.2017.01.013",
+            "live": "false",
+            "release-date": "2018-02-02"
+        }
+    ]
+}

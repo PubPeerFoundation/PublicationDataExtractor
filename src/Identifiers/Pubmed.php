@@ -6,7 +6,7 @@ class Pubmed extends Identifier
 {
     protected $resources = [
         \PubPeerFoundation\PublicationDataExtractor\Resources\EutilsEfetch::class,
-//        'idconverter' => \App\Resources\IdConverter::class,
+        \PubPeerFoundation\PublicationDataExtractor\Resources\IdConverter::class,
     ];
 
     protected $regex = '/^\d{5,8}$/';
