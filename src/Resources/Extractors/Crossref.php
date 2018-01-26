@@ -73,7 +73,7 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
      */
     public function extractIdentifiersData()
     {
-        if (!empty($this->searchTree['DOI'])) {
+        if (! empty($this->searchTree['DOI'])) {
             $this->output['identifiers'][] = [
                 'value' => $this->searchTree['DOI'],
                 'type' => 'doi',
@@ -178,7 +178,7 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
 
     protected function getIssnList()
     {
-        if (!empty($this->searchTree['ISSN'])) {
+        if (! empty($this->searchTree['ISSN'])) {
             return (is_array($this->searchTree['ISSN']))
                 ? $this->searchTree['ISSN']
                 : [$this->searchTree['ISSN']];
