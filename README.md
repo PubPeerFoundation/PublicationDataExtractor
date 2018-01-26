@@ -14,64 +14,30 @@ The package can then read from different external APIs such as doi.org, crossref
 The resulting structure looks like this:
 
 ```
-{
-    "authors":[
-        {
-            "first_name":"Richard S.",
-            "last_name":"Smith",
-            "orcid":null,
-            "affiliation":[{
-                "name":"Department of Biology, University of Maryland, College Park, Maryland"
-            }]
+[
+    {
+        "authors":[
+            {"first_name":"J D","last_name":"WATSON","affiliation":""},
+            {"first_name":"F H","last_name":"CRICK","affiliation":""}
+        ],
+        "identifiers":[
+            {"value":"13054692","type":"pubmed"},
+            {"value":"0028-0836","type":"issn"}
+        ],
+        "journals":{
+            "title":"Nature",
+            "issn":[
+                0028-0836
+            ]
         },
-        {
-            "first_name":"Ricardo C.",
-            "last_name":"Araneda",
-            "orcid":null,
-            "affiliation":[{
-                "name":"Department of Biology, University of Maryland, College Park, Maryland"
-            }]
+        "publication":{
+            "title":"Molecular structure of nucleic acids; a structure for deoxyribose nucleic acid.",
+            "url":"http:\/\/www.ncbi.nlm.nih.gov\/pubmed\/13054692",
+            "published_at":"1953-04-25",
+            "abstract":""
         }
-    ],
-    "identifiers":[
-        {
-            "value":"10.1152\/jn.00446.2010",
-            "type":"doi"
-        },
-        {
-            "value":"0022-3077",
-            "type":"issn"
-        },
-        {
-            "value":"1522-1598",
-            "type":"issn"
-        }
-    ],
-    "journal":{
-        "title":"Journal of Neurophysiology",
-        "issn":["0022-3077","1522-1598"],
-        "publisher":"American Physiological Society"
-    },
-    "publication":{
-        "title":"Cholinergic Modulation of Neuronal Excitability in the Accessory Olfactory Bulb",
-        "abstract":null,
-        "url":"http:\/\/dx.doi.org\/10.1152\/jn.00446.2010",
-        "published_at":"2010-12"
-    },
-    "tags": [
-        {
-            "name":"Physiology"
-        },
-        {
-            "name":"General Neuroscience"
-        }
-    ],
-    "types":[
-        {
-            "name":"journal-article"
-        }
-    ]
-}
+    }
+]
 ```
 
 ## Contributing
