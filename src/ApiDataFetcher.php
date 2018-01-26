@@ -3,22 +3,26 @@
 namespace PubPeerFoundation\PublicationDataExtractor;
 
 use Generator;
+use GuzzleHttp\Psr7;
 use GuzzleHttp\Promise\EachPromise;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 use GrahamCampbell\GuzzleFactory\GuzzleFactory;
+use PubPeerFoundation\PublicationDataExtractor\Helpers\ClassHelper;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Resource;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class ApiDataFetcher
 {
-    private $identifier;
+    protected $identifier;
 
-    private $client;
+    protected $client;
 
-    private $resources = [];
+    protected $resources = [];
 
     public $apiData;
+
+    protected $errors = [];
 
     public function __construct(Identifier $identifier)
     {
@@ -34,9 +38,12 @@ class ApiDataFetcher
         (new EachPromise($this->getPromises(), [
             'concurrency' => 3,
             'fulfilled' => function (ResponseInterface $response, $index) {
-                $this->apiData[] = $this->getResourceAtIndex($index)->getDataFrom((string) $response->getBody());
+                $this->apiData[] = $this->getResourceAtIndex($index)
+                    ->getDataFrom((string) $response->getBody());
             },
             'rejected' => function (RequestException $exception, $index) {
+                $resourceName = ClassHelper::get_class_name($this->getResourceAtIndex($index));
+                $this->errors[$resourceName] = $exception->getCode();
             },
         ]))->promise()->wait();
     }
@@ -59,6 +66,11 @@ class ApiDataFetcher
 
             yield $promise;
         }
+    }
+
+    public function getErrors(): array
+    {
+        return $this->errors;
     }
 
     /**

@@ -58,4 +58,23 @@ class ApiDataFetcherTest extends TestCase
         // Assert
         $this->assertCount(1, $dataFetcher->apiData);
     }
+
+    /**
+     * @test
+     * @group internet
+     */
+    public function it_lists_errors_from_rejected_api_calls()
+    {
+        // Arrange
+        $identifier = new IdentifierResolver('10.1023/B');
+        $dataFetcher = new ApiDataFetcher($identifier->handle());
+
+        // Act
+        $dataFetcher->getData();
+        $errors = $dataFetcher->getErrors();
+
+        // Assert
+        $this->assertNull($dataFetcher->apiData);
+        $this->assertArraySubset(['Doi' => 404, 'Crossref' => 404], $errors);
+    }
 }
