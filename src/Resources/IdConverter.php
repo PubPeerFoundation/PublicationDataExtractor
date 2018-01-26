@@ -2,7 +2,6 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
-use SimpleXMLElement;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class IdConverter implements Resource
@@ -15,7 +14,7 @@ class IdConverter implements Resource
             'tool' => 'pubpeer',
             'email' => 'contact@pubpeer.com',
             'version' => 'no',
-            'ids' => ''
+            'ids' => '',
         ],
     ];
 
