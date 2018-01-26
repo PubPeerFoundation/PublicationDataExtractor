@@ -3,13 +3,12 @@
 namespace PubPeerFoundation\PublicationDataExtractor;
 
 use Generator;
-use GuzzleHttp\Psr7;
 use GuzzleHttp\Promise\EachPromise;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 use GrahamCampbell\GuzzleFactory\GuzzleFactory;
-use PubPeerFoundation\PublicationDataExtractor\Helpers\ClassHelper;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Resource;
+use PubPeerFoundation\PublicationDataExtractor\Helpers\ClassHelper;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class ApiDataFetcher

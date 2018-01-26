@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Helpers;
 
-class ClassHelper {
-
+class ClassHelper
+{
     /**
      * @param $object
      * @return string
