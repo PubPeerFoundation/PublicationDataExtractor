@@ -9,25 +9,20 @@ use PubPeerFoundation\PublicationDataExtractor\ApiDataFetcher;
 class ApiDataMergerTest extends TestCase
 {
     /** @test */
-    public function it_fetches_data_from_a_doi_identifier()
+    public function it_merges_data_from_fetcher()
     {
         // Arrange
-        $dataFetcher = $this->getMockBuilder(ApiDataFetcher::class)
-            ->disableOriginalConstructor()
-            ->getMock();
-
-        $dataFetcher->apiData = [
+        $fetchedData = [
             ['publication' => ['title' => 'blabla']],
             ['publication' => ['title' => 'blibli']],
         ];
 
-        $dataFetcher->getData();
-
         // Act
-        $mergedData = ApiDataMerger::handle($dataFetcher);
+        $mergedData = ApiDataMerger::handle($fetchedData);
 
         // Assert
         $this->assertCount(1, $mergedData);
         $this->assertArrayHasKey('publication', $mergedData);
+        $this->assertCount(2, $mergedData['publication']);
     }
 }

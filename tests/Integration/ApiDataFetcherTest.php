@@ -19,10 +19,10 @@ class ApiDataFetcherTest extends TestCase
         $dataFetcher = new ApiDataFetcher($identifier->handle());
 
         // Act
-        $dataFetcher->getData();
+        $dataFetcher->fetch();
 
         // Assert
-        $this->assertCount(2, $dataFetcher->apiData);
+        $this->assertCount(2, $dataFetcher->getData());
     }
 
     /**
@@ -36,10 +36,10 @@ class ApiDataFetcherTest extends TestCase
         $dataFetcher = new ApiDataFetcher($identifier->handle());
 
         // Act
-        $dataFetcher->getData();
+        $dataFetcher->fetch();
 
         // Assert
-        $this->assertCount(1, $dataFetcher->apiData);
+        $this->assertCount(1, $dataFetcher->getData());
     }
 
     /**
@@ -53,10 +53,10 @@ class ApiDataFetcherTest extends TestCase
         $dataFetcher = new ApiDataFetcher($identifier->handle());
 
         // Act
-        $dataFetcher->getData();
+        $dataFetcher->fetch();
 
         // Assert
-        $this->assertCount(1, $dataFetcher->apiData);
+        $this->assertCount(1, $dataFetcher->getData());
     }
 
     /**
@@ -70,11 +70,11 @@ class ApiDataFetcherTest extends TestCase
         $dataFetcher = new ApiDataFetcher($identifier->handle());
 
         // Act
-        $dataFetcher->getData();
+        $dataFetcher->fetch();
         $errors = $dataFetcher->getErrors();
 
         // Assert
-        $this->assertNull($dataFetcher->apiData);
+        $this->assertEmpty($dataFetcher->getData());
         $this->assertArraySubset(['Doi' => 404, 'Crossref' => 404], $errors);
     }
 }

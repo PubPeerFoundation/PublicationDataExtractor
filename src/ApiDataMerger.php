@@ -4,9 +4,9 @@ namespace PubPeerFoundation\PublicationDataExtractor;
 
 class ApiDataMerger
 {
-    public static function handle(ApiDataFetcher $dataFetcher)
+    public static function handle(array $data)
     {
-        return self::mergeData($dataFetcher->apiData);
+        return self::mergeData($data);
     }
 
     protected static function mergeData($data)

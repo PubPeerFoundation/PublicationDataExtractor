@@ -30,9 +30,9 @@ class ApiDataFetcher
     }
 
     /**
-     * Get data from API calls promises.
+     * Fetch data from API calls promises.
      */
-    public function getData(): void
+    public function fetch(): void
     {
         (new EachPromise($this->getPromises(), [
             'concurrency' => 3,
@@ -65,6 +65,13 @@ class ApiDataFetcher
 
             yield $promise;
         }
+    }
+
+    public function getData(): array
+    {
+        return array_values(
+            array_filter($this->apiData)
+        );
     }
 
     public function getErrors(): array
