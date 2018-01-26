@@ -1,5 +1,5 @@
 {
-    "name": "PubPeerFoundation/publication-data-extractor",
+    "name": "pubpeer-foundation/publication-data-extractor",
     "description": "Extract publication data from multiple external APIs",
     "type": "library",
     "license": "MIT",
