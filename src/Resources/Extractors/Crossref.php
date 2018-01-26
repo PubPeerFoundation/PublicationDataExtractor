@@ -73,27 +73,18 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
      */
     public function extractIdentifiersData()
     {
-        if (! empty($this->searchTree['DOI'])) {
+        if (!empty($this->searchTree['DOI'])) {
             $this->output['identifiers'][] = [
                 'value' => $this->searchTree['DOI'],
                 'type' => 'doi',
             ];
         }
 
-        if (! empty($this->searchTree['ISSN'])) {
-            if (is_array($this->searchTree['ISSN'])) {
-                foreach ($this->searchTree['ISSN'] as $issn) {
-                    $this->output['identifiers'][] = [
-                        'value' => $issn,
-                        'type' => 'issn',
-                    ];
-                }
-            } else {
-                $this->output['identifiers'][] = [
-                    'value' => $this->searchTree['ISSN'],
-                    'type' => 'issn',
-                ];
-            }
+        foreach ($this->getIssnList() as $issn) {
+            $this->output['identifiers'][] = [
+                'value' => $issn,
+                'type' => 'issn',
+            ];
         }
     }
 
@@ -104,15 +95,12 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
     public function extractJournalData()
     {
         if (empty($this->searchTree['container-title']) && empty($this->searchTree['ISSN'])) {
-            throw new JournalTitleNotFoundException;
-        }
-        if (array_key_exists('ISSN', $this->searchTree) && ! is_array($this->searchTree['ISSN'])) {
-            $this->searchTree['ISSN'] = [$this->searchTree['ISSN']];
+            throw new JournalTitleNotFoundException();
         }
 
         $this->output['journal'] = [
             'title' => $this->searchTree['container-title'] ?? null,
-            'issn' => $this->searchTree['ISSN'] ?? null,
+            'issn' => $this->getIssnList() ?? null,
             'publisher' => $this->searchTree['publisher'] ?? null,
         ];
     }
@@ -186,5 +174,16 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
                 ];
             }
         }
+    }
+
+    protected function getIssnList()
+    {
+        if (!empty($this->searchTree['ISSN'])) {
+            return (is_array($this->searchTree['ISSN']))
+                ? $this->searchTree['ISSN']
+                : [$this->searchTree['ISSN']];
+        }
+
+        return [];
     }
 }

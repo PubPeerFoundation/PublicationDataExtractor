@@ -49,7 +49,7 @@ class ApiDataFetcherTest extends TestCase
     public function it_fetches_data_from_a_pubmed_identifier()
     {
         // Arrange
-        $identifier = new IdentifierResolver('28658642');
+        $identifier = new IdentifierResolver('13054692');
         $dataFetcher = new ApiDataFetcher($identifier->handle());
 
         // Act

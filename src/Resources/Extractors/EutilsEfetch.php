@@ -76,19 +76,9 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
      */
     public function extractJournalData()
     {
-        $issn = [];
-
-        if ($this->searchTree->MedlineCitation->Article->Journal->ISSN) {
-            $issn[] = $this->searchTree->MedlineCitation->Article->Journal->ISSN;
-        }
-
-        if ($this->searchTree->MedlineCitation->MedlineJournalInfo->ISSNLinking) {
-            $issn[] = $this->searchTree->MedlineCitation->MedlineJournalInfo->ISSNLinking;
-        }
-
         $this->output['journals'] = [
             'title' => (string) $this->searchTree->MedlineCitation->Article->Journal->Title ?? null,
-            'issn' => $issn,
+            'issn' => $this->getIssns(),
         ];
     }
 
@@ -109,5 +99,20 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
         } catch (\Exception $e) {
             // If can't find authors, just don't do anything.
         }
+    }
+
+    protected function getIssns()
+    {
+        $issn = [];
+
+        if ($this->searchTree->MedlineCitation->Article->Journal->ISSN) {
+            $issn[] = (string) $this->searchTree->MedlineCitation->Article->Journal->ISSN;
+        }
+
+        if ($this->searchTree->MedlineCitation->MedlineJournalInfo->ISSNLinking) {
+            $issn[] = (string) $this->searchTree->MedlineCitation->MedlineJournalInfo->ISSNLinking;
+        }
+
+        return $issn;
     }
 }
