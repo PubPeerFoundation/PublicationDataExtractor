@@ -4,7 +4,7 @@ namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Crossref;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\IdentifierResolver;
+use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
 
 class CrossrefResourceTest extends TestCase
 {
