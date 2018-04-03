@@ -13,7 +13,7 @@ class IdConverter implements Extractor, ProvidesIdentifiersData
     protected $typeMap = [
         'pmcid' => 'pmc',
         'pmid' => 'pubmed',
-        'doi' => 'doi'
+        'doi' => 'doi',
     ];
 
     protected $output;
@@ -43,7 +43,7 @@ class IdConverter implements Extractor, ProvidesIdentifiersData
     public function extractIdentifiersData()
     {
         foreach ($this->searchTree as $type => $identifier) {
-            if(array_key_exists($type, $this->typeMap)) {
+            if (array_key_exists($type, $this->typeMap)) {
                 $this->output['identifiers'][] = [
                     'value' => $identifier,
                     'type' => $this->typeMap[$type],

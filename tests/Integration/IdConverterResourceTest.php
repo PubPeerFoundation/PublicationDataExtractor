@@ -3,8 +3,8 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
-use PubPeerFoundation\PublicationDataExtractor\Resources\IdConverter;
 use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
+use PubPeerFoundation\PublicationDataExtractor\Resources\IdConverter;
 
 class IdConverterResourceTest extends TestCase
 {
