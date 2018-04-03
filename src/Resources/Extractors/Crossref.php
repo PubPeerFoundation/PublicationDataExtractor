@@ -26,7 +26,11 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
 
         $this->extractAuthorsData();
         $this->extractIdentifiersData();
-        $this->extractJournalData();
+        try {
+            $this->extractJournalData();
+        } catch (JournalTitleNotFoundException $e) {
+            $this->searchTree['container-title'] = $this->searchTree['publisher'];
+        }
         $this->extractPublicationData();
         $this->extractTagsData();
         $this->extractTypesData();

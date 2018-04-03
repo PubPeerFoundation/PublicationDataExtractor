@@ -63,6 +63,23 @@ class ApiDataFetcherTest extends TestCase
      * @test
      * @group internet
      */
+    public function it_fetches_data_from_a_doi_book_identifier()
+    {
+        // Arrange
+        $identifier = new IdentifierResolver('10.4337/9781783475360');
+        $dataFetcher = new ApiDataFetcher($identifier->handle());
+
+        // Act
+        $dataFetcher->fetch();
+
+        // Assert
+        $this->assertCount(2, $dataFetcher->getData());
+    }
+
+    /**
+     * @test
+     * @group internet
+     */
     public function it_lists_errors_from_rejected_api_calls()
     {
         // Arrange
