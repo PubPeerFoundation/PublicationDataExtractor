@@ -18,6 +18,6 @@ class ApiDataMerger
             }
         }
 
-        return array_values($tmp);
+        return $tmp;
     }
 }
