@@ -11,7 +11,7 @@
     ],
     "require": {
 	    "php": "^7.1",
-        "graham-campbell/guzzle-factory": "^2.2",
+        "graham-campbell/guzzle-factory": "^3.0",
         "nesbot/carbon": "^1.22"
     },
     "require-dev": {
