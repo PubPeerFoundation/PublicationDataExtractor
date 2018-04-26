@@ -24,10 +24,15 @@ class UpdateTypesStandardiser
         'Retraction' => 'Retracted',
         'retration' => 'Retracted',
         'withdrawal' => 'Withdrawn',
+        'new_version' => 'New Version'
     ];
 
     public static function getType($type)
     {
+        if(!isset(self::TYPES_MAP[$type])) {
+            return $type;
+        }
+
         return self::TYPES_MAP[$type];
     }
 }
