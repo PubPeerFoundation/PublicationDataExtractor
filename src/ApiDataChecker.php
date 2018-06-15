@@ -11,82 +11,82 @@ class ApiDataChecker
             'authors' => [
                 '_type' => 'nested_array',
                 'first_name' => [
-                    '_type' => 'string'
+                    '_type' => 'string',
                 ],
                 'last_name' => [
-                    '_type' => 'required_string'
+                    '_type' => 'required_string',
                 ],
                 'orcid' => [
-                    '_type' => 'string'
+                    '_type' => 'string',
                 ],
                 'affiliation' => [
-                    '_type' => 'array'
+                    '_type' => 'array',
                 ],
             ],
             'identifiers' => [
                 '_type' => 'nested_array',
                 'value' => [
-                    '_type' => 'required_string'
+                    '_type' => 'required_string',
                 ],
                 'type' => [
-                    '_type' => 'required_string'
+                    '_type' => 'required_string',
                 ],
             ],
             'journal' => [
                 '_type' => 'array',
                 'title' => [
-                    '_type' => 'string'
+                    '_type' => 'string',
                 ],
                 'issn' => [
-                    '_type' => 'array'
+                    '_type' => 'array',
                 ],
                 'publisher' => [
-                    '_type' => 'string'
+                    '_type' => 'string',
                 ],
             ],
             'publication' => [
                 '_type' => 'required_array',
                 'title' => [
-                    '_type' => 'required_string'
+                    '_type' => 'required_string',
                 ],
                 'abstract' => [
-                    '_type' => 'string'
+                    '_type' => 'string',
                 ],
                 'url' => [
-                    '_type' => 'required_string'
+                    '_type' => 'required_string',
                 ],
                 'published_at' => [
-                    '_type' => 'string'
+                    '_type' => 'string',
                 ],
             ],
             'types' =>  [
                 '_type' => 'nested_array',
                 'name' => [
-                    '_type' => 'string'
+                    '_type' => 'string',
                 ],
             ],
             'tags' => [
                 '_type' => 'nested_array',
                 'name' => [
-                    '_type' => 'string'
+                    '_type' => 'string',
                 ],
             ],
             'updates' => [
                 '_type' => 'array',
                 'timestamp' => [
-                    '_type' => 'string'
+                    '_type' => 'string',
                 ],
                 'identifier' => [
                     '_type' => 'array',
                     'doi' => [
-                        '_type' => 'string'
-                    ]
+                        '_type' => 'string',
+                    ],
                 ],
                 'type' => [
-                    '_type' => 'string'
-                ]
-            ]
-        ]
+                    '_type' => 'string',
+                ],
+            ],
+        ],
     ];
 
     public static function check($data)

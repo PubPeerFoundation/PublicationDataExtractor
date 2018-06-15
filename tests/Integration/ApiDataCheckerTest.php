@@ -2,79 +2,78 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use PubPeerFoundation\PublicationDataExtractor\ApiDataChecker;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
-use Volan\Volan;
+use PubPeerFoundation\PublicationDataExtractor\ApiDataChecker;
 
 class ApiDataCheckerTest extends TestCase
 {
     protected $mergedData = [
-        "authors" => [
+        'authors' => [
             0 => [
-                "first_name" => "Chew Hooi",
-                "last_name" => "Wong",
-                "orcid" => null,
-                "affiliation" => []
+                'first_name' => 'Chew Hooi',
+                'last_name' => 'Wong',
+                'orcid' => null,
+                'affiliation' => [],
             ],
             1 => [
-                "first_name" => "Kartini Bte",
-                "last_name" => "Iskandar",
-                "orcid" => null,
-                "affiliation" => []
+                'first_name' => 'Kartini Bte',
+                'last_name' => 'Iskandar',
+                'orcid' => null,
+                'affiliation' => [],
             ],
             2 => [
-                "first_name" => "Sanjiv Kumar",
-                "last_name" => "Yadav",
-                "orcid" => null,
-                "affiliation" => []
+                'first_name' => 'Sanjiv Kumar',
+                'last_name' => 'Yadav',
+                'orcid' => null,
+                'affiliation' => [],
             ],
             3 => [
-                "first_name" => "Jayshree L.",
-                "last_name" => "Hirpara",
-                "orcid" => null,
-                "affiliation" => [],
+                'first_name' => 'Jayshree L.',
+                'last_name' => 'Hirpara',
+                'orcid' => null,
+                'affiliation' => [],
             ],
             4 => [
-                "first_name" => "Thomas",
-                "last_name" => "Loh",
-                "orcid" => null,
-                "affiliation" => []
+                'first_name' => 'Thomas',
+                'last_name' => 'Loh',
+                'orcid' => null,
+                'affiliation' => [],
             ],
             5 => [
-                "first_name" => "Shazib",
-                "last_name" => "Pervaiz",
-                "orcid" => null,
-                "affiliation" => []
-            ]
+                'first_name' => 'Shazib',
+                'last_name' => 'Pervaiz',
+                'orcid' => null,
+                'affiliation' => [],
+            ],
         ],
-        "identifiers" => [
+        'identifiers' => [
             0 => [
-                "value" => "10.1371/journal.pone.0009996",
-                "type" => "doi"
+                'value' => '10.1371/journal.pone.0009996',
+                'type' => 'doi',
             ],
             1 => [
-                "value" => "1932-6203",
-                "type" => "issn"
-            ]
-        ],
-        "journal" => [
-            "title" => "PLoS ONE",
-            "issn" => [
-                0 => "1932-6203"
+                'value' => '1932-6203',
+                'type' => 'issn',
             ],
-            "publisher" => "Public Library of Science (PLoS)"
         ],
-        "publication" => [
-            "title" => "Simultaneous Induction of Non-Canonical Autophagy and Apoptosis in Cancer Cells by ROS-Dependent ERK and JNK Activation",
-            "abstract" => null,
-            "url" => "http://dx.doi.org/10.1371/journal.pone.0009996",
-            "published_at" => "2010-04-02"
+        'journal' => [
+            'title' => 'PLoS ONE',
+            'issn' => [
+                0 => '1932-6203',
+            ],
+            'publisher' => 'Public Library of Science (PLoS)',
         ],
-        "types" => [
+        'publication' => [
+            'title' => 'Simultaneous Induction of Non-Canonical Autophagy and Apoptosis in Cancer Cells by ROS-Dependent ERK and JNK Activation',
+            'abstract' => null,
+            'url' => 'http://dx.doi.org/10.1371/journal.pone.0009996',
+            'published_at' => '2010-04-02',
+        ],
+        'types' => [
             0 => [
-                "name" => "journal-article"
+                'name' => 'journal-article',
             ],
-        ]
+        ],
     ];
 
     /** @test */
@@ -92,7 +91,7 @@ class ApiDataCheckerTest extends TestCase
     {
         $data = $this->mergedData;
         $data['journal']['title'] = [
-            "PLoS ONE"
+            'PLoS ONE',
         ];
         $result = ApiDataChecker::check($data);
 
