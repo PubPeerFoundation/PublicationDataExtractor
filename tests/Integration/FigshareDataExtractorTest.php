@@ -23,5 +23,7 @@ class FigshareDataExtractorTest extends TestCase
         $this->assertArraySubset([
             'title' => 'Figshare',
         ], $extracted['journal']);
+
+        $this->assertArrayIsValid($extracted);
     }
 }

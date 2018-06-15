@@ -3,6 +3,7 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
+use PubPeerFoundation\PublicationDataExtractor\Helpers\Helpers;
 use PubPeerFoundation\PublicationDataExtractor\Helpers\UpdateTypesStandardiser;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
@@ -56,19 +57,11 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
         $date = $this->extractDateFrom(['published-print', 'published-online', 'issued']);
 
         $this->output['publication'] = [
-            'title' => $this->extractTitle() ?? null,
-            'abstract' => $this->searchTree['abstract'] ?? null,
+            'title' => Helpers::flatten($this->searchTree['title'] ?? null) ,
+            'abstract' => Helpers::flatten($this->searchTree['abstract'] ?? null),
             'url' => $this->searchTree['URL'] ?? null,
             'published_at' => $date,
         ];
-    }
-
-    /**
-     * @return mixed
-     */
-    protected function extractTitle()
-    {
-        return is_array($this->searchTree['title']) ? $this->searchTree['title'][0] : $this->searchTree['title'];
     }
 
     /**
@@ -103,9 +96,9 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
         }
 
         $this->output['journal'] = [
-            'title' => $this->searchTree['container-title'] ?? null,
+            'title' => Helpers::flatten($this->searchTree['container-title'] ?? null),
             'issn' => $this->getIssnList() ?? null,
-            'publisher' => $this->searchTree['publisher'] ?? null,
+            'publisher' => Helpers::flatten($this->searchTree['publisher'] ?? null),
         ];
     }
 

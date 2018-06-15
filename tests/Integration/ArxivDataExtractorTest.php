@@ -30,6 +30,8 @@ class ArxivDataExtractorTest extends TestCase
             be used to prove the same lower bound for their non-monotone network
             complexity. This implies P not equal NP.',
         ], $extracted['publication']);
+
+        $this->assertArrayIsValid($extracted);
     }
 
     /** @test */
@@ -52,6 +54,8 @@ class ArxivDataExtractorTest extends TestCase
                 'type' => 'issn',
             ],
         ], $extracted['identifiers']);
+
+        $this->assertArrayIsValid($extracted);
     }
 
     /** @test */
@@ -70,5 +74,7 @@ class ArxivDataExtractorTest extends TestCase
                 'last_name' => 'Blum',
             ],
         ], $extracted['authors']);
+
+        $this->assertArrayIsValid($extracted);
     }
 }

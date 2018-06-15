@@ -26,6 +26,7 @@ class DoiDataExtractorTest extends TestCase
             'published_at' => '2010-12',
             'abstract' => null,
         ], $extracted['publication']);
+        $this->assertArrayIsValid($extracted);
     }
 
     /** @test */
@@ -52,6 +53,8 @@ class DoiDataExtractorTest extends TestCase
                 'type' => 'issn',
             ],
         ], $extracted['identifiers']);
+
+        $this->assertArrayIsValid($extracted);
     }
 
     /** @test */
@@ -94,6 +97,8 @@ class DoiDataExtractorTest extends TestCase
                 ],
             ],
         ], $extracted['authors']);
+
+        $this->assertArrayIsValid($extracted);
     }
 
     /** @test */
@@ -115,5 +120,7 @@ class DoiDataExtractorTest extends TestCase
                 'type' => 'Erratum',
             ],
         ], $extracted['updates']);
+
+        $this->assertArrayIsValid($extracted);
     }
 }

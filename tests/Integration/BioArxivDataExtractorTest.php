@@ -23,5 +23,7 @@ class BioArxivDataExtractorTest extends TestCase
         $this->assertArraySubset([
             'title' => 'BioRxiv',
         ], $extracted['journal']);
+
+        $this->assertArrayIsValid($extracted);
     }
 }

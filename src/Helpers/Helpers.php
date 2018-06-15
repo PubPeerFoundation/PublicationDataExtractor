@@ -2,7 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Helpers;
 
-class ClassHelper
+class Helpers
 {
     /**
      * @param $object
@@ -14,5 +14,14 @@ class ClassHelper
         $pos = strrpos($className, '\\');
 
         return substr($className, $pos + 1);
+    }
+
+    /**
+     * @param mixed  $entry
+     * @return string
+     */
+    public static function flatten($entry)
+    {
+        return is_array($entry) ? $entry[0] : $entry;
     }
 }

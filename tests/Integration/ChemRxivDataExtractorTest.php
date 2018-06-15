@@ -23,5 +23,7 @@ class ChemRxivDataExtractorTest extends TestCase
         $this->assertArraySubset([
             'title' => 'ChemRxiv',
         ], $extracted['journal']);
+
+        $this->assertArrayIsValid($extracted);
     }
 }

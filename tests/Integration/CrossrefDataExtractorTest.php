@@ -40,6 +40,8 @@ class CrossrefDataExtractorTest extends TestCase
             'published_at' => '2010-12',
             'abstract' => null,
         ], $extracted['publication']);
+
+        $this->assertArrayIsValid($extracted);
     }
 
     /** @test */

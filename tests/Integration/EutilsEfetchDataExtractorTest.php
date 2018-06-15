@@ -28,6 +28,8 @@ class EutilsEfetchDataExtractorTest extends TestCase
             'published_at' => '1977-12-17',
             'abstract' => 'Oral contraceptives containing a high dose of oestrogen reduce the sebum excretion rate (SER) and improve acne vulgaris, but more progestogenic preparations may exacerbate acne. The effect on the SER of several oral contraceptives with varying progestogenic potencies was studied in 81 women. The predominantly progestogenic pills (Eugynon 30, Gynovlar) produced no significant change in SER, whereas the rate in women taking a more oestrogenic pill (Minovlar) was significantly reduced compared with the rate in controls. Progestogens therefore do not exacerbate acne by inducing seborrhoea, but in the doses we studied they nullified the inhibitory effect of oestrogens on the sebaceous glands. Acne-prone women who require an oral contraceptive should be given a predominantly oestrogenic preparation.',
         ], $extracted['publication']);
+
+        $this->assertArrayIsValid($extracted);
     }
 
     /** @test */
@@ -56,6 +58,8 @@ class EutilsEfetchDataExtractorTest extends TestCase
                 'type' => 'issn',
             ],
         ], $extracted['identifiers']);
+
+        $this->assertArrayIsValid($extracted);
     }
 
     /** @test */
@@ -87,5 +91,7 @@ class EutilsEfetchDataExtractorTest extends TestCase
                 'last_name' => 'Burton',
             ],
         ], $extracted['authors']);
+
+        $this->assertArrayIsValid($extracted);
     }
 }

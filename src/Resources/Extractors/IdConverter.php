@@ -31,6 +31,11 @@ class IdConverter implements Extractor, ProvidesIdentifiersData
         return $this->output;
     }
 
+    /**
+     * Extract search tree from document.
+     *
+     * @throws UnparseableApiException
+     */
     protected function getDataFromDocument()
     {
         if ('ok' !== $this->document['status']) {

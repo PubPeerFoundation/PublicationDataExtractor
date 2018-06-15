@@ -20,4 +20,13 @@ class Figshare extends Doi
             ];
         }
     }
+
+    public function extractPublicationData()
+    {
+        parent::extractPublicationData();
+
+        if(empty($this->output['publication']['url'])) {
+            $this->output['publication']['url'] = $this->searchTree['id'];
+        }
+    }
 }
