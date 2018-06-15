@@ -76,7 +76,7 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
      */
     public function extractJournalData()
     {
-        $this->output['journals'] = [
+        $this->output['journal'] = [
             'title' => (string) $this->searchTree->MedlineCitation->Article->Journal->Title ?? null,
             'issn' => $this->getIssns(),
         ];

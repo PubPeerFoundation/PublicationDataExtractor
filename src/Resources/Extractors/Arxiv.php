@@ -71,7 +71,7 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
      */
     public function extractJournalData()
     {
-        $this->output['journals'] = [
+        $this->output['journal'] = [
             'title' => 'arXiv',
             'issn' => ['2331-8422'],
         ];

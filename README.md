@@ -24,7 +24,7 @@ The resulting structure looks like this:
             {"value":"13054692","type":"pubmed"},
             {"value":"0028-0836","type":"issn"}
         ],
-        "journals":{
+        "journal":{
             "title":"Nature",
             "issn":[
                 0028-0836
