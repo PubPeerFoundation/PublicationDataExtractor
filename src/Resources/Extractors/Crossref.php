@@ -2,9 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Helpers\Helpers;
-use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
-use PubPeerFoundation\PublicationDataExtractor\Helpers\UpdateTypesStandardiser;
+use PubPeerFoundation\PublicationDataExtractor\Support\UpdateTypesStandardiser;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 
@@ -57,8 +55,8 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
         $date = $this->extractDateFrom(['published-print', 'published-online', 'issued']);
 
         $this->output['publication'] = [
-            'title' => Helpers::flatten($this->searchTree['title'] ?? null),
-            'abstract' => Helpers::flatten($this->searchTree['abstract'] ?? null),
+            'title' => get_string($this->searchTree, 'title'),
+            'abstract' => get_string($this->searchTree, 'abstract'),
             'url' => $this->searchTree['URL'] ?? null,
             'published_at' => $date,
         ];
@@ -77,7 +75,7 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
             ];
         }
 
-        foreach ($this->getIssnList() as $issn) {
+        foreach (get_array($this->searchTree, 'ISSN') as $issn) {
             $this->output['identifiers'][] = [
                 'value' => $issn,
                 'type' => 'issn',
@@ -88,6 +86,8 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
     /**
      * Extract and format data needed for the Journal Relationship
      * on the Publication Model.
+     *
+     * @throws JournalTitleNotFoundException
      */
     public function extractJournalData()
     {
@@ -96,9 +96,9 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
         }
 
         $this->output['journal'] = [
-            'title' => Helpers::flatten($this->searchTree['container-title'] ?? null),
-            'issn' => $this->getIssnList() ?? null,
-            'publisher' => Helpers::flatten($this->searchTree['publisher'] ?? null),
+            'title' => get_string($this->searchTree, 'container-title'),
+            'issn' => get_array($this->searchTree, 'ISSN'),
+            'publisher' => get_string($this->searchTree, 'publisher'),
         ];
     }
 
@@ -108,16 +108,14 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
      */
     public function extractAuthorsData()
     {
-        if (array_key_exists('author', $this->searchTree)) {
-            foreach ($this->searchTree['author'] as $author) {
-                if (isset($author['family'])) {
-                    $this->output['authors'][] = [
-                        'first_name' => $author['given'] ?? null,
-                        'last_name' => $author['family'] ?? null,
-                        'orcid' => $author['ORCID'] ?? null,
-                        'affiliation' => $author['affiliation'] ?? null,
-                    ];
-                }
+        foreach (get_array($this->searchTree, 'author') as $author) {
+            if (isset($author['family'])) {
+                $this->output['authors'][] = [
+                    'first_name' => get_string($author, 'given'),
+                    'last_name' => get_string($author, 'family'),
+                    'orcid' => get_string($author, 'ORCID'),
+                    'affiliation' => get_array($author, 'affiliation'),
+                ];
             }
         }
     }
@@ -129,7 +127,7 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
     public function extractTypesData()
     {
         $this->output['types'][] = [
-            'name' => $this->searchTree['type'] ?? null,
+            'name' => get_string($this->searchTree, 'type'),
         ];
     }
 
@@ -139,12 +137,10 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
      */
     public function extractTagsData()
     {
-        if (array_key_exists('subject', $this->searchTree)) {
-            foreach ($this->searchTree['subject'] as $tag) {
-                $this->output['tags'][] = [
-                    'name' => $tag,
-                ];
-            }
+        foreach (get_array($this->searchTree, 'subject') as $tag) {
+            $this->output['tags'][] = [
+                'name' => $tag,
+            ];
         }
     }
 
@@ -154,33 +150,19 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
             return isset($this->searchTree[$string]);
         }))[0];
 
-        return (new DateHelper())
-            ->dateFromDateParts($this->searchTree[$datePartsContainer]['date-parts'][0]);
+        return date_from_parts($this->searchTree[$datePartsContainer]['date-parts'][0]);
     }
 
     public function extractUpdatesData()
     {
-        if (array_key_exists('update-to', $this->searchTree)) {
-            foreach ($this->searchTree['update-to'] as $update) {
-                $this->output['updates'][] = [
-                    'timestamp' => $update['updated']['timestamp'],
-                    'identifier' => [
-                        'doi' => $update['DOI'],
-                    ],
-                    'type' => UpdateTypesStandardiser::getType($update['type']),
-                ];
-            }
+        foreach (get_array($this->searchTree, 'update-to') as $update) {
+            $this->output['updates'][] = [
+                'timestamp' => $update['updated']['timestamp'],
+                'identifier' => [
+                    'doi' => get_string($update, 'DOI'),
+                ],
+                'type' => UpdateTypesStandardiser::getType($update['type']),
+            ];
         }
-    }
-
-    protected function getIssnList()
-    {
-        if (! empty($this->searchTree['ISSN'])) {
-            return (is_array($this->searchTree['ISSN']))
-                ? $this->searchTree['ISSN']
-                : [$this->searchTree['ISSN']];
-        }
-
-        return [];
     }
 }

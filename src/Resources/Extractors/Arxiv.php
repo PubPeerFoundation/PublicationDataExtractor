@@ -2,8 +2,6 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
-
 class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData, ProvidesTypesData
 {
     private $document;
@@ -41,10 +39,10 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
     public function extractPublicationData()
     {
         $this->output['publication'] = [
-            'title' => (string) $this->searchTree->title[0] ?? null,
-            'abstract' => (string) trim($this->searchTree->summary[0]) ?? null,
-            'url' => (string) $this->searchTree->id[0] ?? null,
-            'published_at' => (new DateHelper)->dateFromCommonFormat($this->searchTree->published),
+            'title' => get_string($this->searchTree, 'title'),
+            'abstract' => get_string($this->searchTree, 'summary'),
+            'url' => get_string($this->searchTree, 'id'),
+            'published_at' => date_from_parseable_format(get_string($this->searchTree, 'published')),
         ];
     }
 
@@ -83,7 +81,7 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
      */
     public function extractAuthorsData()
     {
-        foreach ($this->searchTree->author as $author) {
+        foreach (get_array($this->searchTree, 'author') as $author) {
             $name = explode(' ', $author->name, 2);
             $this->output['authors'][] = [
                 'first_name' => $name[0] ?? null,

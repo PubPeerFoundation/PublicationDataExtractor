@@ -26,7 +26,7 @@ class Figshare extends Doi
         parent::extractPublicationData();
 
         if (empty($this->output['publication']['url'])) {
-            $this->output['publication']['url'] = $this->searchTree['id'];
+            $this->output['publication']['url'] = get_string($this->searchTree, 'id');
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace PubPeerFoundation\PublicationDataExtractor\Helpers;
+namespace PubPeerFoundation\PublicationDataExtractor\Support;
 
 class UpdateTypesStandardiser
 {

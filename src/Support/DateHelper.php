@@ -1,44 +1,44 @@
 <?php
 
-namespace PubPeerFoundation\PublicationDataExtractor\Helpers;
+namespace PubPeerFoundation\PublicationDataExtractor\Support;
 
 use Carbon\Carbon;
 
 class DateHelper
 {
-    public function dateFromDateParts(array $parts)
+    public static function dateFromDateParts(array $parts)
     {
         if (empty($parts)) {
             return '';
         }
 
-        return $this->formatForParts(
+        return static::formatForParts(
             Carbon::createFromDate(...array_merge($parts, [1, 1, 1])),
             count($parts)
         );
     }
 
-    public function dateFromCommonFormat($formattedDate)
+    public static function dateFromParseableFormat($formattedDate)
     {
         return Carbon::parse($formattedDate)->format('Y-m-d');
     }
 
-    public function dateFromPubDate($pubDateObject)
+    public static function dateFromPubDate($pubDateObject)
     {
         if (! isset($pubDateObject->Year) || empty($pubDateObject->Year)) {
             return '';
         }
 
-        $month = $this->getPubDateMonth($pubDateObject);
+        $month = static::getPubDateMonth($pubDateObject);
 
-        return $this->formatForParts(Carbon::create(
+        return static::formatForParts(Carbon::create(
             (int) $pubDateObject->Year,
             (int) $month,
             isset($pubDateObject->Day) ? (int) $pubDateObject->Day : 1
-        ), $this->countObjectParts($pubDateObject));
+        ), static::countObjectParts($pubDateObject));
     }
 
-    protected function getPubDateMonth($pubDateObject)
+    protected static function getPubDateMonth($pubDateObject)
     {
         if (! isset($pubDateObject->Month)) {
             return 1;
@@ -49,7 +49,7 @@ class DateHelper
             : $pubDateObject->Month;
     }
 
-    protected function formatForParts($date, $count)
+    protected static function formatForParts($date, $count)
     {
         $partsToFormat = [
             1 => 'Y',
@@ -60,7 +60,7 @@ class DateHelper
         return $date->format($partsToFormat[$count]);
     }
 
-    protected function countObjectParts($pubDateObject)
+    protected static function countObjectParts($pubDateObject)
     {
         return array_reduce(['Year', 'Month', 'Day'], function ($carry, $datePart) use ($pubDateObject) {
             return isset($pubDateObject->$datePart) ? $carry + 1 : $carry;

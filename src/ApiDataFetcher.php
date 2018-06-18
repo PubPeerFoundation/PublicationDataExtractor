@@ -7,7 +7,6 @@ use GuzzleHttp\Promise\EachPromise;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 use GrahamCampbell\GuzzleFactory\GuzzleFactory;
-use PubPeerFoundation\PublicationDataExtractor\Helpers\Helpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Resource;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
@@ -41,7 +40,7 @@ class ApiDataFetcher
                     ->getDataFrom((string) $response->getBody());
             },
             'rejected' => function (RequestException $exception, $index) {
-                $resourceName = Helpers::get_class_name($this->getResourceAtIndex($index));
+                $resourceName = get_class_name($this->getResourceAtIndex($index));
                 $this->errors[$resourceName] = $exception->getCode();
             },
         ]))->promise()->wait();
@@ -84,7 +83,7 @@ class ApiDataFetcher
      *
      * @param int $index
      *
-     * @return Resource
+     * @return resource
      */
     protected function getResourceAtIndex(int $index): Resource
     {
@@ -96,7 +95,7 @@ class ApiDataFetcher
      *
      * @param string $resourceClass
      *
-     * @return Resource
+     * @return resource
      */
     protected function instantiateResource($resourceClass): Resource
     {

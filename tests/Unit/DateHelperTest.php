@@ -3,7 +3,7 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
-use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
+use PubPeerFoundation\PublicationDataExtractor\Support\DateHelper;
 
 class DateHelperTest extends TestCase
 {
@@ -18,7 +18,7 @@ class DateHelperTest extends TestCase
         ];
 
         // Act
-        $dateString = (new DateHelper())->dateFromDateParts($parts);
+        $dateString = date_from_parts($parts);
 
         // Assert
         $this->assertEquals('2010-09-23', $dateString);
@@ -37,8 +37,8 @@ class DateHelperTest extends TestCase
         ];
 
         // Act
-        $dateString1 = (new DateHelper())->dateFromDateParts($parts1);
-        $dateString2 = (new DateHelper())->dateFromDateParts($parts2);
+        $dateString1 = date_from_parts($parts1);
+        $dateString2 = date_from_parts($parts2);
 
         // Assert
         $this->assertEquals('2010-09', $dateString1);
@@ -52,7 +52,7 @@ class DateHelperTest extends TestCase
         $parts = [];
 
         // Act
-        $dateString = (new DateHelper())->dateFromDateParts($parts);
+        $dateString = date_from_parts($parts);
 
         // Assert
         $this->assertEquals('', $dateString);

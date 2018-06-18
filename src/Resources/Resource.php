@@ -21,7 +21,7 @@ interface Resource
     /**
      * Transform raw data to a usable format.
      *
-     * @param string $document
+     * @param  string $document
      * @return array
      */
     public function getDataFrom(string $document): array;

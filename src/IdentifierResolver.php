@@ -39,9 +39,8 @@ class IdentifierResolver
     /**
      * Resolves the Identifier;.
      *
-     * @return Identifiers\Identifier
-     *
      * @throws UnknownIdentifierException
+     * @return Identifiers\Identifier
      */
     public function handle()
     {

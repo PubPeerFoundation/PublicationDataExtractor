@@ -2,8 +2,6 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Helpers\DateHelper;
-
 class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData
 {
     private $document;
@@ -42,10 +40,10 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
     public function extractPublicationData()
     {
         $this->output['publication'] = [
-            'title' => (string) $this->searchTree->MedlineCitation->Article->ArticleTitle ?? null,
-            'url' => (string) 'http://www.ncbi.nlm.nih.gov/pubmed/'.$this->searchTree->MedlineCitation->PMID,
-            'published_at' => (new DateHelper)->dateFromPubDate($this->searchTree->MedlineCitation->Article->Journal->JournalIssue->PubDate),
-            'abstract' => (string) $this->searchTree->MedlineCitation->Article->Abstract->AbstractText ?? null,
+            'title' => get_string($this->searchTree, 'MedlineCitation.Article.ArticleTitle'),
+            'url' => (string) 'http://www.ncbi.nlm.nih.gov/pubmed/'.get_string($this->searchTree, 'MedlineCitation.PMID'),
+            'published_at' => date_from_pub_date(data_get($this->searchTree, 'MedlineCitation.Article.Journal.JournalIssue.PubDate')),
+            'abstract' => get_string($this->searchTree, 'MedlineCitation.Article.Abstract.AbstractText'),
         ];
     }
 
@@ -61,10 +59,9 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
                 'type' => (string) $identifier['IdType'],
             ];
         }
-
-        if ($this->searchTree->MedlineCitation->Article->Journal->ISSN) {
+        if ($value = get_string($this->searchTree, 'MedlineCitation.Article.Journal.ISSN')) {
             $this->output['identifiers'][] = [
-                'value' => (string) $this->searchTree->MedlineCitation->Article->Journal->ISSN,
+                'value' => $value,
                 'type' => 'issn',
             ];
         }
@@ -77,7 +74,7 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
     public function extractJournalData()
     {
         $this->output['journal'] = [
-            'title' => (string) $this->searchTree->MedlineCitation->Article->Journal->Title ?? null,
+            'title' => get_string($this->searchTree, 'MedlineCitation.Article.Journal.Title'),
             'issn' => $this->getIssns(),
         ];
     }
@@ -91,13 +88,12 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
         try {
             foreach ($this->searchTree->MedlineCitation->Article->AuthorList->Author as $author) {
                 $this->output['authors'][] = [
-                    'first_name' => (string) $author->ForeName,
-                    'last_name' => (string) $author->LastName,
-                    'affiliation' => (string) $author->AffiliationInfo->Affiliation,
+                    'first_name' => get_string($author, 'ForeName'),
+                    'last_name' => get_string($author, 'LastName'),
+                    'affiliation' => get_string($author, 'AffiliationInfo.Affiliation'),
                 ];
             }
         } catch (\Exception $e) {
-            // If can't find authors, just don't do anything.
         }
     }
 
@@ -105,12 +101,12 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
     {
         $issn = [];
 
-        if ($this->searchTree->MedlineCitation->Article->Journal->ISSN) {
-            $issn[] = (string) $this->searchTree->MedlineCitation->Article->Journal->ISSN;
+        if ($number = get_string($this->searchTree, 'MedlineCitation.Article.Journal.ISSN')) {
+            $issn[] = $number;
         }
 
-        if ($this->searchTree->MedlineCitation->MedlineJournalInfo->ISSNLinking) {
-            $issn[] = (string) $this->searchTree->MedlineCitation->MedlineJournalInfo->ISSNLinking;
+        if ($number = get_string($this->searchTree, 'MedlineCitation.MedlineJournalInfo.ISSNLinking')) {
+            $issn[] = $number;
         }
 
         return $issn;
