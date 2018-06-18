@@ -84,7 +84,7 @@ class ApiDataFetcher
      *
      * @param int $index
      *
-     * @return resource
+     * @return Resource
      */
     protected function getResourceAtIndex(int $index): Resource
     {
@@ -96,7 +96,7 @@ class ApiDataFetcher
      *
      * @param string $resourceClass
      *
-     * @return resource
+     * @return Resource
      */
     protected function instantiateResource($resourceClass): Resource
     {

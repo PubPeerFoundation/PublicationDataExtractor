@@ -42,6 +42,10 @@ class IdConverter implements Extractor, ProvidesIdentifiersData
             throw new UnparseableApiException();
         }
 
+        if (isset($this->document['records'][0]['status']) && 'error' === $this->document['records'][0]['status']) {
+            throw new UnparseableApiException();
+        }
+
         $this->searchTree = $this->document['records'][0];
     }
 

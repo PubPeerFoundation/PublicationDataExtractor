@@ -6,7 +6,7 @@ use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class IdConverter implements Resource
 {
-    protected $url = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi';
+    protected $url = 'https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/';
 
     protected $queryStringParameters = [
         'query' => [
