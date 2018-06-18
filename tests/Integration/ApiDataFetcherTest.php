@@ -111,7 +111,7 @@ class ApiDataFetcherTest extends TestCase
 
         $merged = ApiDataMerger::handle($extracted);
         $identifiers = array_merge(...$merged['identifiers']);
-        $this->assertTrue(count(array_filter($identifiers, function($identifier) {
+        $this->assertTrue(count(array_filter($identifiers, function ($identifier) {
             return $identifier['type'] === 'pubmed';
         })) > 0);
     }
