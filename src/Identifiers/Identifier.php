@@ -70,6 +70,16 @@ abstract class Identifier
     }
 
     /**
+     * Complementary Resources getter.
+     *
+     * @return array
+     */
+    public function getComplementaryResources(): array
+    {
+        return $this->complementaryResources ?? [];
+    }
+
+    /**
      * Return URL to the identifier's publication website.
      *
      * @return string

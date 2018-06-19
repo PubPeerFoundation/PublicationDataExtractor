@@ -45,7 +45,7 @@ class ApiDataChecker
                 ],
             ],
             'publication' => [
-                '_type' => 'required_array',
+                '_type' => 'array',
                 'title' => [
                     '_type' => 'required_string',
                 ],
@@ -66,6 +66,12 @@ class ApiDataChecker
                 ],
             ],
             'tags' => [
+                '_type' => 'nested_array',
+                'name' => [
+                    '_type' => 'string',
+                ],
+            ],
+            'affiliations' => [
                 '_type' => 'nested_array',
                 'name' => [
                     '_type' => 'string',

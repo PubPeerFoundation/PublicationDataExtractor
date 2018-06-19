@@ -20,6 +20,6 @@ abstract class TestCase extends PHPUnit
 
         $result = ApiDataChecker::check($array);
 
-        static::assertThat($result->isValid(), static::isTrue(), $result->getErrorMessage());
+        static::assertThat($result->isValid(), static::isTrue(), (string) $result->getErrorMessage());
     }
 }

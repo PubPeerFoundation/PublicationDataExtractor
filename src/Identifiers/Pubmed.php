@@ -9,6 +9,10 @@ class Pubmed extends Identifier
         \PubPeerFoundation\PublicationDataExtractor\Resources\IdConverter::class,
     ];
 
+    protected $complementaryResources = [
+        'doi' => \PubPeerFoundation\PublicationDataExtractor\Resources\Crossref::class,
+    ];
+
     protected $regex = '/^\d{5,8}$/';
 
     protected $baseUrl = 'http://www.ncbi.nlm.nih.gov/pubmed/';

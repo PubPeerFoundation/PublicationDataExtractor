@@ -12,7 +12,12 @@ class Doi extends Identifier
     protected $resources = [
         \PubPeerFoundation\PublicationDataExtractor\Resources\Doi::class,
         \PubPeerFoundation\PublicationDataExtractor\Resources\Crossref::class,
+        \PubPeerFoundation\PublicationDataExtractor\Resources\PubmedWebsite::class,
         \PubPeerFoundation\PublicationDataExtractor\Resources\IdConverter::class,
+    ];
+
+    protected $complementaryResources = [
+        'pubmed' => \PubPeerFoundation\PublicationDataExtractor\Resources\EutilsEfetch::class,
     ];
 
     /**

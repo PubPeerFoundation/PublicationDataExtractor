@@ -3,6 +3,7 @@
 namespace PubPeerFoundation\PublicationDataExtractor;
 
 use Generator;
+use Tightenco\Collect\Support\Arr;
 use GuzzleHttp\Promise\EachPromise;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -16,15 +17,18 @@ class ApiDataFetcher
 
     protected $client;
 
+    protected $apiData;
+
     protected $resources = [];
 
-    public $apiData;
+    protected $resourcesToFetch = [];
 
     protected $errors = [];
 
     public function __construct(Identifier $identifier)
     {
         $this->identifier = $identifier;
+        $this->resourcesToFetch = $identifier->getRelatedResources();
         $this->client = GuzzleFactory::make(compact('headers'), 100);
     }
 
@@ -34,7 +38,7 @@ class ApiDataFetcher
     public function fetch(): void
     {
         (new EachPromise($this->getPromises(), [
-            'concurrency' => 3,
+            'concurrency' => 5,
             'fulfilled' => function (ResponseInterface $response, $index) {
                 $this->apiData[] = $this->getResourceAtIndex($index)
                     ->getDataFrom((string) $response->getBody());
@@ -53,7 +57,7 @@ class ApiDataFetcher
      */
     protected function getPromises(): Generator
     {
-        foreach ($this->identifier->getRelatedResources() as $resourceClass) {
+        foreach ($this->resourcesToFetch as $resourceClass) {
             $resource = $this->instantiateResource($resourceClass);
 
             $promise = $this->client->requestAsync(
@@ -68,6 +72,12 @@ class ApiDataFetcher
 
     public function getData(): array
     {
+        if (0 === count(array_filter(Arr::pluck($this->apiData, 'publication')))) {
+            return [];
+        }
+
+        $this->fetchComplementaryData();
+
         return array_values(
             array_filter($this->apiData)
         );
@@ -100,5 +110,25 @@ class ApiDataFetcher
     protected function instantiateResource($resourceClass): Resource
     {
         return $this->resources[] = new $resourceClass($this->identifier);
+    }
+
+    protected function fetchComplementaryData()
+    {
+        $flatIdentifiers = Arr::flatten(Arr::pluck($this->apiData, 'identifiers'));
+
+        foreach ($this->identifier->getComplementaryResources() as $key => $value) {
+            if (false !== $valueKey = array_search($key, $flatIdentifiers)) {
+                try {
+                    $this->identifier = (new IdentifierResolver($flatIdentifiers[$valueKey - 1]))->handle();
+
+                    $this->resourcesToFetch = [$value];
+                    $this->resources = [];
+
+                    $this->fetch();
+                } catch (Exceptions\UnknownIdentifierException $e) {
+                    var_dump('an error occured');
+                }
+            }
+        }
     }
 }
