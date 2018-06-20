@@ -62,7 +62,7 @@ if (! function_exists('get_string')) {
      *
      * @param array $array
      * @param $key
-     * @param  null  $default
+     * @param  mixed $default
      * @return mixed
      */
     function get_string($array, $key, $default = null)
@@ -73,9 +73,9 @@ if (! function_exists('get_string')) {
 
 if (! function_exists('get_array')) {
     /**
-     * Get array from array path.
+     * Get array from dot access key.
      *
-     * @param array $target
+     * @param mixed $target
      * @param $key
      * @param  array $default
      * @return array
