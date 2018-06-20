@@ -66,21 +66,7 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
     public function extractAuthorsData()
     {
         try {
-            foreach ($this->searchTree->MedlineCitation->Article->AuthorList->Author as $author) {
-                if (! empty($lastName = get_string($author, 'LastName'))) {
-                    $affiliations = [];
-                    foreach ($author->AffiliationInfo as $affiliation) {
-                        $affiliations[]['name'] = get_string($affiliation, 'Affiliation');
-                    }
-
-                    $this->output['authors'][] = [
-                        'first_name' => get_string($author, 'ForeName'),
-                        'last_name' => $lastName,
-                        'email' => get_string(find_emails_in_array(Arr::pluck($affiliations, 'name')), 0),
-                        'affiliation' => $affiliations,
-                    ];
-                }
-            }
+            $this->loopOverAuthors();
         } catch (\Exception $e) {
             // Empty catch block, don't want anything to happen in case of exception.
         }
@@ -104,5 +90,61 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
         }
 
         return $issn;
+    }
+
+    /**
+     * Loop over authors array.
+     */
+    protected function loopOverAuthors(): void
+    {
+        foreach ($this->searchTree->MedlineCitation->Article->AuthorList->Author as $author) {
+            $this->createAuthorEntry($author);
+        }
+    }
+
+    /**
+     * Create an author entry in output.
+     *
+     * @param $author
+     */
+    protected function createAuthorEntry($author): void
+    {
+        if (! empty($lastName = get_string($author, 'LastName'))) {
+            $affiliations = $this->loopOverAffiliations($author);
+
+            $this->output['authors'][] = [
+                'first_name' => get_string($author, 'ForeName'),
+                'last_name' => $lastName,
+                'email' => $this->getEmailsFromAffiliations($affiliations),
+                'affiliation' => $affiliations,
+            ];
+        }
+    }
+
+    /**
+     * Loop over affiliations.
+     *
+     * @param  array $author
+     * @return array
+     */
+    protected function loopOverAffiliations($author): array
+    {
+        $affiliations = [];
+        foreach ($author->AffiliationInfo as $affiliation) {
+            $affiliations[]['name'] = get_string($affiliation, 'Affiliation');
+        }
+
+        return $affiliations;
+    }
+
+    /**
+     * Get emails from affiliations array.
+     *
+     * @param  array  $affiliations
+     * @return string
+     */
+    protected function getEmailsFromAffiliations($affiliations): string
+    {
+        return get_string(find_emails_in_array(Arr::pluck($affiliations, 'name')), 0);
     }
 }

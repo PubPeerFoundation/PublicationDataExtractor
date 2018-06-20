@@ -62,8 +62,8 @@ if (! function_exists('get_string')) {
      *
      * @param array $array
      * @param $key
-     * @param  mixed $default
-     * @return mixed
+     * @param  mixed  $default
+     * @return string
      */
     function get_string($array, $key, $default = null)
     {
