@@ -112,6 +112,7 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
                 ];
             }
         } catch (\Exception $e) {
+            // Empty catch block, don't want anything to happen in case of exception.
         }
     }
 
