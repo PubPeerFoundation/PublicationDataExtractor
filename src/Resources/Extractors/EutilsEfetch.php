@@ -2,48 +2,10 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData
+use Tightenco\Collect\Support\Arr;
+
+class EutilsEfetch extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData
 {
-    /**
-     * @var array
-     */
-    protected $document;
-
-    /**
-     * @var array
-     */
-    protected $searchTree;
-
-    /**
-     * @var array
-     */
-    protected $output = [];
-
-    /**
-     * EutilsEfetch constructor.
-     *
-     * @param $document
-     */
-    public function __construct($document)
-    {
-        $this->document = $document;
-    }
-
-    /**
-     * @return array
-     */
-    public function extract(): array
-    {
-        $this->getDataFromDocument();
-
-        $this->extractAuthorsData();
-        $this->extractIdentifiersData();
-        $this->extractJournalData();
-        $this->extractPublicationData();
-
-        return $this->output;
-    }
-
     /**
      * Create search tree.
      */
@@ -105,11 +67,19 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
     {
         try {
             foreach ($this->searchTree->MedlineCitation->Article->AuthorList->Author as $author) {
-                $this->output['authors'][] = [
-                    'first_name' => get_string($author, 'ForeName'),
-                    'last_name' => get_string($author, 'LastName'),
-                    'affiliation' => get_string($author, 'AffiliationInfo.Affiliation'),
-                ];
+                if (! empty($lastName = get_string($author, 'LastName'))) {
+                    $affiliations = [];
+                    foreach ($author->AffiliationInfo as $affiliation) {
+                        $affiliations[]['name'] = get_string($affiliation, 'Affiliation');
+                    }
+
+                    $this->output['authors'][] = [
+                        'first_name' => get_string($author, 'ForeName'),
+                        'last_name' => $lastName,
+                        'email' => get_string(find_emails_in_array(Arr::pluck($affiliations, 'name')), 0),
+                        'affiliation' => $affiliations,
+                    ];
+                }
             }
         } catch (\Exception $e) {
             // Empty catch block, don't want anything to happen in case of exception.

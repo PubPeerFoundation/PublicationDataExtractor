@@ -83,7 +83,9 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
                 [
                     'first_name' => 'R J',
                     'last_name' => 'Pye',
-                    'affiliation' => 'University of whatever',
+                    'affiliation' => [
+                        ['name' => 'University of whatever'],
+                    ],
                 ],
             ],
         ], $this->getProtectedProperty($extractor, 'output'));
@@ -122,7 +124,9 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
             'authors' => [
                 [
                     'last_name' => 'Pye',
-                    'affiliation' => 'University of whatever',
+                    'affiliation' => [
+                        ['name' => 'University of whatever'],
+                    ],
                 ],
             ],
         ], $this->getProtectedProperty($extractor, 'output'));

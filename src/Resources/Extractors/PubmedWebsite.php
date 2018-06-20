@@ -4,48 +4,20 @@ namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 use Symfony\Component\DomCrawler\Crawler;
 
-class PubmedWebsite implements Extractor, ProvidesIdentifiersData, ProvidesAffiliationsData
+class PubmedWebsite extends Extractor implements ProvidesIdentifiersData, ProvidesAffiliationsData
 {
-    /**
-     * @var array
-     */
-    protected $document;
-
-    /**
-     * @var array
-     */
-    protected $searchTree;
-
-    /**
-     * @var array
-     */
-    protected $output = [];
-
     /**
      * @var Crawler
      */
     protected $crawler;
 
     /**
-     * PubmedWebsite constructor.
-     *
-     * @param $document
+     * Create search tree.
      */
-    public function __construct($document)
+    protected function getDataFromDocument()
     {
         $this->crawler = new Crawler();
-        $this->crawler->addHtmlContent($document);
-    }
-
-    /**
-     * @return array
-     */
-    public function extract(): array
-    {
-        $this->extractIdentifiersData();
-        $this->extractAffiliationsData();
-
-        return $this->output;
+        $this->crawler->addHtmlContent($this->document);
     }
 
     /**

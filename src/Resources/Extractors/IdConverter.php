@@ -4,23 +4,8 @@ namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 
-class IdConverter implements Extractor, ProvidesIdentifiersData
+class IdConverter extends Extractor implements ProvidesIdentifiersData
 {
-    /**
-     * @var array
-     */
-    protected $document;
-
-    /**
-     * @var array
-     */
-    protected $searchTree;
-
-    /**
-     * @var
-     */
-    protected $output;
-
     /**
      * @var array
      */
@@ -29,28 +14,6 @@ class IdConverter implements Extractor, ProvidesIdentifiersData
         'pmid' => 'pubmed',
         'doi' => 'doi',
     ];
-
-    /**
-     * IdConverter constructor.
-     *
-     * @param $document
-     */
-    public function __construct($document)
-    {
-        $this->document = $document;
-    }
-
-    /**
-     * @throws UnparseableApiException
-     * @return array
-     */
-    public function extract(): array
-    {
-        $this->getDataFromDocument();
-        $this->extractIdentifiersData();
-
-        return $this->output;
-    }
 
     /**
      * Extract search tree from document.

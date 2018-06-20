@@ -6,56 +6,8 @@ use PubPeerFoundation\PublicationDataExtractor\Support\UpdateTypesStandardiser;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 
-class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesUpdatesData
+class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesUpdatesData
 {
-    /**
-     * @var array
-     */
-    protected $document;
-
-    /**
-     * @var array
-     */
-    protected $searchTree;
-
-    /**
-     * @var array
-     */
-    protected $output = [];
-
-    /**
-     * Crossref constructor.
-     *
-     * @param $document
-     */
-    public function __construct($document)
-    {
-        $this->document = $document;
-    }
-
-    /**
-     * @throws UnparseableApiException
-     * @return array
-     */
-    public function extract(): array
-    {
-        $this->getDataFromDocument();
-
-        $this->extractAuthorsData();
-        $this->extractIdentifiersData();
-        try {
-            $this->extractJournalData();
-        } catch (JournalTitleNotFoundException $e) {
-            $this->searchTree['container-title'] = $this->searchTree['publisher'];
-        }
-        $this->extractPublicationData();
-        $this->extractTagsData();
-        $this->extractTypesData();
-        $this->extractUpdatesData();
-
-        return $this->output;
-    }
-
     /**
      * @throws UnparseableApiException
      */
@@ -112,15 +64,15 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
      */
     public function extractJournalData()
     {
-        if (empty($this->searchTree['container-title']) && empty($this->searchTree['ISSN'])) {
-            throw new JournalTitleNotFoundException();
-        }
-
         $this->output['journal'] = [
             'title' => get_string($this->searchTree, 'container-title'),
             'issn' => get_array($this->searchTree, 'ISSN'),
             'publisher' => get_string($this->searchTree, 'publisher'),
         ];
+
+        if (empty($this->searchTree['container-title']) && empty($this->searchTree['ISSN'])) {
+            throw new JournalTitleNotFoundException();
+        }
     }
 
     /**

@@ -11,6 +11,9 @@ class ApiDataChecker
      */
     const SCHEMA = [
         'root' => [
+            '_source' => [
+                '_type' => 'string',
+            ],
             'authors' => [
                 '_type' => 'nested_array',
                 'first_name' => [
@@ -22,8 +25,14 @@ class ApiDataChecker
                 'orcid' => [
                     '_type' => 'string',
                 ],
+                'email' => [
+                    '_type' => 'string',
+                ],
                 'affiliation' => [
                     '_type' => 'array',
+                    'name' => [
+                        '_type' => 'string',
+                    ],
                 ],
             ],
             'identifiers' => [

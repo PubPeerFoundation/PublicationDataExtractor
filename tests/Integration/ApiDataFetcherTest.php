@@ -303,7 +303,9 @@ class ApiDataFetcherTest extends TestCase
 
             $extracted = $dataFetcher->getData();
 
-            var_dump(count($extracted));
+            foreach ($extracted as $resource) {
+                $this->assertArrayIsValid($resource);
+            }
         }
     }
 }

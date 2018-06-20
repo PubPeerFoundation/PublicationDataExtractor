@@ -2,49 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData, ProvidesTypesData
+class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData, ProvidesTypesData
 {
-    /**
-     * @var array
-     */
-    protected $document;
-
-    /**
-     * @var array
-     */
-    protected $searchTree;
-
-    /**
-     * @var array
-     */
-    protected $output = [];
-
-    /**
-     * Arxiv constructor.
-     *
-     * @param $document
-     */
-    public function __construct($document)
-    {
-        $this->document = $document;
-    }
-
-    /**
-     * @return array
-     */
-    public function extract(): array
-    {
-        $this->getDataFromDocument();
-
-        $this->extractAuthorsData();
-        $this->extractIdentifiersData();
-        $this->extractJournalData();
-        $this->extractPublicationData();
-        $this->extractTypesData();
-
-        return $this->output;
-    }
-
     /**
      * Create search tree.
      */
