@@ -14,8 +14,12 @@ class Doi extends Identifier
         \PubPeerFoundation\PublicationDataExtractor\Resources\Crossref::class,
         \PubPeerFoundation\PublicationDataExtractor\Resources\PubmedWebsite::class,
         \PubPeerFoundation\PublicationDataExtractor\Resources\IdConverter::class,
+        \PubPeerFoundation\PublicationDataExtractor\Resources\EutilsEsearch::class,
     ];
 
+    /**
+     * @var array
+     */
     protected $complementaryResources = [
         'pubmed' => \PubPeerFoundation\PublicationDataExtractor\Resources\EutilsEfetch::class,
     ];
@@ -27,6 +31,9 @@ class Doi extends Identifier
      */
     protected $regex = '/\b(10[.][0-9]{3,}(?:[.][0-9]+)*\/(?:(?!["&\'])\S)+)\b/';
 
+    /**
+     * @var string
+     */
     protected $baseUrl = 'http://dx.doi.org/';
 
     /**

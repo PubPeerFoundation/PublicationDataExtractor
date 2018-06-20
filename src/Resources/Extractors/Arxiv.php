@@ -4,17 +4,34 @@ namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData, ProvidesTypesData
 {
-    private $document;
+    /**
+     * @var array
+     */
+    protected $document;
 
-    private $searchTree;
+    /**
+     * @var array
+     */
+    protected $searchTree;
 
-    private $output = [];
+    /**
+     * @var array
+     */
+    protected $output = [];
 
+    /**
+     * Arxiv constructor.
+     *
+     * @param $document
+     */
     public function __construct($document)
     {
         $this->document = $document;
     }
 
+    /**
+     * @return array
+     */
     public function extract(): array
     {
         $this->getDataFromDocument();
@@ -28,6 +45,9 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
         return $this->output;
     }
 
+    /**
+     * Create search tree.
+     */
     protected function getDataFromDocument()
     {
         $this->searchTree = $this->document->entry;
@@ -101,6 +121,9 @@ class Arxiv implements Extractor, ProvidesPublicationData, ProvidesIdentifiersDa
         ];
     }
 
+    /**
+     * @return mixed
+     */
     protected function getIdentifier()
     {
         $urlParts = explode('/', $this->searchTree->id[0]);

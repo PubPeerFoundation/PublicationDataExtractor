@@ -7,8 +7,14 @@ use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class EutilsEfetch implements Resource
 {
+    /**
+     * @var string
+     */
     protected $url = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi';
 
+    /**
+     * @var array
+     */
     protected $queryStringParameters = [
         'query' => [
             'db' => 'pubmed',
@@ -18,10 +24,11 @@ class EutilsEfetch implements Resource
         ],
     ];
 
-    protected $input;
-
-    protected $identifier;
-
+    /**
+     * EutilsEfetch constructor.
+     *
+     * @param Identifier $identifier
+     */
     public function __construct(Identifier $identifier)
     {
         $this->queryStringParameters['query']['id'] = $identifier->getQueryString();
@@ -52,7 +59,7 @@ class EutilsEfetch implements Resource
     {
         try {
             $baseTree = new SimpleXMLElement($document);
-            $extractor = new Extractors\EutilsEfetch($baseTree, $this->identifier);
+            $extractor = new Extractors\EutilsEfetch($baseTree);
 
             return $extractor->extract();
         } catch (\Exception $e) {

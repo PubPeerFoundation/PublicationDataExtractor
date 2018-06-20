@@ -23,7 +23,7 @@ class ApiDataFetcherTest extends TestCase
         $dataFetcher->fetch();
 
         // Assert
-        $this->assertCount(5, $dataFetcher->getData());
+        $this->assertCount(6, $dataFetcher->getData());
     }
 
     /**
@@ -40,7 +40,7 @@ class ApiDataFetcherTest extends TestCase
         $dataFetcher->fetch();
 
         // Assert
-        $this->assertCount(4, $extracted = $dataFetcher->getData());
+        $this->assertCount(5, $extracted = $dataFetcher->getData());
         $this->assertArrayIsValid($extracted);
     }
 
@@ -125,7 +125,7 @@ class ApiDataFetcherTest extends TestCase
         $dataFetcher->fetch();
 
         // Assert
-        $this->assertCount(4, $extracted = $dataFetcher->getData());
+        $this->assertCount(5, $extracted = $dataFetcher->getData());
 
         $merged = ApiDataMerger::handle($extracted);
         $identifiers = array_merge(...$merged['identifiers']);

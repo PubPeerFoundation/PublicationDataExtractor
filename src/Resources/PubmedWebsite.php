@@ -6,18 +6,25 @@ use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class PubmedWebsite implements Resource
 {
+    /**
+     * @var string
+     */
     protected $url = 'https://www.ncbi.nlm.nih.gov/pubmed/';
 
+    /**
+     * @var array
+     */
     protected $queryStringParameters = [
         'query' => [
             'term' => '',
         ],
     ];
 
-    protected $input;
-
-    protected $identifier;
-
+    /**
+     * PubmedWebsite constructor.
+     *
+     * @param Identifier $identifier
+     */
     public function __construct(Identifier $identifier)
     {
         $this->queryStringParameters['query']['term'] = $identifier->getQueryString();

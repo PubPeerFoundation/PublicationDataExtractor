@@ -8,17 +8,35 @@ use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundEx
 
 class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesUpdatesData
 {
+    /**
+     * @var array
+     */
     protected $document;
 
+    /**
+     * @var array
+     */
     protected $searchTree;
 
+    /**
+     * @var array
+     */
     protected $output = [];
 
+    /**
+     * Crossref constructor.
+     *
+     * @param $document
+     */
     public function __construct($document)
     {
         $this->document = $document;
     }
 
+    /**
+     * @throws UnparseableApiException
+     * @return array
+     */
     public function extract(): array
     {
         $this->getDataFromDocument();
@@ -38,6 +56,9 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
         return $this->output;
     }
 
+    /**
+     * @throws UnparseableApiException
+     */
     protected function getDataFromDocument()
     {
         if ('ok' !== $this->document['status']) {
@@ -144,15 +165,10 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
         }
     }
 
-    protected function extractDateFrom($array)
-    {
-        $datePartsContainer = array_values(array_filter($array, function ($string) {
-            return isset($this->searchTree[$string]);
-        }))[0];
-
-        return date_from_parts($this->searchTree[$datePartsContainer]['date-parts'][0]);
-    }
-
+    /**
+     * Extract and format data needed for the Updates Relationship
+     * on the Publication Model.
+     */
     public function extractUpdatesData()
     {
         foreach (get_array($this->searchTree, 'update-to') as $update) {
@@ -164,5 +180,18 @@ class Crossref implements Extractor, ProvidesPublicationData, ProvidesIdentifier
                 'type' => UpdateTypesStandardiser::getType($update['type']),
             ];
         }
+    }
+
+    /**
+     * @param $array
+     * @return mixed
+     */
+    protected function extractDateFrom($array)
+    {
+        $datePartsContainer = array_values(array_filter($array, function ($string) {
+            return isset($this->searchTree[$string]);
+        }))[0];
+
+        return date_from_parts($this->searchTree[$datePartsContainer]['date-parts'][0]);
     }
 }

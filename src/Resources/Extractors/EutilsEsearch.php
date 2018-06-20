@@ -4,15 +4,15 @@ namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 
-class IdConverter implements Extractor, ProvidesIdentifiersData
+class EutilsEsearch implements Extractor, ProvidesIdentifiersData
 {
     /**
-     * @var array
+     * @var
      */
     protected $document;
 
     /**
-     * @var array
+     * @var
      */
     protected $searchTree;
 
@@ -22,16 +22,7 @@ class IdConverter implements Extractor, ProvidesIdentifiersData
     protected $output;
 
     /**
-     * @var array
-     */
-    protected $typeMap = [
-        'pmcid' => 'pmc',
-        'pmid' => 'pubmed',
-        'doi' => 'doi',
-    ];
-
-    /**
-     * IdConverter constructor.
+     * EutilsEsearch constructor.
      *
      * @param $document
      */
@@ -59,15 +50,11 @@ class IdConverter implements Extractor, ProvidesIdentifiersData
      */
     protected function getDataFromDocument()
     {
-        if ('ok' !== $this->document['status']) {
+        if ($this->document['esearchresult']['count'] !== '1') {
             throw new UnparseableApiException();
         }
 
-        if (isset($this->document['records'][0]['status']) && 'error' === $this->document['records'][0]['status']) {
-            throw new UnparseableApiException();
-        }
-
-        $this->searchTree = $this->document['records'][0];
+        $this->searchTree = $this->document['esearchresult'];
     }
 
     /**
@@ -76,13 +63,11 @@ class IdConverter implements Extractor, ProvidesIdentifiersData
      */
     public function extractIdentifiersData()
     {
-        foreach ($this->searchTree as $type => $identifier) {
-            if (array_key_exists($type, $this->typeMap)) {
-                $this->output['identifiers'][] = [
-                    'value' => $identifier,
-                    'type' => $this->typeMap[$type],
-                ];
-            }
+        foreach ($this->searchTree['idlist'] as $identifier) {
+            $this->output['identifiers'][] = [
+                'value' => stringify($identifier),
+                'type' => 'pubmed',
+            ];
         }
     }
 }

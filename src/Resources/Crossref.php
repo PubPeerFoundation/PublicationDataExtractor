@@ -7,20 +7,34 @@ use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiExceptio
 
 class Crossref implements Resource
 {
+    /**
+     * @var string
+     */
     protected $url = 'https://api.crossref.org/works/';
 
+    /**
+     * @var array
+     */
     protected $queryStringParameters = [
         'headers' => [
             'User-Agent'    =>  'PubPeer/2.0 (https://pubpeer.com; mailto:contact@pubpeer.com)',
         ],
     ];
 
-    protected $input;
-
+    /**
+     * @var Identifier
+     */
     protected $identifier;
 
+    /**
+     * @var string
+     */
     protected $extractor = Extractors\Crossref::class;
 
+    /**
+     * Crossref constructor.
+     * @param Identifier $identifier
+     */
     public function __construct(Identifier $identifier)
     {
         $this->identifier = $identifier;

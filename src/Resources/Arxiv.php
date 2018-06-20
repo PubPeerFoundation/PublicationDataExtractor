@@ -7,18 +7,24 @@ use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class Arxiv implements Resource
 {
+    /**
+     * @var string
+     */
     protected $url = 'http://export.arxiv.org/api/query';
 
+    /**
+     * @var array
+     */
     protected $queryStringParameters = [
         'query' => [
             'id_list' => '',
         ],
     ];
 
-    protected $input;
-
-    protected $identifier;
-
+    /**
+     * Arxiv constructor.
+     * @param Identifier $identifier
+     */
     public function __construct(Identifier $identifier)
     {
         $this->queryStringParameters['query']['id_list'] = $identifier->getQueryString();

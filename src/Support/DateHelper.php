@@ -6,6 +6,10 @@ use Carbon\Carbon;
 
 class DateHelper
 {
+    /**
+     * @param  array        $parts
+     * @return mixed|string
+     */
     public static function dateFromDateParts(array $parts)
     {
         if (empty($parts)) {
@@ -18,11 +22,19 @@ class DateHelper
         );
     }
 
+    /**
+     * @param $formattedDate
+     * @return string
+     */
     public static function dateFromParseableFormat($formattedDate)
     {
         return Carbon::parse($formattedDate)->format('Y-m-d');
     }
 
+    /**
+     * @param $pubDateObject
+     * @return mixed|string
+     */
     public static function dateFromPubDate($pubDateObject)
     {
         if (! isset($pubDateObject->Year) || empty($pubDateObject->Year)) {
@@ -38,6 +50,10 @@ class DateHelper
         ), static::countObjectParts($pubDateObject));
     }
 
+    /**
+     * @param $pubDateObject
+     * @return int|string
+     */
     protected static function getPubDateMonth($pubDateObject)
     {
         if (! isset($pubDateObject->Month)) {
@@ -49,6 +65,11 @@ class DateHelper
             : $pubDateObject->Month;
     }
 
+    /**
+     * @param $date
+     * @param $count
+     * @return mixed
+     */
     protected static function formatForParts($date, $count)
     {
         $partsToFormat = [
@@ -60,6 +81,10 @@ class DateHelper
         return $date->format($partsToFormat[$count]);
     }
 
+    /**
+     * @param $pubDateObject
+     * @return mixed
+     */
     protected static function countObjectParts($pubDateObject)
     {
         return array_reduce(['Year', 'Month', 'Day'], function ($carry, $datePart) use ($pubDateObject) {

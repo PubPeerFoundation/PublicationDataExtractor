@@ -21,6 +21,9 @@ class Figshare extends Doi
         }
     }
 
+    /**
+     * Extract and format data needed for the Publication Model.
+     */
     public function extractPublicationData()
     {
         parent::extractPublicationData();

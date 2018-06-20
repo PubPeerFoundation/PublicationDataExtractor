@@ -6,6 +6,9 @@ use Volan\Volan;
 
 class ApiDataChecker
 {
+    /**
+     * Array validation schema.
+     */
     const SCHEMA = [
         'root' => [
             'authors' => [
@@ -95,6 +98,10 @@ class ApiDataChecker
         ],
     ];
 
+    /**
+     * @param $data
+     * @return \Volan\ValidatorResult
+     */
     public static function check($data)
     {
         $validator = new Volan(static::SCHEMA);

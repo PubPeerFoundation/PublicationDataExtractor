@@ -4,6 +4,9 @@ namespace PubPeerFoundation\PublicationDataExtractor\Support;
 
 class UpdateTypesStandardiser
 {
+    /**
+     * Array map of what should be replaced.
+     */
     const TYPES_MAP = [
         'comment' => 'Comment',
         'corrected-article' => 'Corrected',
@@ -27,6 +30,10 @@ class UpdateTypesStandardiser
         'new_version' => 'New Version',
     ];
 
+    /**
+     * @param $type
+     * @return mixed
+     */
     public static function getType($type)
     {
         if (! isset(self::TYPES_MAP[$type])) {

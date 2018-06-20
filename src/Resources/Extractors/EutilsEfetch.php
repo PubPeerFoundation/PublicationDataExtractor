@@ -4,19 +4,34 @@ namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData
 {
-    private $document;
+    /**
+     * @var array
+     */
+    protected $document;
 
-    private $searchTree;
+    /**
+     * @var array
+     */
+    protected $searchTree;
 
-    private $output = [];
-    private $identifier;
+    /**
+     * @var array
+     */
+    protected $output = [];
 
-    public function __construct($document, $identifier)
+    /**
+     * EutilsEfetch constructor.
+     *
+     * @param $document
+     */
+    public function __construct($document)
     {
         $this->document = $document;
-        $this->identifier = $identifier;
     }
 
+    /**
+     * @return array
+     */
     public function extract(): array
     {
         $this->getDataFromDocument();
@@ -29,6 +44,9 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
         return $this->output;
     }
 
+    /**
+     * Create search tree.
+     */
     protected function getDataFromDocument()
     {
         $this->searchTree = $this->document->{'PubmedArticle'};
@@ -97,6 +115,11 @@ class EutilsEfetch implements Extractor, ProvidesPublicationData, ProvidesIdenti
         }
     }
 
+    /**
+     * Get all available ISSNs values from the tree.
+     *
+     * @return array
+     */
     protected function getIssns()
     {
         $issn = [];

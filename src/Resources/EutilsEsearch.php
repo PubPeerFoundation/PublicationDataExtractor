@@ -4,33 +4,34 @@ namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
-class IdConverter implements Resource
+class EutilsEsearch implements Resource
 {
     /**
      * @var string
      */
-    protected $url = 'https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/';
+    protected $url = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi';
 
     /**
      * @var array
      */
     protected $queryStringParameters = [
         'query' => [
-            'format' => 'json',
-            'tool' => 'pubpeer',
-            'email' => 'contact@pubpeer.com',
-            'version' => 'no',
-            'ids' => '',
+            'db' => 'pubmed',
+            'version' => '2.0',
+            'retmode' => 'json',
+            'term' => '',
+            'field' => 'AID',
         ],
     ];
 
     /**
-     * IdConverter constructor.
+     * EutilsEsearch constructor.
+     *
      * @param Identifier $identifier
      */
     public function __construct(Identifier $identifier)
     {
-        $this->queryStringParameters['query']['ids'] = $identifier->getQueryString();
+        $this->queryStringParameters['query']['term'] = $identifier->getQueryString();
     }
 
     /**
@@ -50,14 +51,15 @@ class IdConverter implements Resource
     }
 
     /**
-     * @param  string $document
+     * @param string $document
+     *
      * @return array
      */
     public function getDataFrom(string $document): array
     {
         try {
             $baseTree = json_decode($document, true);
-            $extractor = new Extractors\IdConverter($baseTree);
+            $extractor = new Extractors\EutilsEsearch($baseTree);
 
             return $extractor->extract();
         } catch (\Exception $e) {

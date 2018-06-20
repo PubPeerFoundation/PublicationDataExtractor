@@ -13,18 +13,41 @@ use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class ApiDataFetcher
 {
+    /**
+     * @var Identifier
+     */
     protected $identifier;
 
+    /**
+     * @var \GuzzleHttp\Client
+     */
     protected $client;
 
-    protected $apiData;
+    /**
+     * @var array
+     */
+    protected $apiData = [];
 
+    /**
+     * @var array
+     */
     protected $resources = [];
 
+    /**
+     * @var array
+     */
     protected $resourcesToFetch = [];
 
+    /**
+     * @var array
+     */
     protected $errors = [];
 
+    /**
+     * ApiDataFetcher constructor.
+     *
+     * @param Identifier $identifier
+     */
     public function __construct(Identifier $identifier)
     {
         $this->identifier = $identifier;
@@ -70,6 +93,11 @@ class ApiDataFetcher
         }
     }
 
+    /**
+     * Get the whole data array.
+     *
+     * @return array
+     */
     public function getData(): array
     {
         if (0 === count(array_filter(Arr::pluck($this->apiData, 'publication')))) {
@@ -83,6 +111,11 @@ class ApiDataFetcher
         );
     }
 
+    /**
+     * Get errors as array.
+     *
+     * @return array
+     */
     public function getErrors(): array
     {
         return $this->errors;
@@ -112,6 +145,9 @@ class ApiDataFetcher
         return $this->resources[] = new $resourceClass($this->identifier);
     }
 
+    /**
+     * Fetch again with new related Identifiers.
+     */
     protected function fetchComplementaryData()
     {
         $flatIdentifiers = Arr::flatten(Arr::pluck($this->apiData, 'identifiers'));
@@ -126,7 +162,7 @@ class ApiDataFetcher
 
                     $this->fetch();
                 } catch (Exceptions\UnknownIdentifierException $e) {
-                    var_dump('an error occured');
+                    continue;
                 }
             }
         }
