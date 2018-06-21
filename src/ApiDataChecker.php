@@ -118,4 +118,9 @@ class ApiDataChecker
 
         return $result;
     }
+
+    public static function getDataTypes()
+    {
+        return array_slice(array_keys(ApiDataChecker::SCHEMA['root']), 1);
+    }
 }

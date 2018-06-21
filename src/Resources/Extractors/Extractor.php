@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
+use PubPeerFoundation\PublicationDataExtractor\Models\Output;
 use PubPeerFoundation\PublicationDataExtractor\ApiDataChecker;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 
@@ -41,7 +42,7 @@ abstract class Extractor
     {
         $this->getDataFromDocument();
 
-        foreach ($this->dataTypes() as $type) {
+        foreach (ApiDataChecker::getDataTypes() as $type) {
             $class = __NAMESPACE__.'\\Provides'.ucfirst($type).'Data';
 
             if ($this instanceof $class) {
@@ -53,20 +54,37 @@ abstract class Extractor
                 }
             }
         }
+//        if (isset($this->output['identifiers'])) {
+//            Output::getInstance()->addIdentifiers($this->output['identifiers']);
+//        }
+//        if (isset($this->output['publication'])) {
+//            Output::getInstance()->addPublication($this->output['publication']);
+//        }
+//        if (isset($this->output['journal'])) {
+//            Output::getInstance()->addJournal($this->output['journal']);
+//        }
+//        if (isset($this->output['affiliations'])) {
+//            Output::getInstance()->addAffiliations($this->output['affiliations']);
+//        }
+//        if (isset($this->output['types'])) {
+//            Output::getInstance()->addTypes($this->output['types']);
+//        }
+//        if (isset($this->output['tags'])) {
+//            Output::getInstance()->addTags($this->output['tags']);
+//        }
+//        if (isset($this->output['authors'])) {
+//            Output::getInstance()->addAuthors($this->output['authors']);
+//        }
+        foreach (ApiDataChecker::getDataTypes() as $type) {
+            if (isset($this->output[$type])) {
+                $method = 'add'.ucfirst($type);
+                Output::getInstance()->$method($this->output[$type]);
+            }
+        }
 
         $this->addOutputSource();
 
         return $this->output;
-    }
-
-    /**
-     * Get a list of data Types from Schema.
-     *
-     * @return array
-     */
-    protected function dataTypes(): array
-    {
-        return array_slice(array_keys(ApiDataChecker::SCHEMA['root']), 1);
     }
 
     /**

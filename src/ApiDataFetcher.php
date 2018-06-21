@@ -8,6 +8,7 @@ use GuzzleHttp\Promise\EachPromise;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 use GrahamCampbell\GuzzleFactory\GuzzleFactory;
+use PubPeerFoundation\PublicationDataExtractor\Models\Output;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Resource;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
@@ -106,9 +107,7 @@ class ApiDataFetcher
 
         $this->fetchComplementaryData();
 
-        return array_values(
-            array_filter($this->apiData)
-        );
+        return Output::getInstance()->format();
     }
 
     /**

@@ -102,7 +102,9 @@ if (! function_exists('stringify')) {
         }
 
         if (is_array($data)) {
-            return stringify($data[0]);
+            $data = array_filter($data);
+
+            return stringify(array_shift($data));
         }
 
         return (string) trim($data);
