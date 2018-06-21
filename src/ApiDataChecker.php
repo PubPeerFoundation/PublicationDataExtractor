@@ -121,6 +121,6 @@ class ApiDataChecker
 
     public static function getDataTypes()
     {
-        return array_slice(array_keys(ApiDataChecker::SCHEMA['root']), 1);
+        return array_slice(array_keys(self::SCHEMA['root']), 1);
     }
 }
