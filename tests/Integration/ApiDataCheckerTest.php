@@ -66,7 +66,7 @@ class ApiDataCheckerTest extends TestCase
         'publication' => [
             'title' => 'Simultaneous Induction of Non-Canonical Autophagy and Apoptosis in Cancer Cells by ROS-Dependent ERK and JNK Activation',
             'abstract' => null,
-            'url' => 'http://dx.doi.org/10.1371/journal.pone.0009996',
+            'url' => 'https://doi.org/10.1371/journal.pone.0009996',
             'published_at' => '2010-04-02',
         ],
         'types' => [
