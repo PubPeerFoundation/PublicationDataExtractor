@@ -83,7 +83,7 @@
     "timestamp": 1513972039000
   },
   "page": "313",
-  "update-policy": "http://dx.doi.org/10.1016/elsevier_cm_policy",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
   "source": "Crossref",
   "is-referenced-by-count": 0,
   "title": "Retraction notice to “Increased Ras GTPase activity is regulated by miRNAs that can be attenuated by CDF treatment in pancreatic cancer cells” [Cancer Lett. 319(2) (2012) 173–181]",
@@ -169,7 +169,7 @@
   "alternative-id": [
     "S030438351730753X"
   ],
-  "URL": "http://dx.doi.org/10.1016/j.canlet.2017.11.030",
+  "URL": "https://doi.org/10.1016/j.canlet.2017.11.030",
   "relation": {},
   "ISSN": [
     "0304-3835"
@@ -196,12 +196,12 @@
       "label": "Journal Title"
     },
     {
-      "value": "http://dx.doi.org/10.1016/j.canlet.2017.11.030",
+      "value": "https://doi.org/10.1016/j.canlet.2017.11.030",
       "name": "articlelink",
       "label": "CrossRef DOI link to publisher maintained version"
     },
     {
-      "value": "http://dx.doi.org/10.1016/j.canlet.2012.01.013",
+      "value": "https://doi.org/10.1016/j.canlet.2012.01.013",
       "name": "associatedlink",
       "label": "CrossRef DOI link to the associated document"
     },

@@ -34,7 +34,7 @@ class Doi extends Identifier
     /**
      * @var string
      */
-    protected $baseUrl = 'http://dx.doi.org/';
+    protected $baseUrl = 'https://doi.org/';
 
     /**
      * QueryString getter.

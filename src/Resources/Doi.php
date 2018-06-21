@@ -9,7 +9,7 @@ class Doi extends Crossref
      *
      * @var string
      */
-    protected $url = 'http://dx.doi.org/';
+    protected $url = 'https://doi.org/';
 
     /**
      * Parameters needed for the query.
