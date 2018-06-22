@@ -101,27 +101,4 @@ class DoiDataExtractorTest extends TestCase
 
         $this->assertArrayIsValid($extracted);
     }
-
-    /** @test */
-    public function it_can_extract_updates_from_crossref_api()
-    {
-        // Arrange
-        $file = $this->loadJson('Doi/valid-with-updates-article');
-
-        // Act
-        $extracted = (new Doi($file, new Output()))->extract();
-
-        // Assert
-        $this->assertArraySubset([
-            [
-                'timestamp' => '1517443200000',
-                'identifier' => [
-                    'doi' => '10.1016/j.canlet.2012.01.013',
-                ],
-                'type' => 'Erratum',
-            ],
-        ], $extracted['updates']);
-
-        $this->assertArrayIsValid($extracted);
-    }
 }

@@ -2,11 +2,10 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Support\UpdateTypesStandardiser;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 
-class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesUpdatesData
+class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesTagsData
 {
     /**
      * @throws UnparseableApiException
@@ -108,28 +107,11 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
      * Extract and format data needed for the tags Relationship
      * on the Publication Model.
      */
-    public function extractTagsData()
+    public function extractTagsData(): void
     {
         foreach (get_array($this->searchTree, 'subject') as $tag) {
             $this->resourceOutput['tags'][] = [
                 'name' => $tag,
-            ];
-        }
-    }
-
-    /**
-     * Extract and format data needed for the Updates Relationship
-     * on the Publication Model.
-     */
-    public function extractUpdatesData(): void
-    {
-        foreach (get_array($this->searchTree, 'update-to') as $update) {
-            $this->resourceOutput['updates'][] = [
-                'timestamp' => $update['updated']['timestamp'],
-                'identifier' => [
-                    'doi' => get_string($update, 'DOI'),
-                ],
-                'type' => UpdateTypesStandardiser::getType($update['type']),
             ];
         }
     }

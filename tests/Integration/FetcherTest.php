@@ -15,7 +15,7 @@ class FetcherTest extends TestCase
     public function it_fetches_data_from_a_doi_identifier()
     {
         // Arrange
-        $identifier = new IdentifierResolver('10.1152/jn.00446.2010');
+        $identifier = new IdentifierResolver('29358649');
         $dataFetcher = new Fetcher($identifier->handle());
 
         // Act
@@ -128,5 +128,21 @@ class FetcherTest extends TestCase
         $this->assertCount(1, array_filter($extracted['identifiers'], function ($identifier) {
             return 'pubmed' === $identifier['type'];
         }));
+    }
+
+    /** @test */
+    public function it_can_extract_updates_from_crossref_updates()
+    {
+        // Arrange
+        $identifier = new IdentifierResolver('10.1038/s41588-017-0029-0');
+        $dataFetcher = new Fetcher($identifier->handle());
+
+        // Act
+        $output = $dataFetcher->fetch();
+
+        // Assert
+        $extracted = $output->getData();
+
+        $this->assertGreaterThan(0, $extracted['updates']);
     }
 }

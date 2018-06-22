@@ -6,6 +6,7 @@ use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\CrossrefUpdates;
 
 class CrossrefDataExtractorTest extends TestCase
 {
@@ -106,16 +107,16 @@ class CrossrefDataExtractorTest extends TestCase
         $file = $this->loadJson('Crossref/valid-with-updates-article');
 
         // Act
-        $extracted = (new Crossref($file, new Output()))->extract();
+        $extracted = (new CrossrefUpdates($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([
             [
-                'timestamp' => '1517443200000',
+                'timestamp' => '1524096000000',
                 'identifier' => [
-                    'doi' => '10.1016/j.canlet.2012.01.013',
+                    'doi' => '10.1038/s41588-017-0029-0',
                 ],
-                'type' => 'Erratum',
+                'type' => 'Corrected',
             ],
         ], $extracted['updates']);
     }
