@@ -16,8 +16,10 @@ class DateHelper
             return '';
         }
 
+        list($year, $month, $day) = array_merge($parts, [1, 1, 1]);
+
         return static::formatForParts(
-            Carbon::createFromDate(...array_merge($parts, [1, 1, 1])),
+            Carbon::createFromDate($year, $month, $day),
             count($parts)
         );
     }
