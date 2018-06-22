@@ -2,27 +2,14 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 
 class CrossrefDataExtractorTest extends TestCase
 {
     use TestHelpers;
-
-    /** @test */
-    public function it_throws_an_exception_if_status_is_not_ok()
-    {
-        // Arrange
-        $file = $this->loadJson('Crossref/not-ok-article');
-
-        // Assert
-        $this->expectException(UnparseableApiException::class);
-
-        // Act
-        (new Crossref($file))->extract();
-    }
 
     /** @test */
     public function it_can_extract_publication_data_from_crossref_api()
@@ -31,7 +18,7 @@ class CrossrefDataExtractorTest extends TestCase
         $file = $this->loadJson('Crossref/valid-article');
 
         // Act
-        $extracted = (new Crossref($file))->extract();
+        $extracted = (new Crossref($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([
@@ -51,7 +38,7 @@ class CrossrefDataExtractorTest extends TestCase
         $file = $this->loadJson('Crossref/valid-article');
 
         // Act
-        $extracted = (new Crossref($file))->extract();
+        $extracted = (new Crossref($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([
@@ -77,7 +64,7 @@ class CrossrefDataExtractorTest extends TestCase
         $file = $this->loadJson('Crossref/valid-with-orcid-article');
 
         // Act
-        $extracted = (new Crossref($file))->extract();
+        $extracted = (new Crossref($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([
@@ -119,7 +106,7 @@ class CrossrefDataExtractorTest extends TestCase
         $file = $this->loadJson('Crossref/valid-with-updates-article');
 
         // Act
-        $extracted = (new Crossref($file))->extract();
+        $extracted = (new Crossref($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([

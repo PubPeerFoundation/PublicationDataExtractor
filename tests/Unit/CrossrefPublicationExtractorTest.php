@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
@@ -14,7 +15,7 @@ class CrossrefPublicationExtractorTest extends TestCase
     public function it_can_extract_a_title_as_an_array()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'title' => ['blabla'],
@@ -41,13 +42,13 @@ class CrossrefPublicationExtractorTest extends TestCase
                 'url'   =>  'bloblo',
                 'published_at'  =>  '2010-12',
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_can_extract_a_title_as_a_string()
     {
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'title' => 'blabla',
@@ -74,6 +75,6 @@ class CrossrefPublicationExtractorTest extends TestCase
                 'url'   =>  'bloblo',
                 'published_at'  =>  '2010-12',
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 }

@@ -2,11 +2,11 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Fetcher;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
-use PubPeerFoundation\PublicationDataExtractor\ApiDataFetcher;
 use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
 
-class ApiDataFetcherTest extends TestCase
+class FetcherTest extends TestCase
 {
     /**
      * @test
@@ -16,13 +16,13 @@ class ApiDataFetcherTest extends TestCase
     {
         // Arrange
         $identifier = new IdentifierResolver('10.1152/jn.00446.2010');
-        $dataFetcher = new ApiDataFetcher($identifier->handle());
+        $dataFetcher = new Fetcher($identifier->handle());
 
         // Act
-        $dataFetcher->fetch();
+        $output = $dataFetcher->fetch();
 
         // Assert
-        $this->assertArrayIsValid($dataFetcher->getData());
+        $this->assertArrayIsValid($output->getData());
     }
 
     /**
@@ -33,13 +33,13 @@ class ApiDataFetcherTest extends TestCase
     {
         // Arrange
         $identifier = new IdentifierResolver('10.1038/s41591-018-0049-z');
-        $dataFetcher = new ApiDataFetcher($identifier->handle());
+        $dataFetcher = new Fetcher($identifier->handle());
 
         // Act
-        $dataFetcher->fetch();
+        $output = $dataFetcher->fetch();
 
         // Assert
-        $this->assertArrayIsValid($dataFetcher->getData());
+        $this->assertArrayIsValid($output->getData());
     }
 
     /**
@@ -50,13 +50,13 @@ class ApiDataFetcherTest extends TestCase
     {
         // Arrange
         $identifier = new IdentifierResolver('1708.03486');
-        $dataFetcher = new ApiDataFetcher($identifier->handle());
+        $dataFetcher = new Fetcher($identifier->handle());
 
         // Act
-        $dataFetcher->fetch();
+        $output = $dataFetcher->fetch();
 
         // Assert
-        $this->assertArrayIsValid($dataFetcher->getData());
+        $this->assertArrayIsValid($output->getData());
     }
 
     /**
@@ -67,13 +67,13 @@ class ApiDataFetcherTest extends TestCase
     {
         // Arrange
         $identifier = new IdentifierResolver('13054692');
-        $dataFetcher = new ApiDataFetcher($identifier->handle());
+        $dataFetcher = new Fetcher($identifier->handle());
 
         // Act
-        $dataFetcher->fetch();
+        $output = $dataFetcher->fetch();
 
         // Assert
-        $this->assertArrayIsValid($dataFetcher->getData());
+        $this->assertArrayIsValid($output->getData());
     }
 
     /**
@@ -84,13 +84,13 @@ class ApiDataFetcherTest extends TestCase
     {
         // Arrange
         $identifier = new IdentifierResolver('10.4337/9781783475360');
-        $dataFetcher = new ApiDataFetcher($identifier->handle());
+        $dataFetcher = new Fetcher($identifier->handle());
 
         // Act
-        $dataFetcher->fetch();
+        $output = $dataFetcher->fetch();
 
         // Assert
-        $this->assertArrayIsValid($dataFetcher->getData());
+        $this->assertArrayIsValid($output->getData());
     }
 
     /**
@@ -101,14 +101,14 @@ class ApiDataFetcherTest extends TestCase
     {
         // Arrange
         $identifier = new IdentifierResolver('10.1023/B');
-        $dataFetcher = new ApiDataFetcher($identifier->handle());
+        $dataFetcher = new Fetcher($identifier->handle());
 
         // Act
-        $dataFetcher->fetch();
+        $output = $dataFetcher->fetch();
         $errors = $dataFetcher->getErrors();
 
         // Assert
-        $this->assertEmpty($dataFetcher->getData());
+        $this->assertEmpty($output->getData());
         $this->assertArraySubset(['Doi' => 404, 'Crossref' => 404], $errors);
     }
 
@@ -117,13 +117,13 @@ class ApiDataFetcherTest extends TestCase
     {
         // Arrange
         $identifier = new IdentifierResolver('10.1371/journal.pone.0009996');
-        $dataFetcher = new ApiDataFetcher($identifier->handle());
+        $dataFetcher = new Fetcher($identifier->handle());
 
         // Act
-        $dataFetcher->fetch();
+        $output = $dataFetcher->fetch();
 
         // Assert
-        $extracted = $dataFetcher->getData();
+        $extracted = $output->getData();
 
         $this->assertCount(1, array_filter($extracted['identifiers'], function ($identifier) {
             return 'pubmed' === $identifier['type'];

@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Arxiv;
 use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
@@ -15,7 +16,7 @@ class ArxivResourceTest extends TestCase
         $identifier = (new IdentifierResolver('1708.03486v2'))->handle();
 
         // Act
-        $result = (new Arxiv($identifier))->getDataFrom('');
+        $result = (new Arxiv($identifier, new Output()))->getDataFrom('');
 
         // Assert
         $this->assertEmpty($result);

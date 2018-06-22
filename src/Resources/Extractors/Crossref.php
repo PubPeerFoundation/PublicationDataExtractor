@@ -11,7 +11,7 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
     /**
      * @throws UnparseableApiException
      */
-    protected function getDataFromDocument()
+    protected function fillSearchTree(): void
     {
         if ('ok' !== $this->document['status']) {
             throw new UnparseableApiException();
@@ -23,11 +23,11 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
     /**
      * Extract and format data needed for the Publication Model.
      */
-    public function extractPublicationData()
+    public function extractPublicationData(): void
     {
         $date = $this->extractDateFrom(['published-print', 'published-online', 'issued']);
 
-        $this->output['publication'] = [
+        $this->resourceOutput['publication'] = [
             'title' => get_string($this->searchTree, 'title'),
             'abstract' => get_string($this->searchTree, 'abstract'),
             'url' => $this->searchTree['URL'] ?? null,
@@ -39,17 +39,17 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
      * Extract and format data needed for the Identifiers Relationship
      * on the Publication Model.
      */
-    public function extractIdentifiersData()
+    public function extractIdentifiersData(): void
     {
         if (! empty($this->searchTree['DOI'])) {
-            $this->output['identifiers'][] = [
+            $this->resourceOutput['identifiers'][] = [
                 'value' => $this->searchTree['DOI'],
                 'type' => 'doi',
             ];
         }
 
         foreach (get_array($this->searchTree, 'ISSN') as $issn) {
-            $this->output['identifiers'][] = [
+            $this->resourceOutput['identifiers'][] = [
                 'value' => $issn,
                 'type' => 'issn',
             ];
@@ -62,9 +62,9 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
      *
      * @throws JournalTitleNotFoundException
      */
-    public function extractJournalData()
+    public function extractJournalData(): void
     {
-        $this->output['journal'] = [
+        $this->resourceOutput['journal'] = [
             'title' => get_string($this->searchTree, 'container-title'),
             'issn' => get_array($this->searchTree, 'ISSN'),
             'publisher' => get_string($this->searchTree, 'publisher'),
@@ -79,11 +79,11 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
      * Extract and format data needed for the Authors Relationship
      * on the Publication Model.
      */
-    public function extractAuthorsData()
+    public function extractAuthorsData(): void
     {
         foreach (get_array($this->searchTree, 'author') as $author) {
             if (isset($author['family'])) {
-                $this->output['authors'][] = [
+                $this->resourceOutput['authors'][] = [
                     'first_name' => get_string($author, 'given'),
                     'last_name' => get_string($author, 'family'),
                     'orcid' => get_string($author, 'ORCID'),
@@ -99,7 +99,7 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
      */
     public function extractTypesData()
     {
-        $this->output['types'][] = [
+        $this->resourceOutput['types'][] = [
             'name' => get_string($this->searchTree, 'type'),
         ];
     }
@@ -111,7 +111,7 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
     public function extractTagsData()
     {
         foreach (get_array($this->searchTree, 'subject') as $tag) {
-            $this->output['tags'][] = [
+            $this->resourceOutput['tags'][] = [
                 'name' => $tag,
             ];
         }
@@ -121,10 +121,10 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
      * Extract and format data needed for the Updates Relationship
      * on the Publication Model.
      */
-    public function extractUpdatesData()
+    public function extractUpdatesData(): void
     {
         foreach (get_array($this->searchTree, 'update-to') as $update) {
-            $this->output['updates'][] = [
+            $this->resourceOutput['updates'][] = [
                 'timestamp' => $update['updated']['timestamp'],
                 'identifier' => [
                     'doi' => get_string($update, 'DOI'),

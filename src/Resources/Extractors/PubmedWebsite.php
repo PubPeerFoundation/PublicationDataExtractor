@@ -24,12 +24,12 @@ class PubmedWebsite extends Extractor implements ProvidesIdentifiersData, Provid
      * Extract and format data needed for the Identifiers Relationship
      * on the Publication Model.
      */
-    public function extractIdentifiersData()
+    public function extractIdentifiersData(): void
     {
         $pubmed = stringify($this->crawler->evaluate('string(//input[@id="absid"]/@value)'));
 
         if (! empty($pubmed)) {
-            $this->output['identifiers'][] = [
+            $this->resourceOutput['identifiers'][] = [
                 'value' => $pubmed,
                 'type' => 'pubmed',
             ];
@@ -40,12 +40,12 @@ class PubmedWebsite extends Extractor implements ProvidesIdentifiersData, Provid
      * Extract and format data needed for the Affiliations Relationship
      * on the Publication Model.
      */
-    public function extractAffiliationsData()
+    public function extractAffiliationsData(): void
     {
         $affiliations = $this->crawler->evaluate('//div[@class="afflist"]/dl/dd');
 
         foreach ($affiliations as $affiliation) {
-            $this->output['affiliations'][] = [
+            $this->resourceOutput['affiliations'][] = [
                 'name' => (string) $affiliation->textContent,
             ];
         }

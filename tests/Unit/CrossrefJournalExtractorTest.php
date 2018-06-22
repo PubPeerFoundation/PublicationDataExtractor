@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
@@ -14,7 +15,7 @@ class CrossrefJournalExtractorTest extends TestCase
     public function it_will_extract_an_ISSN_as_an_array()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'container-title' => 'blabla',
@@ -32,14 +33,14 @@ class CrossrefJournalExtractorTest extends TestCase
                 'issn' => ['4561-1234'],
                 'publisher' => 'blibli',
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_will_extract_multiple_ISSNs_as_an_array()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'container-title' => 'blabla',
@@ -63,14 +64,14 @@ class CrossrefJournalExtractorTest extends TestCase
                     '4561-1235',
                 ],
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_will_extract_an_ISSN_as_a_string()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'container-title' => 'blabla',
@@ -90,6 +91,6 @@ class CrossrefJournalExtractorTest extends TestCase
                     '4561-1234',
                 ],
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 }

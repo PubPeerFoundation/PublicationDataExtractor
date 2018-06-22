@@ -7,7 +7,7 @@ class Doi extends Crossref
     /**
      * Create search tree.
      */
-    protected function getDataFromDocument()
+    protected function fillSearchTree(): void
     {
         $this->searchTree = $this->document;
     }

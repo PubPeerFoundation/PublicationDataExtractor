@@ -3,8 +3,9 @@
 namespace PubPeerFoundation\PublicationDataExtractor;
 
 use Volan\Volan;
+use Volan\ValidatorResult;
 
-class ApiDataChecker
+class Schema
 {
     /**
      * Array validation schema.
@@ -45,7 +46,7 @@ class ApiDataChecker
                 ],
             ],
             'journal' => [
-                '_type' => 'array',
+                '_type' => 'required_array',
                 'title' => [
                     '_type' => 'string',
                 ],
@@ -57,7 +58,7 @@ class ApiDataChecker
                 ],
             ],
             'publication' => [
-                '_type' => 'array',
+                '_type' => 'required_array',
                 'title' => [
                     '_type' => 'required_string',
                 ],
@@ -108,10 +109,12 @@ class ApiDataChecker
     ];
 
     /**
+     * Validate the data against Schema.
+     *
      * @param $data
      * @return \Volan\ValidatorResult
      */
-    public static function check($data)
+    public static function validate($data): ValidatorResult
     {
         $validator = new Volan(static::SCHEMA);
         $result = $validator->validate($data);
@@ -119,7 +122,12 @@ class ApiDataChecker
         return $result;
     }
 
-    public static function getDataTypes()
+    /**
+     * Get the main data types from Schema.
+     *
+     * @return array
+     */
+    public static function getDataTypes(): array
     {
         return array_slice(array_keys(self::SCHEMA['root']), 1);
     }

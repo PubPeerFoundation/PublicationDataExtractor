@@ -1,10 +1,8 @@
 <?php
 
-namespace PubPeerFoundation\PublicationDataExtractor\Models;
+namespace PubPeerFoundation\PublicationDataExtractor;
 
-use PubPeerFoundation\PublicationDataExtractor\ApiDataChecker;
-
-class Output extends Model
+class Output
 {
     /**
      * Global content array.
@@ -19,12 +17,12 @@ class Output extends Model
      * @param string $name
      * @param array  $resourceData
      */
-    public function __call($name, array $resourceData): void
+    public function __call(string $name, array $resourceData): void
     {
         $name = strtolower(substr($name, 3));
 
-        if (in_array($name, ApiDataChecker::getDataTypes())) {
-            $className = __NAMESPACE__.'\\'.ucfirst($name);
+        if (in_array($name, Schema::getDataTypes())) {
+            $className = __NAMESPACE__.'\\Models\\'.ucfirst($name);
             $this->content[$name] = $className::getInstance()->add($resourceData[0]);
         }
     }
@@ -34,17 +32,18 @@ class Output extends Model
      *
      * @return array
      */
-    public function format()
+    public function getData(): array
     {
-        $this->resetLists();
-
         return $this->content;
     }
 
-    protected function resetLists()
+    /**
+     * Reset each Model's list array.
+     */
+    public function resetLists(): void
     {
-        foreach (ApiDataChecker::getDataTypes() as $type) {
-            $className = __NAMESPACE__.'\\'.ucfirst($type);
+        foreach (Schema::getDataTypes() as $type) {
+            $className = __NAMESPACE__.'\\Models\\'.ucfirst($type);
             $className::getInstance()->reset();
         }
     }

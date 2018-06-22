@@ -9,7 +9,7 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
     /**
      * Create search tree.
      */
-    protected function getDataFromDocument()
+    protected function fillSearchTree(): void
     {
         $this->searchTree = $this->document->{'PubmedArticle'};
     }
@@ -17,9 +17,9 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
     /**
      * Extract and format data needed for the Publication Model.
      */
-    public function extractPublicationData()
+    public function extractPublicationData(): void
     {
-        $this->output['publication'] = [
+        $this->resourceOutput['publication'] = [
             'title' => get_string($this->searchTree, 'MedlineCitation.Article.ArticleTitle'),
             'url' => (string) 'http://www.ncbi.nlm.nih.gov/pubmed/'.get_string($this->searchTree, 'MedlineCitation.PMID'),
             'published_at' => date_from_pub_date(data_get($this->searchTree, 'MedlineCitation.Article.Journal.JournalIssue.PubDate')),
@@ -31,16 +31,16 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
      * Extract and format data needed for the Identifiers Relationship
      * on the Publication Model.
      */
-    public function extractIdentifiersData()
+    public function extractIdentifiersData(): void
     {
         foreach ($this->searchTree->PubmedData->ArticleIdList->ArticleId as $identifier) {
-            $this->output['identifiers'][] = [
+            $this->resourceOutput['identifiers'][] = [
                 'value' => (string) $identifier,
                 'type' => (string) $identifier['IdType'],
             ];
         }
         if ($value = get_string($this->searchTree, 'MedlineCitation.Article.Journal.ISSN')) {
-            $this->output['identifiers'][] = [
+            $this->resourceOutput['identifiers'][] = [
                 'value' => $value,
                 'type' => 'issn',
             ];
@@ -51,9 +51,9 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
      * Extract and format data needed for the Journals Relationship
      * on the Publication Model.
      */
-    public function extractJournalData()
+    public function extractJournalData(): void
     {
-        $this->output['journal'] = [
+        $this->resourceOutput['journal'] = [
             'title' => get_string($this->searchTree, 'MedlineCitation.Article.Journal.Title'),
             'issn' => $this->getIssns(),
         ];
@@ -63,7 +63,7 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
      * Extract and format data needed for the Authors Relationship
      * on the Publication Model.
      */
-    public function extractAuthorsData()
+    public function extractAuthorsData(): void
     {
         try {
             $this->loopOverAuthors();
@@ -112,7 +112,7 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
         if (! empty($lastName = get_string($author, 'LastName'))) {
             $affiliations = $this->loopOverAffiliations($author);
 
-            $this->output['authors'][] = [
+            $this->resourceOutput['authors'][] = [
                 'first_name' => get_string($author, 'ForeName'),
                 'last_name' => $lastName,
                 'email' => $this->getEmailsFromAffiliations($affiliations),

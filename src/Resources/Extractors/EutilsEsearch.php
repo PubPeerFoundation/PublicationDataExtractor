@@ -11,7 +11,7 @@ class EutilsEsearch extends Extractor implements ProvidesIdentifiersData
      *
      * @throws UnparseableApiException
      */
-    protected function getDataFromDocument()
+    protected function fillSearchTree(): void
     {
         if ($this->document['esearchresult']['count'] !== '1') {
             throw new UnparseableApiException();
@@ -24,10 +24,10 @@ class EutilsEsearch extends Extractor implements ProvidesIdentifiersData
      * Extract and format data needed for the Identifiers Relationship
      * on the Publication Model.
      */
-    public function extractIdentifiersData()
+    public function extractIdentifiersData(): void
     {
         foreach ($this->searchTree['idlist'] as $identifier) {
-            $this->output['identifiers'][] = [
+            $this->resourceOutput['identifiers'][] = [
                 'value' => stringify($identifier),
                 'type' => 'pubmed',
             ];

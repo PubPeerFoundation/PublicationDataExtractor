@@ -10,12 +10,12 @@ class BioRxiv extends Crossref
      * Extract and format data needed for the Journals Relationship
      * on the Publication Model.
      */
-    public function extractJournalData()
+    public function extractJournalData(): void
     {
         try {
             parent::extractJournalData();
         } catch (JournalTitleNotFoundException $e) {
-            $this->output['journal'] = [
+            $this->resourceOutput['journal'] = [
                 'title' => 'BioRxiv',
             ];
         }

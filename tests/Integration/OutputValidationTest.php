@@ -2,10 +2,10 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Schema;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
-use PubPeerFoundation\PublicationDataExtractor\ApiDataChecker;
 
-class ApiDataCheckerTest extends TestCase
+class OutputValidationTest extends TestCase
 {
     protected $mergedData = [
         'authors' => [
@@ -79,7 +79,7 @@ class ApiDataCheckerTest extends TestCase
     /** @test */
     public function it_validates_well_formed_data()
     {
-        $result = ApiDataChecker::check($this->mergedData);
+        $result = Schema::validate($this->mergedData);
 
         $this->assertEmpty(array_filter($result->getErrorInfo()));
         // Assert
@@ -93,7 +93,7 @@ class ApiDataCheckerTest extends TestCase
         $data['journal']['title'] = [
             'PLoS ONE',
         ];
-        $result = ApiDataChecker::check($data);
+        $result = Schema::validate($data);
 
         $this->assertNotEmpty(array_filter($result->getErrorInfo()));
         // Assert

@@ -20,7 +20,7 @@ class IdConverter extends Extractor implements ProvidesIdentifiersData
      *
      * @throws UnparseableApiException
      */
-    protected function getDataFromDocument()
+    protected function fillSearchTree(): void
     {
         if ('ok' !== $this->document['status']) {
             throw new UnparseableApiException();
@@ -37,11 +37,11 @@ class IdConverter extends Extractor implements ProvidesIdentifiersData
      * Extract and format data needed for the Identifiers Relationship
      * on the Publication Model.
      */
-    public function extractIdentifiersData()
+    public function extractIdentifiersData(): void
     {
         foreach ($this->searchTree as $type => $identifier) {
             if (array_key_exists($type, $this->typeMap)) {
-                $this->output['identifiers'][] = [
+                $this->resourceOutput['identifiers'][] = [
                     'value' => $identifier,
                     'type' => $this->typeMap[$type],
                 ];

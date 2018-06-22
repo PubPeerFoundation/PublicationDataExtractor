@@ -14,7 +14,7 @@ class Types extends Model
     /**
      * Add unknown types to the current list.
      *
-     * @param $types
+     * @param  array $types
      * @return array
      */
     public function add(array $types): array

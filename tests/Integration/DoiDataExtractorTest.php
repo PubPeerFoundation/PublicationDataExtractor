@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Doi;
@@ -17,7 +18,7 @@ class DoiDataExtractorTest extends TestCase
         $file = $this->loadJson('Doi/valid-article');
 
         // Act
-        $extracted = (new Doi($file))->extract();
+        $extracted = (new Doi($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([
@@ -36,7 +37,7 @@ class DoiDataExtractorTest extends TestCase
         $file = $this->loadJson('Doi/valid-article');
 
         // Act
-        $extracted = (new Doi($file))->extract();
+        $extracted = (new Doi($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([
@@ -64,7 +65,7 @@ class DoiDataExtractorTest extends TestCase
         $file = $this->loadJson('Doi/valid-with-orcid-article');
 
         // Act
-        $extracted = (new Doi($file))->extract();
+        $extracted = (new Doi($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([
@@ -108,7 +109,7 @@ class DoiDataExtractorTest extends TestCase
         $file = $this->loadJson('Doi/valid-with-updates-article');
 
         // Act
-        $extracted = (new Doi($file))->extract();
+        $extracted = (new Doi($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([

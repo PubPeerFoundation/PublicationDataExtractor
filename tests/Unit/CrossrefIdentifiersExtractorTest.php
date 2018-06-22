@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
@@ -14,7 +15,7 @@ class CrossrefIdentifiersExtractorTest extends TestCase
     public function it_wont_extract_an_empty_DOI()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'DOI' => '',
@@ -24,14 +25,14 @@ class CrossrefIdentifiersExtractorTest extends TestCase
         $extractor->extractIdentifiersData();
 
         // Assert
-        $this->assertEmpty($this->getProtectedProperty($extractor, 'output'));
+        $this->assertEmpty($this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_wont_extract_a_missing_DOI()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', []);
 
@@ -39,14 +40,14 @@ class CrossrefIdentifiersExtractorTest extends TestCase
         $extractor->extractIdentifiersData();
 
         // Assert
-        $this->assertEmpty($this->getProtectedProperty($extractor, 'output'));
+        $this->assertEmpty($this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_wont_extract_an_empty_ISSN()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'ISSN' => '',
@@ -56,14 +57,14 @@ class CrossrefIdentifiersExtractorTest extends TestCase
         $extractor->extractIdentifiersData();
 
         // Assert
-        $this->assertEmpty($this->getProtectedProperty($extractor, 'output'));
+        $this->assertEmpty($this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_wont_extract_an_empty_ISSN_array()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'ISSN' => [],
@@ -73,14 +74,14 @@ class CrossrefIdentifiersExtractorTest extends TestCase
         $extractor->extractIdentifiersData();
 
         // Assert
-        $this->assertEmpty($this->getProtectedProperty($extractor, 'output'));
+        $this->assertEmpty($this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_wont_extract_a_missing_ISSN()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', []);
 
@@ -88,14 +89,14 @@ class CrossrefIdentifiersExtractorTest extends TestCase
         $extractor->extractIdentifiersData();
 
         // Assert
-        $this->assertEmpty($this->getProtectedProperty($extractor, 'output'));
+        $this->assertEmpty($this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_will_extract_an_ISSN_as_an_array()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'ISSN' => ['4561-1234'],
@@ -112,14 +113,14 @@ class CrossrefIdentifiersExtractorTest extends TestCase
                     'type' => 'issn',
                 ],
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_will_extract_multiple_ISSNs_as_an_array()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'ISSN' => [
@@ -143,14 +144,14 @@ class CrossrefIdentifiersExtractorTest extends TestCase
                     'type' => 'issn',
                 ],
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
     public function it_will_extract_an_ISSN_as_a_string()
     {
         // Arrange
-        $extractor = new Crossref('');
+        $extractor = new Crossref('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', [
             'ISSN' => '4561-1234',
@@ -167,6 +168,6 @@ class CrossrefIdentifiersExtractorTest extends TestCase
                     'type' => 'issn',
                 ],
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 }

@@ -14,7 +14,7 @@ class Authors extends Model
     /**
      * Add unknown authors to the current list.
      *
-     * @param $authors
+     * @param  array $authors
      * @return array
      */
     public function add(array $authors): array
@@ -27,21 +27,27 @@ class Authors extends Model
             return $this->list;
         }
 
-        for ($i = 0; $i < $count; $i++) {
+        for ($i = 0; $i < $count; ++$i) {
             $this->addUnknownAttributes($authors, $i);
         }
 
         return $this->list;
     }
 
-    protected function addUnknownAttributes($authors, $i)
+    /**
+     * Add unknown attributes to current author.
+     *
+     * @param array $authors
+     * @param int   $counter
+     */
+    protected function addUnknownAttributes(array $authors, int $counter): void
     {
-        foreach ($authors[$i] as $key => $value) {
+        foreach ($authors[$counter] as $key => $value) {
             if (empty($value)) {
                 continue;
             }
-            if (isset($this->list[$i][$key]) && ! empty($this->list[$i][$key])) {
-                $this->list[$i][$key] = $value;
+            if (isset($this->list[$counter][$key]) && ! empty($this->list[$counter][$key])) {
+                $this->list[$counter][$key] = $value;
             }
         }
     }

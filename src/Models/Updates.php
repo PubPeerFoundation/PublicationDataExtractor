@@ -14,7 +14,7 @@ class Updates extends Model
     /**
      * Add unknown updates to the current list.
      *
-     * @param $updates
+     * @param  array $updates
      * @return array
      */
     public function add(array $updates): array

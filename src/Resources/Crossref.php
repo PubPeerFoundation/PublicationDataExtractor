@@ -2,10 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 
-class Crossref implements Resource
+class Crossref extends Resource
 {
     /**
      * @var string
@@ -22,23 +21,9 @@ class Crossref implements Resource
     ];
 
     /**
-     * @var Identifier
-     */
-    protected $identifier;
-
-    /**
      * @var string
      */
     protected $extractor = Extractors\Crossref::class;
-
-    /**
-     * Crossref constructor.
-     * @param Identifier $identifier
-     */
-    public function __construct(Identifier $identifier)
-    {
-        $this->identifier = $identifier;
-    }
 
     /**
      * @return string
@@ -70,7 +55,7 @@ class Crossref implements Resource
         }
 
         try {
-            $extractor = new $this->extractor($baseTree);
+            $extractor = new $this->extractor($baseTree, $this->output);
 
             return $extractor->extract();
         } catch (UnparseableApiException $e) {

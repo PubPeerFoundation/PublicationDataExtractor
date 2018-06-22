@@ -10,12 +10,12 @@ class Figshare extends Doi
      * Extract and format data needed for the Journals Relationship
      * on the Publication Model.
      */
-    public function extractJournalData()
+    public function extractJournalData(): void
     {
         try {
             parent::extractJournalData();
         } catch (JournalTitleNotFoundException $e) {
-            $this->output['journal'] = [
+            $this->resourceOutput['journal'] = [
                 'title' => 'Figshare',
             ];
         }
@@ -24,12 +24,12 @@ class Figshare extends Doi
     /**
      * Extract and format data needed for the Publication Model.
      */
-    public function extractPublicationData()
+    public function extractPublicationData(): void
     {
         parent::extractPublicationData();
 
-        if (empty($this->output['publication']['url'])) {
-            $this->output['publication']['url'] = get_string($this->searchTree, 'id');
+        if (empty($this->resourceOutput['publication']['url'])) {
+            $this->resourceOutput['publication']['url'] = get_string($this->searchTree, 'id');
         }
     }
 }

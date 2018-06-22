@@ -3,9 +3,8 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
 use SimpleXMLElement;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
-class EutilsEfetch implements Resource
+class EutilsEfetch extends Resource
 {
     /**
      * @var string
@@ -25,28 +24,12 @@ class EutilsEfetch implements Resource
     ];
 
     /**
-     * EutilsEfetch constructor.
-     *
-     * @param Identifier $identifier
-     */
-    public function __construct(Identifier $identifier)
-    {
-        $this->queryStringParameters['query']['id'] = $identifier->getQueryString();
-    }
-
-    /**
-     * @return string
-     */
-    public function getApiUrl(): string
-    {
-        return $this->url;
-    }
-
-    /**
      * @return array
      */
     public function getRequestOptions(): array
     {
+        $this->queryStringParameters['query']['id'] = $this->identifier->getQueryString();
+
         return $this->queryStringParameters;
     }
 
@@ -59,7 +42,7 @@ class EutilsEfetch implements Resource
     {
         try {
             $baseTree = new SimpleXMLElement($document);
-            $extractor = new Extractors\EutilsEfetch($baseTree);
+            $extractor = new Extractors\EutilsEfetch($baseTree, $this->output);
 
             return $extractor->extract();
         } catch (\Exception $e) {

@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
@@ -16,7 +17,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
     {
         // Arrange
         $identifier = (new IdentifierResolver('145268'))->handle();
-        $extractor = new EutilsEfetch('', $identifier);
+        $extractor = new EutilsEfetch('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', new \SimpleXMLElement('
             <PubmedArticle>
@@ -45,7 +46,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
                     'last_name' => 'Pye',
                 ],
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
@@ -53,7 +54,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
     {
         // Arrange
         $identifier = (new IdentifierResolver('145268'))->handle();
-        $extractor = new EutilsEfetch('', $identifier);
+        $extractor = new EutilsEfetch('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', new \SimpleXMLElement('
             <PubmedArticle>
@@ -88,7 +89,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
                     ],
                 ],
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
@@ -96,7 +97,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
     {
         // Arrange
         $identifier = (new IdentifierResolver('145268'))->handle();
-        $extractor = new EutilsEfetch('', $identifier);
+        $extractor = new EutilsEfetch('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', new \SimpleXMLElement('
             <PubmedArticle>
@@ -129,7 +130,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
                     ],
                 ],
             ],
-        ], $this->getProtectedProperty($extractor, 'output'));
+        ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 
     /** @test */
@@ -137,7 +138,7 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
     {
         // Arrange
         $identifier = (new IdentifierResolver('145268'))->handle();
-        $extractor = new EutilsEfetch('', $identifier);
+        $extractor = new EutilsEfetch('', new Output());
 
         $this->setProtectedProperty($extractor, 'searchTree', new \SimpleXMLElement('
             <PubmedArticle>
@@ -152,6 +153,6 @@ class EutilsEfetchAuthorsExtractorTest extends TestCase
         $extractor->extractAuthorsData();
 
         // Assert
-        $this->assertEmpty($this->getProtectedProperty($extractor, 'output'));
+        $this->assertEmpty($this->getProtectedProperty($extractor, 'resourceOutput'));
     }
 }

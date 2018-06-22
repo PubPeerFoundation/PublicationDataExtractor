@@ -2,9 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
-
-class EutilsEsearch implements Resource
+class EutilsEsearch extends Resource
 {
     /**
      * @var string
@@ -25,28 +23,12 @@ class EutilsEsearch implements Resource
     ];
 
     /**
-     * EutilsEsearch constructor.
-     *
-     * @param Identifier $identifier
-     */
-    public function __construct(Identifier $identifier)
-    {
-        $this->queryStringParameters['query']['term'] = $identifier->getQueryString();
-    }
-
-    /**
-     * @return string
-     */
-    public function getApiUrl(): string
-    {
-        return $this->url;
-    }
-
-    /**
      * @return array
      */
     public function getRequestOptions(): array
     {
+        $this->queryStringParameters['query']['term'] = $this->identifier->getQueryString();
+
         return $this->queryStringParameters;
     }
 
@@ -59,7 +41,7 @@ class EutilsEsearch implements Resource
     {
         try {
             $baseTree = json_decode($document, true);
-            $extractor = new Extractors\EutilsEsearch($baseTree);
+            $extractor = new Extractors\EutilsEsearch($baseTree, $this->output);
 
             return $extractor->extract();
         } catch (\Exception $e) {

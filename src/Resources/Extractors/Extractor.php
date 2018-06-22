@@ -2,8 +2,9 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Models\Output;
-use PubPeerFoundation\PublicationDataExtractor\ApiDataChecker;
+use PubPeerFoundation\PublicationDataExtractor\Output;
+use PubPeerFoundation\PublicationDataExtractor\Schema;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 
 abstract class Extractor
@@ -19,18 +20,29 @@ abstract class Extractor
     protected $searchTree;
 
     /**
+     * Temporary Resource output array.
+     *
      * @var array
      */
-    protected $output = [];
+    protected $resourceOutput = [];
+
+    /**
+     * Global Output object.
+     *
+     * @var Output
+     */
+    protected $output;
 
     /**
      * Extractor constructor.
      *
-     * @param $document
+     * @param mixed  $document
+     * @param Output $output
      */
-    public function __construct($document)
+    public function __construct($document, Output $output)
     {
         $this->document = $document;
+        $this->output = $output;
     }
 
     /**
@@ -40,59 +52,29 @@ abstract class Extractor
      */
     public function extract(): array
     {
-        $this->getDataFromDocument();
+        try {
+            $this->fillSearchTree();
 
-        foreach (ApiDataChecker::getDataTypes() as $type) {
-            $class = __NAMESPACE__.'\\Provides'.ucfirst($type).'Data';
+            foreach (Schema::getDataTypes() as $type) {
+                $this->extractData($type);
 
-            if ($this instanceof $class) {
-                $method = 'extract'.ucfirst($type).'Data';
-                try {
-                    $this->$method();
-                } catch (JournalTitleNotFoundException $e) {
-                    $this->output['journal']['title'] = $this->output['journal']['publisher'];
-                }
+                $this->buildOutput($type);
             }
-        }
-//        if (isset($this->output['identifiers'])) {
-//            Output::getInstance()->addIdentifiers($this->output['identifiers']);
-//        }
-//        if (isset($this->output['publication'])) {
-//            Output::getInstance()->addPublication($this->output['publication']);
-//        }
-//        if (isset($this->output['journal'])) {
-//            Output::getInstance()->addJournal($this->output['journal']);
-//        }
-//        if (isset($this->output['affiliations'])) {
-//            Output::getInstance()->addAffiliations($this->output['affiliations']);
-//        }
-//        if (isset($this->output['types'])) {
-//            Output::getInstance()->addTypes($this->output['types']);
-//        }
-//        if (isset($this->output['tags'])) {
-//            Output::getInstance()->addTags($this->output['tags']);
-//        }
-//        if (isset($this->output['authors'])) {
-//            Output::getInstance()->addAuthors($this->output['authors']);
-//        }
-        foreach (ApiDataChecker::getDataTypes() as $type) {
-            if (isset($this->output[$type])) {
-                $method = 'add'.ucfirst($type);
-                Output::getInstance()->$method($this->output[$type]);
-            }
-        }
 
-        $this->addOutputSource();
+            $this->addOutputSource();
 
-        return $this->output;
+            return $this->resourceOutput;
+        } catch (UnparseableApiException $e) {
+            return [];
+        }
     }
 
     /**
      * Prepare each data document.
      *
-     * @return mixed
+     * @throws UnparseableApiException
      */
-    abstract protected function getDataFromDocument();
+    abstract protected function fillSearchTree(): void;
 
     /**
      *  Set the source of the data on the data.
@@ -100,7 +82,39 @@ abstract class Extractor
     protected function addOutputSource(): void
     {
         if (! empty($this->output)) {
-            $this->output['_source'] = get_class_name($this);
+            $this->resourceOutput['_source'] = get_class_name($this);
+        }
+    }
+
+    /**
+     * Extract data from each type of the Resource.
+     *
+     * @param $type
+     */
+    protected function extractData($type): void
+    {
+        $class = __NAMESPACE__.'\\Provides'.ucfirst($type).'Data';
+
+        if ($this instanceof $class) {
+            $method = 'extract'.ucfirst($type).'Data';
+            try {
+                $this->$method();
+            } catch (JournalTitleNotFoundException $e) {
+                $this->resourceOutput['journal']['title'] = $this->resourceOutput['journal']['publisher'];
+            }
+        }
+    }
+
+    /**
+     * Build data output for each Resource type.
+     *
+     * @param $type
+     */
+    protected function buildOutput($type): void
+    {
+        if (isset($this->resourceOutput[$type])) {
+            $method = 'add'.ucfirst($type);
+            $this->output->$method($this->resourceOutput[$type]);
         }
     }
 }

@@ -14,7 +14,7 @@ class Identifiers extends Model
     /**
      * Add unknown identifiers to the current list.
      *
-     * @param $identifiers
+     * @param  array $identifiers
      * @return array
      */
     public function add(array $identifiers): array

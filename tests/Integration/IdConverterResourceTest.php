@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Resources\IdConverter;
@@ -15,7 +16,7 @@ class IdConverterResourceTest extends TestCase
         $identifier = (new IdentifierResolver('10.123/4567'))->handle();
 
         // Act
-        $result = (new IdConverter($identifier))->getDataFrom('{"status":"not-ok"}');
+        $result = (new IdConverter($identifier, new Output()))->getDataFrom('{"status":"not-ok"}');
 
         // Assert
         $this->assertEmpty($result);
@@ -28,7 +29,7 @@ class IdConverterResourceTest extends TestCase
         $identifier = (new IdentifierResolver('10.123/4567'))->handle();
 
         // Act
-        $result = (new IdConverter($identifier))->getDataFrom('');
+        $result = (new IdConverter($identifier, new Output()))->getDataFrom('');
 
         // Assert
         $this->assertEmpty($result);

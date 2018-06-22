@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Arxiv;
@@ -17,7 +18,7 @@ class ArxivDataExtractorTest extends TestCase
         $file = $this->loadXml('arXiv/valid-article');
 
         // Act
-        $extracted = (new Arxiv($file))->extract();
+        $extracted = (new Arxiv($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([
@@ -41,7 +42,7 @@ class ArxivDataExtractorTest extends TestCase
         $file = $this->loadXml('arXiv/valid-article');
 
         // Act
-        $extracted = (new Arxiv($file))->extract();
+        $extracted = (new Arxiv($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([
@@ -65,7 +66,7 @@ class ArxivDataExtractorTest extends TestCase
         $file = $this->loadXml('arXiv/valid-article');
 
         // Act
-        $extracted = (new Arxiv($file))->extract();
+        $extracted = (new Arxiv($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([

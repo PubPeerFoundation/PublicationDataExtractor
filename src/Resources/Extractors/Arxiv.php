@@ -7,7 +7,7 @@ class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdenti
     /**
      * Create search tree.
      */
-    protected function getDataFromDocument()
+    protected function fillSearchTree(): void
     {
         $this->searchTree = $this->document->entry;
     }
@@ -15,9 +15,9 @@ class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdenti
     /**
      * Extract and format data needed for the Publication Model.
      */
-    public function extractPublicationData()
+    public function extractPublicationData(): void
     {
-        $this->output['publication'] = [
+        $this->resourceOutput['publication'] = [
             'title' => get_string($this->searchTree, 'title'),
             'abstract' => get_string($this->searchTree, 'summary'),
             'url' => get_string($this->searchTree, 'id'),
@@ -29,14 +29,14 @@ class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdenti
      * Extract and format data needed for the Identifiers Relationship
      * on the Publication Model.
      */
-    public function extractIdentifiersData()
+    public function extractIdentifiersData(): void
     {
-        $this->output['identifiers'][] = [
+        $this->resourceOutput['identifiers'][] = [
             'value' => (string) $this->getIdentifier(),
             'type' => 'arxiv',
         ];
 
-        $this->output['identifiers'][] = [
+        $this->resourceOutput['identifiers'][] = [
             'value' => '2331-8422',
             'type' => 'issn',
         ];
@@ -46,9 +46,9 @@ class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdenti
      * Extract and format data needed for the Journals Relationship
      * on the Publication Model.
      */
-    public function extractJournalData()
+    public function extractJournalData(): void
     {
-        $this->output['journal'] = [
+        $this->resourceOutput['journal'] = [
             'title' => 'arXiv',
             'issn' => ['2331-8422'],
         ];
@@ -58,11 +58,11 @@ class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdenti
      * Extract and format data needed for the Authors Relationship
      * on the Publication Model.
      */
-    public function extractAuthorsData()
+    public function extractAuthorsData(): void
     {
         foreach (get_array($this->searchTree, 'author') as $author) {
             $name = explode(' ', $author->name, 2);
-            $this->output['authors'][] = [
+            $this->resourceOutput['authors'][] = [
                 'first_name' => $name[0] ?? null,
                 'last_name' => $name[1] ?? null,
             ];
@@ -73,17 +73,19 @@ class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdenti
      * Extract and format data needed for the Types Relationship
      * on the Publication Model.
      */
-    public function extractTypesData()
+    public function extractTypesData(): void
     {
-        $this->output['types'][] = [
+        $this->resourceOutput['types'][] = [
             'name' => 'arxiv',
         ];
     }
 
     /**
-     * @return mixed
+     * Get the Identifier from the data.
+     *
+     * @return string
      */
-    protected function getIdentifier()
+    protected function getIdentifier(): string
     {
         $urlParts = explode('/', $this->searchTree->id[0]);
 

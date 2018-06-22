@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor;
 
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
 
 class IdentifierResolver
@@ -42,7 +43,7 @@ class IdentifierResolver
      * @throws UnknownIdentifierException
      * @return Identifiers\Identifier
      */
-    public function handle()
+    public function handle(): Identifier
     {
         foreach ($this->identifiers as $identifierClass) {
             $identifier = new $identifierClass($this->queryString);

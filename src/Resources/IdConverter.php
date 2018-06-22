@@ -2,9 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
-
-class IdConverter implements Resource
+class IdConverter extends Resource
 {
     /**
      * @var string
@@ -25,27 +23,12 @@ class IdConverter implements Resource
     ];
 
     /**
-     * IdConverter constructor.
-     * @param Identifier $identifier
-     */
-    public function __construct(Identifier $identifier)
-    {
-        $this->queryStringParameters['query']['ids'] = $identifier->getQueryString();
-    }
-
-    /**
-     * @return string
-     */
-    public function getApiUrl(): string
-    {
-        return $this->url;
-    }
-
-    /**
      * @return array
      */
     public function getRequestOptions(): array
     {
+        $this->queryStringParameters['query']['ids'] = $this->identifier->getQueryString();
+
         return $this->queryStringParameters;
     }
 
@@ -57,7 +40,7 @@ class IdConverter implements Resource
     {
         try {
             $baseTree = json_decode($document, true);
-            $extractor = new Extractors\IdConverter($baseTree);
+            $extractor = new Extractors\IdConverter($baseTree, $this->output);
 
             return $extractor->extract();
         } catch (\Exception $e) {

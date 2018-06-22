@@ -2,21 +2,54 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
-interface Resource
+use PubPeerFoundation\PublicationDataExtractor\Output;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
+
+abstract class Resource
 {
+    /**
+     * @var Output
+     */
+    protected $output;
+
+    /**
+     * @var Identifier
+     */
+    protected $identifier;
+
+    /**
+     * @var string
+     */
+    protected $url;
+
+    /**
+     * Resource constructor.
+     *
+     * @param Identifier $identifier
+     * @param Output     $output
+     */
+    public function __construct(Identifier $identifier, Output $output)
+    {
+        $this->identifier = $identifier;
+        $this->output = $output;
+    }
+
     /**
      * Full URL to the fetched resource.
      *
      * @return string
      */
-    public function getApiUrl(): string;
+    public function getApiUrl(): string
+    {
+        return $this->url;
+    }
 
     /**
      * Request Options Array used to fetch the resource.
      *
      * @return array
      */
-    public function getRequestOptions(): array;
+    abstract public function getRequestOptions(): array;
 
     /**
      * Transform raw data to a usable format.
@@ -24,5 +57,5 @@ interface Resource
      * @param  string $document
      * @return array
      */
-    public function getDataFrom(string $document): array;
+    abstract public function getDataFrom(string $document): array;
 }

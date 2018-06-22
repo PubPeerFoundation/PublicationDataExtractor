@@ -2,6 +2,7 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\BioRxiv;
@@ -17,7 +18,7 @@ class BioArxivDataExtractorTest extends TestCase
         $file = $this->loadJson('BioRxiv/valid-article');
 
         // Act
-        $extracted = (new BioRxiv($file))->extract();
+        $extracted = (new BioRxiv($file, new Output()))->extract();
 
         // Assert
         $this->assertArraySubset([

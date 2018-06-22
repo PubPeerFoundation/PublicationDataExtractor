@@ -4,5 +4,5 @@ namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 interface ProvidesPublicationData
 {
-    public function extractPublicationData();
+    public function extractPublicationData(): void;
 }

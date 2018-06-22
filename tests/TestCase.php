@@ -5,7 +5,7 @@ namespace PubPeerFoundation\PublicationDataExtractor\Test;
 use ArrayAccess;
 use PHPUnit\Util\InvalidArgumentHelper;
 use PHPUnit\Framework\TestCase as PHPUnit;
-use PubPeerFoundation\PublicationDataExtractor\ApiDataChecker;
+use PubPeerFoundation\PublicationDataExtractor\Schema;
 
 abstract class TestCase extends PHPUnit
 {
@@ -18,7 +18,7 @@ abstract class TestCase extends PHPUnit
             );
         }
 
-        $result = ApiDataChecker::check($array);
+        $result = Schema::validate($array);
 
         static::assertThat($result->isValid(), static::isTrue(), (string) $result->getErrorMessage());
     }

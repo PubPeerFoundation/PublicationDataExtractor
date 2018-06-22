@@ -3,9 +3,8 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Resources;
 
 use SimpleXMLElement;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
-class Arxiv implements Resource
+class Arxiv extends Resource
 {
     /**
      * @var string
@@ -22,27 +21,12 @@ class Arxiv implements Resource
     ];
 
     /**
-     * Arxiv constructor.
-     * @param Identifier $identifier
-     */
-    public function __construct(Identifier $identifier)
-    {
-        $this->queryStringParameters['query']['id_list'] = $identifier->getQueryString();
-    }
-
-    /**
-     * @return string
-     */
-    public function getApiUrl(): string
-    {
-        return $this->url;
-    }
-
-    /**
      * @return array
      */
     public function getRequestOptions(): array
     {
+        $this->queryStringParameters['query']['id_list'] = $this->identifier->getQueryString();
+
         return $this->queryStringParameters;
     }
 
@@ -55,7 +39,7 @@ class Arxiv implements Resource
     {
         try {
             $baseTree = new SimpleXMLElement($document);
-            $extractor = new Extractors\Arxiv($baseTree);
+            $extractor = new Extractors\Arxiv($baseTree, $this->output);
 
             return $extractor->extract();
         } catch (\Exception $e) {

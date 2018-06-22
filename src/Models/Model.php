@@ -55,10 +55,10 @@ class Model
     /**
      * Figure out which values are already known.
      *
-     * @param $key
+     * @param  string $key
      * @return array
      */
-    protected function knownIdentifierValues($key): array
+    protected function knownIdentifierValues(string $key): array
     {
         return array_map(function ($value) {
             return strtolower($value);
@@ -68,11 +68,11 @@ class Model
     /**
      * Should the attribute be kept?
      *
-     * @param $key
-     * @param $value
+     * @param  string $key
+     * @param  mixed  $value
      * @return bool
      */
-    protected function shouldKeepAttribute($key, $value): bool
+    protected function shouldKeepAttribute(string $key, $value): bool
     {
         $function = is_array($value) ? 'count' : 'strlen';
 
@@ -83,7 +83,10 @@ class Model
         return $function($this->list[$key]) > $function($value);
     }
 
-    protected function reset()
+    /**
+     * Reset the Model's list array.
+     */
+    public function reset(): void
     {
         $this->list = [];
     }
