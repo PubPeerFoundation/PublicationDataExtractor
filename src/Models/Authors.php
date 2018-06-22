@@ -46,7 +46,8 @@ class Authors extends Model
             if (empty($value)) {
                 continue;
             }
-            if (isset($this->list[$counter][$key]) && ! empty($this->list[$counter][$key])) {
+
+            if (! isset($this->list[$counter][$key]) || empty($this->list[$counter][$key])) {
                 $this->list[$counter][$key] = $value;
             }
         }

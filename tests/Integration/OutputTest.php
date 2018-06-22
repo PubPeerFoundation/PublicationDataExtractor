@@ -15,6 +15,7 @@ class OutputTest extends TestCase
     public function test_20_randomly_selected_identifiers()
     {
         $ids = [
+            '10.1038/s41591-018-0058-y',
             '10.1016/j.biomaterials.2013.04.055',
             '23702148',
             '21035459',
