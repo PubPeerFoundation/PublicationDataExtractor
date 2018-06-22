@@ -27,7 +27,7 @@ class Authors extends Model
             return $this->list;
         }
 
-        for ($i = 0; $i < $count; ++$i) {
+        for ($i = 0; $i < $count; $i++) {
             $this->addUnknownAttributes($authors, $i);
         }
 
