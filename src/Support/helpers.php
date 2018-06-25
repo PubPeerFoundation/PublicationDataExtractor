@@ -56,6 +56,19 @@ if (! function_exists('date_from_parseable_format')) {
     }
 }
 
+if (! function_exists('date_from_human_readable')) {
+    /**
+     * Get Carbon Date Object from human readable string.
+     *
+     * @param  string $string
+     * @return mixed
+     */
+    function date_from_human_readable($string)
+    {
+        return DateHelper::dateFromHumanReadable($string);
+    }
+}
+
 if (! function_exists('get_string')) {
     /**
      * Get string from array path.

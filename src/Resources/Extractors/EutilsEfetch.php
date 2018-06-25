@@ -4,8 +4,14 @@ namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 use Tightenco\Collect\Support\Arr;
 
-class EutilsEfetch extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData
+class EutilsEfetch extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData, ProvidesUpdatesData
 {
+    protected $updateTypes = [
+        'ErratumIn' => 'Erratum',
+        'RetractionIn' => 'Retraction',
+        'ExpressionOfConcernIn' => 'Expression of concern',
+    ];
+
     /**
      * Create search tree.
      */
@@ -70,6 +76,38 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
         } catch (\Exception $e) {
             // Empty catch block, don't want anything to happen in case of exception.
         }
+    }
+
+    public function extractUpdatesData(): void
+    {
+        foreach (get_array($this->searchTree, 'MedlineCitation.CommentsCorrectionsList.CommentsCorrections') as $correction) {
+            if (in_array(stringify($correction['RefType']), array_keys($this->updateTypes))) {
+                $this->getUpdateFromCorrection($correction);
+            }
+        }
+    }
+
+    /**
+     * @param $correction
+     */
+    protected function getUpdateFromCorrection($correction): void
+    {
+        try {
+            $this->resourceOutput['updates'][] = [
+                'timestamp' => $this->getUpdateTimestamp(stringify($correction->RefSource)),
+                'identifier' => [
+                    'pubmed' => get_string($correction, 'PMID'),
+                ],
+                'type' => $this->getReadableUpdateType(stringify($correction['RefType'])),
+            ];
+        } catch (\Exception $e) {
+            // Don't stop in case of unreadable date format
+        }
+    }
+
+    protected function getReadableUpdateType($refType)
+    {
+        return $this->updateTypes[$refType];
     }
 
     /**
@@ -146,5 +184,12 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
     protected function getEmailsFromAffiliations($affiliations): string
     {
         return get_string(find_emails_in_array(Arr::pluck($affiliations, 'name')), 0);
+    }
+
+    protected function getUpdateTimestamp($refSource)
+    {
+        preg_match('/\s(\d{4}\s\w{3}(\s\d{1,2})?);/', $refSource, $matches);
+
+        return date_from_human_readable($matches[1])->timestamp;
     }
 }

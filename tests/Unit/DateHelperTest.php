@@ -130,4 +130,33 @@ class DateHelperTest extends TestCase
         // Assert
         $this->assertEquals('', $dateString);
     }
+
+    /** @test */
+    public function it_generates_a_valid_carbon_object_from_a_human_readable_format()
+    {
+        // Arrange
+        $string = '2011 Nov 01';
+
+        // Act
+        $dateString = DateHelper::dateFromHumanReadable($string);
+
+        // Assert
+        $this->assertEquals('2011', $dateString->year);
+        $this->assertEquals('11', $dateString->month);
+        $this->assertEquals('01', $dateString->day);
+    }
+
+    /** @test */
+    public function it_generates_a_valid_carbon_object_from_an_incomplete_human_readable_format()
+    {
+        // Arrange
+        $string = '2011 Nov';
+
+        // Act
+        $dateString = DateHelper::dateFromHumanReadable($string);
+
+        // Assert
+        $this->assertEquals('2011', $dateString->year);
+        $this->assertEquals('11', $dateString->month);
+    }
 }

@@ -52,6 +52,13 @@ class DateHelper
         ), static::countObjectParts($pubDateObject));
     }
 
+    public static function dateFromHumanReadable($dateString)
+    {
+        $format = 3 === count(explode(' ', $dateString)) ? 'Y M d' : 'Y M';
+
+        return Carbon::createFromFormat($format, $dateString);
+    }
+
     /**
      * @param $pubDateObject
      * @return int|string
