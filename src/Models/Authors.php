@@ -49,6 +49,11 @@ class Authors extends Model
 
             if (! isset($this->list[$counter][$key]) || empty($this->list[$counter][$key])) {
                 $this->list[$counter][$key] = $value;
+                continue;
+            }
+
+            if ('first_name' === $key && strlen($this->list[$counter][$key]) < strlen($value)) {
+                $this->list[$counter][$key] = $value;
             }
         }
     }
