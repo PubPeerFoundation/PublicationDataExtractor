@@ -29,6 +29,9 @@ class Schema
                 'email' => [
                     '_type' => 'string',
                 ],
+                'sequence' => [
+                    '_type' => 'string',
+                ],
                 'affiliation' => [
                     '_type' => 'array',
                     'name' => [
@@ -91,18 +94,21 @@ class Schema
                 ],
             ],
             'updates' => [
-                '_type' => 'array',
+                '_type' => 'nested_array',
                 'timestamp' => [
-                    '_type' => 'string',
+                    '_type' => 'required_number',
                 ],
                 'identifier' => [
-                    '_type' => 'array',
+                    '_type' => 'required_array',
                     'doi' => [
+                        '_type' => 'string',
+                    ],
+                    'pubmed' => [
                         '_type' => 'string',
                     ],
                 ],
                 'type' => [
-                    '_type' => 'string',
+                    '_type' => 'required_string',
                 ],
             ],
         ],

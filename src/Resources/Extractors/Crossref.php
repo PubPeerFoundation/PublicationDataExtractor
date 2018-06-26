@@ -86,6 +86,7 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
                     'first_name' => get_string($author, 'given'),
                     'last_name' => get_string($author, 'family'),
                     'orcid' => get_string($author, 'ORCID'),
+                    'sequence' => get_string($author, 'sequence'),
                     'affiliation' => get_array($author, 'affiliation'),
                 ];
             }
