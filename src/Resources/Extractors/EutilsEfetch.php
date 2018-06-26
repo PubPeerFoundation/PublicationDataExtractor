@@ -80,10 +80,12 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
 
     public function extractUpdatesData(): void
     {
-        foreach (get_array($this->searchTree, 'MedlineCitation.CommentsCorrectionsList.CommentsCorrections') as $correction) {
-            if (in_array(stringify($correction['RefType']), array_keys($this->updateTypes))) {
+        try {
+            foreach ($this->searchTree->MedlineCitation->CommentsCorrectionsList->CommentsCorrections as $correction) {
                 $this->getUpdateFromCorrection($correction);
             }
+        } catch (\Exception $e) {
+            // Don't stop in case of unreadable date format
         }
     }
 
@@ -92,7 +94,7 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
      */
     protected function getUpdateFromCorrection($correction): void
     {
-        try {
+        if (in_array(stringify($correction['RefType']), array_keys($this->updateTypes))) {
             $this->resourceOutput['updates'][] = [
                 'timestamp' => $this->getUpdateTimestamp(stringify($correction->RefSource)),
                 'identifier' => [
@@ -100,8 +102,6 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
                 ],
                 'type' => $this->getReadableUpdateType(stringify($correction['RefType'])),
             ];
-        } catch (\Exception $e) {
-            // Don't stop in case of unreadable date format
         }
     }
 
