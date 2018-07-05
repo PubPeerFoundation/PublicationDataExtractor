@@ -22,7 +22,7 @@ class Pubmed extends Identifier
     /**
      * @var string
      */
-    protected $regex = '/^\d{5,8}$/';
+    protected $regex = '/^\d{4,8}$/';
 
     /**
      * @var string
