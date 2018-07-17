@@ -80,7 +80,7 @@ class Model
             return true;
         }
 
-        return $function($this->list[$key]) > $function($value);
+        return $function($this->list[$key]) < $function($value);
     }
 
     /**

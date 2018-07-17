@@ -21,6 +21,9 @@ class Journal extends Model
     {
         foreach ($journal as $key => $value) {
             if ($this->shouldKeepAttribute($key, $value)) {
+                if (is_array($value)) {
+                    $value = array_unique($value);
+                }
                 $this->list[$key] = $value;
             }
         }
