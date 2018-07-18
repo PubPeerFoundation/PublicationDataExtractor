@@ -47,14 +47,50 @@ class Authors extends Model
                 continue;
             }
 
-            if (! isset($this->list[$counter][$key]) || empty($this->list[$counter][$key])) {
-                $this->list[$counter][$key] = $value;
-                continue;
-            }
-
-            if ('first_name' === $key && strlen($this->list[$counter][$key]) < strlen($value)) {
+            if ($this->attributeShouldBeAdded($counter, $key, $value)) {
                 $this->list[$counter][$key] = $value;
             }
         }
+    }
+
+    /**
+     * Should the current attribute be added to the author array?
+     *
+     * @param $counter
+     * @param $key
+     * @param $value
+     * @return bool
+     */
+    protected function attributeShouldBeAdded($counter, $key, $value)
+    {
+        return $this->foundLongerFirstName($counter, $key, $value)
+            || $this->noKnownAttribute($counter, $key);
+    }
+
+    /**
+     * Is this attribute already known?
+     *
+     * @param $counter
+     * @param $key
+     * @return bool
+     */
+    protected function noKnownAttribute($counter, $key)
+    {
+        return ! isset($this->list[$counter][$key])
+            || empty($this->list[$counter][$key]);
+    }
+
+    /**
+     * Did we find a longer first name?
+     *
+     * @param $counter
+     * @param $key
+     * @param $value
+     * @return bool
+     */
+    protected function foundLongerFirstName($counter, $key, $value)
+    {
+        return 'first_name' === $key
+            && strlen($this->list[$counter][$key]) < strlen($value);
     }
 }
