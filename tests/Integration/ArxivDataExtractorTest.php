@@ -74,6 +74,10 @@ class ArxivDataExtractorTest extends TestCase
                 'first_name' => 'Norbert',
                 'last_name' => 'Blum',
             ],
+            [
+                'first_name' => 'Dev',
+                'last_name' => 'Kumar Thapa',
+            ],
         ], $extracted['authors']);
 
         $this->assertArrayIsValid($extracted);

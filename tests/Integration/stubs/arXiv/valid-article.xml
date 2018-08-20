@@ -21,6 +21,9 @@
         <author>
             <name>Norbert Blum</name>
         </author>
+        <author>
+            <name>Dev Kumar Thapa</name>
+        </author>
         <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The proof is wrong. I shall elaborate precisely what the mistake is.
             For doing this, I need some time. I shall put the explanation on my homepage
             http://theory.cs.uni-bonn.de/blum/blum.var</arxiv:comment>

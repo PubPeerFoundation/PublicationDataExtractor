@@ -60,7 +60,7 @@ class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdenti
      */
     public function extractAuthorsData(): void
     {
-        foreach (get_array($this->searchTree, 'author') as $author) {
+        foreach ($this->searchTree->author as $author) {
             $name = explode(' ', $author->name, 2);
             $this->resourceOutput['authors'][] = [
                 'first_name' => $name[0] ?? null,
