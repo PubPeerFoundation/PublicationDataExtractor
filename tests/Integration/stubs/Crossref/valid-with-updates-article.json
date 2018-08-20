@@ -88,7 +88,7 @@
           "timestamp": 1524149751000
         },
         "page": "764-764",
-        "update-policy": "http://dx.doi.org/10.1007/springer_crossmark_policy",
+        "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
         "source": "Crossref",
         "is-referenced-by-count": 0,
         "title": [
@@ -494,7 +494,7 @@
         "alternative-id": [
           "74"
         ],
-        "URL": "http://dx.doi.org/10.1038/s41588-018-0074-3",
+        "URL": "https://doi.org/10.1038/s41588-018-0074-3",
         "ISSN": [
           "1061-4036",
           "1546-1718"
