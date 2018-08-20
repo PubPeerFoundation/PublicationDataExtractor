@@ -182,7 +182,7 @@ class IdentifiersTest extends TestCase
         $identifier = $result->handle();
 
         // Assert
-        $this->assertEquals('http://dx.doi.org/10.1101/234369', $identifier->getUrl());
+        $this->assertEquals('https://doi.org/10.1101/234369', $identifier->getUrl());
     }
 
     /** @test */
@@ -196,7 +196,7 @@ class IdentifiersTest extends TestCase
         $identifier = $result->handle();
 
         // Assert
-        $this->assertEquals('http://dx.doi.org/10.1038/srep07802', $identifier->getUrl());
+        $this->assertEquals('https://doi.org/10.1038/srep07802', $identifier->getUrl());
     }
 
     /** @test */
@@ -210,7 +210,7 @@ class IdentifiersTest extends TestCase
         $identifier = $result->handle();
 
         // Assert
-        $this->assertEquals('http://dx.doi.org/10.6084/m9.figshare.5673715.v2', $identifier->getUrl());
+        $this->assertEquals('https://doi.org/10.6084/m9.figshare.5673715.v2', $identifier->getUrl());
     }
 
     /** @test */
