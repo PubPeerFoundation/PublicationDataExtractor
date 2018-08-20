@@ -24,7 +24,7 @@ class CrossrefDataExtractorTest extends TestCase
         // Assert
         $this->assertArraySubset([
             'title' => 'Cholinergic Modulation of Neuronal Excitability in the Accessory Olfactory Bulb',
-            'url' => 'http://dx.doi.org/10.1152/jn.00446.2010',
+            'url' => 'https://doi.org/10.1152/jn.00446.2010',
             'published_at' => '2010-12',
             'abstract' => null,
         ], $extracted['publication']);
