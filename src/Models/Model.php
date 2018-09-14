@@ -84,6 +84,14 @@ class Model
     }
 
     /**
+     * Returns the Model's list array.
+     */
+    public function toArray(): array
+    {
+        return $this->list;
+    }
+
+    /**
      * Reset the Model's list array.
      */
     public function reset(): void
