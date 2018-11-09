@@ -3,15 +3,10 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
 use Tightenco\Collect\Support\Arr;
+use PubPeerFoundation\PublicationDataExtractor\Support\UpdateTypesStandardiser;
 
 class EutilsEfetch extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData, ProvidesUpdatesData
 {
-    protected $updateTypes = [
-        'ErratumIn' => 'Erratum',
-        'RetractionIn' => 'Retraction',
-        'ExpressionOfConcernIn' => 'Expression of concern',
-    ];
-
     /**
      * Create search tree.
      */
@@ -100,14 +95,9 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
                 'identifier' => [
                     'pubmed' => get_string($correction, 'PMID'),
                 ],
-                'type' => $this->getReadableUpdateType(stringify($correction['RefType'])),
+                'type' => UpdateTypesStandardiser::getType(stringify($correction['RefType'])),
             ];
         }
-    }
-
-    protected function getReadableUpdateType($refType)
-    {
-        return $this->updateTypes[$refType];
     }
 
     /**
