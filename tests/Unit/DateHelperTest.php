@@ -158,5 +158,6 @@ class DateHelperTest extends TestCase
         // Assert
         $this->assertEquals('2011', $dateString->year);
         $this->assertEquals('11', $dateString->month);
+        $this->assertEquals('01', $dateString->day);
     }
 }

@@ -54,9 +54,9 @@ class DateHelper
 
     public static function dateFromHumanReadable($dateString)
     {
-        $format = 3 === count(explode(' ', $dateString)) ? 'Y M d' : 'Y M';
+        $dateString = 3 === count(explode(' ', $dateString)) ? $dateString : $dateString.' 01';
 
-        return Carbon::createFromFormat($format, $dateString);
+        return Carbon::createFromFormat('Y M d', $dateString);
     }
 
     /**
