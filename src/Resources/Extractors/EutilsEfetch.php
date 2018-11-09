@@ -89,7 +89,7 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
      */
     protected function getUpdateFromCorrection($correction): void
     {
-        if (in_array(stringify($correction['RefType']), array_keys($this->updateTypes))) {
+        if (in_array(stringify($correction['RefType']), array_keys(UpdateTypesStandardiser::TYPES_MAP))) {
             $this->resourceOutput['updates'][] = [
                 'timestamp' => $this->getUpdateTimestamp(stringify($correction->RefSource)),
                 'identifier' => [
