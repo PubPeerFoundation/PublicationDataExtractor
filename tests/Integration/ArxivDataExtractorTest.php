@@ -47,7 +47,7 @@ class ArxivDataExtractorTest extends TestCase
         // Assert
         $this->assertArraySubset([
             [
-                'value' => '1708.03486v2',
+                'value' => '1708.03486',
                 'type' => 'arxiv',
             ],
             [
@@ -79,6 +79,34 @@ class ArxivDataExtractorTest extends TestCase
                 'last_name' => 'Kumar Thapa',
             ],
         ], $extracted['authors']);
+
+        $this->assertArrayIsValid($extracted);
+    }
+
+    /** @test */
+    public function it_will_link_a_preprint_to_its_published_version_if_provided()
+    {
+        // Arrange
+        $file = $this->loadXml('arXiv/linked-article');
+
+        // Act
+        $extracted = (new Arxiv($file, new Output()))->extract();
+
+        // Assert
+        $this->assertArraySubset([
+            [
+                'value' => '1406.0755',
+                'type' => 'arxiv',
+            ],
+            [
+                'value' => '2331-8422',
+                'type' => 'issn',
+            ],
+            [
+                'value' => '10.1007/JHEP07(2014)103',
+                'type' => 'doi',
+            ],
+        ], $extracted['identifiers']);
 
         $this->assertArrayIsValid($extracted);
     }

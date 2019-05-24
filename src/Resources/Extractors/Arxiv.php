@@ -40,6 +40,16 @@ class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdenti
             'value' => '2331-8422',
             'type' => 'issn',
         ];
+
+        $namespace = $this->searchTree->getNamespaces(true);
+        foreach ($this->searchTree->children($namespace['arxiv']) as $key => $child) {
+            if ('doi' === $key) {
+                $this->resourceOutput['identifiers'][] = [
+                    'value' => (string) $child,
+                    'type' => 'doi',
+                ];
+            }
+        }
     }
 
     /**
@@ -87,8 +97,8 @@ class Arxiv extends Extractor implements ProvidesPublicationData, ProvidesIdenti
      */
     protected function getIdentifier(): string
     {
-        $urlParts = explode('/', $this->searchTree->id[0]);
+        preg_match('/(\d{2}(0|1)[0-9]\.\d{4,5})(v|V)?(\d)?/', $this->searchTree->id[0], $matches);
 
-        return array_pop($urlParts);
+        return $matches[1];
     }
 }
