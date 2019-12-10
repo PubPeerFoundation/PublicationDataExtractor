@@ -60,7 +60,7 @@ class Fetcher
         $this->identifier = $identifier;
         $this->resourcesToFetch = $identifier->getRelatedResources();
         $this->output = new Output();
-        $this->client = GuzzleFactory::make(compact('headers'), 100);
+        $this->client = GuzzleFactory::make([], 100);
     }
 
     /**
