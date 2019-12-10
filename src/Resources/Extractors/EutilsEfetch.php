@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use Tightenco\Collect\Support\Arr;
 use PubPeerFoundation\PublicationDataExtractor\Support\UpdateTypesStandardiser;
+use Tightenco\Collect\Support\Arr;
 
 class EutilsEfetch extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesAuthorsData, ProvidesJournalData, ProvidesUpdatesData
 {

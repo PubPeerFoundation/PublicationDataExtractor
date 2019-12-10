@@ -3,9 +3,9 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
 use PubPeerFoundation\PublicationDataExtractor\Output;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Doi;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Doi;
 
 class DoiDataExtractorTest extends TestCase
 {

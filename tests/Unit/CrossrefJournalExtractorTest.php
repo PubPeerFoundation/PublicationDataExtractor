@@ -3,9 +3,9 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
 use PubPeerFoundation\PublicationDataExtractor\Output;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
 
 class CrossrefJournalExtractorTest extends TestCase
 {

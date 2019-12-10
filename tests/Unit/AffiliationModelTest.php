@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
-use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Models\Affiliations;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class AffiliationModelTest extends TestCase
 {

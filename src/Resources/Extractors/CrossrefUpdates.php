@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Support\UpdateTypesStandardiser;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use PubPeerFoundation\PublicationDataExtractor\Support\UpdateTypesStandardiser;
 
 class CrossrefUpdates extends Extractor implements ProvidesUpdatesData
 {
