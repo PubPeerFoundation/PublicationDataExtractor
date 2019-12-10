@@ -2,10 +2,10 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use PubPeerFoundation\PublicationDataExtractor\Output;
-use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
+use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Resources\IdConverter;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class IdConverterResourceTest extends TestCase
 {

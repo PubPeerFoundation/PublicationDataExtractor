@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor;
 
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
 
 class IdentifierResolver
 {

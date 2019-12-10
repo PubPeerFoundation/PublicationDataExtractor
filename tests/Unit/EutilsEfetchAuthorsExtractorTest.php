@@ -2,11 +2,11 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
+use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
 use PubPeerFoundation\PublicationDataExtractor\Output;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\EutilsEfetch;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
-use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\EutilsEfetch;
 
 class EutilsEfetchAuthorsExtractorTest extends TestCase
 {

@@ -3,9 +3,9 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test;
 
 use ArrayAccess;
-use PHPUnit\Util\InvalidArgumentHelper;
-use PHPUnit\Framework\TestCase as PHPUnit;
 use PHPUnit\Framework\Constraint\ArraySubset;
+use PHPUnit\Framework\TestCase as PHPUnit;
+use PHPUnit\Util\InvalidArgumentHelper;
 use PubPeerFoundation\PublicationDataExtractor\Schema;
 
 abstract class TestCase extends PHPUnit

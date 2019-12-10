@@ -3,13 +3,13 @@
 namespace PubPeerFoundation\PublicationDataExtractor;
 
 use Generator;
-use Tightenco\Collect\Support\Arr;
+use GrahamCampbell\GuzzleFactory\GuzzleFactory;
+use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Promise\EachPromise;
 use Psr\Http\Message\ResponseInterface;
-use GuzzleHttp\Exception\RequestException;
-use GrahamCampbell\GuzzleFactory\GuzzleFactory;
-use PubPeerFoundation\PublicationDataExtractor\Resources\Resource;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Resource;
+use Tightenco\Collect\Support\Arr;
 
 class Fetcher
 {

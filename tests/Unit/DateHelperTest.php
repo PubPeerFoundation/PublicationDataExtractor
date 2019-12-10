@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Unit;
 
-use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Support\DateHelper;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class DateHelperTest extends TestCase
 {

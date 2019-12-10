@@ -2,14 +2,14 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
-use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Doi;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Arxiv;
-use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Pubmed;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\BioRxiv;
-use PubPeerFoundation\PublicationDataExtractor\Identifiers\Figshare;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnknownIdentifierException;
+use PubPeerFoundation\PublicationDataExtractor\IdentifierResolver;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Arxiv;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\BioRxiv;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Doi;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Figshare;
+use PubPeerFoundation\PublicationDataExtractor\Identifiers\Pubmed;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 
 class IdentifiersTest extends TestCase
 {

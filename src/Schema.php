@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor;
 
-use Volan\Volan;
 use Volan\ValidatorResult;
+use Volan\Volan;
 
 class Schema
 {

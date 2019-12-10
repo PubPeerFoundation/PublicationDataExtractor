@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 
 class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesTagsData
 {
