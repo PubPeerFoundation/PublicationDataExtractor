@@ -1,0 +1,2155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <link href="http://arxiv.org/api/query?search_query%3D%26id_list%3D1406.0755v3%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
+    <title type="html">ArXiv Query: search_query=&amp;id_list=1406.0755v3&amp;start=0&amp;max_results=10</title>
+    <id>http://arxiv.org/api/Bu+tBN7V7KmkH1piyJipUT8/TuI</id>
+    <updated>2018-11-06T00:00:00-05:00</updated>
+    <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">1</opensearch:totalResults>
+    <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
+    <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
+    <entry>
+        <id>http://arxiv.org/abs/1406.0755v3</id>
+        <updated>2014-07-29T05:07:07Z</updated>
+        <published>2014-06-03T15:40:29Z</published>
+        <title>Observation of the $Λ_b^0\rightarrow J/ψp π^-$ decay</title>
+        <summary>  The first observation of the Cabibbo-suppressed decay $\Lambda_b^0\rightarrow
+            J/\psi p \pi^-$ is reported using a data sample of proton-proton collisions at
+            7 and 8 TeV, corresponding to an integrated luminosity of 3 $\rm fb^{-1}$. A
+            prominent signal is observed and the branching fraction relative to the decay
+            mode $\Lambda_b^0\rightarrow J/\psi p K^-$ is determined to be $$ \frac{{\cal
+            B}(\Lambda_b^0\rightarrow J/\psi p \pi^-)}{{\cal B}(\Lambda_b^0\rightarrow
+            J/\psi p K^-)}=0.0824\pm0.0025\:(\text{stat})\pm0.0042\:(\text{syst}). $$ A
+            search for direct CP violation is performed. The difference in the CP
+            asymmetries between these two decays is found to be $$ {\cal
+            A}_{CP}(\Lambda_b^0\rightarrow J/\psi p \pi^-)-{\cal
+            A}_{CP}(\Lambda_b^0\rightarrow J/\psi p K^-)=(+5.7\pm
+            2.4\:(\text{stat})\pm1.2\:(\text{syst}))\%, $$ which is compatible with CP
+            symmetry at the $2.2\sigma$ level.
+        </summary>
+        <author>
+            <name> LHCb collaboration</name>
+        </author>
+        <author>
+            <name>R. Aaij</name>
+        </author>
+        <author>
+            <name>B. Adeva</name>
+        </author>
+        <author>
+            <name>M. Adinolfi</name>
+        </author>
+        <author>
+            <name>A. Affolder</name>
+        </author>
+        <author>
+            <name>Z. Ajaltouni</name>
+        </author>
+        <author>
+            <name>S. Akar</name>
+        </author>
+        <author>
+            <name>J. Albrecht</name>
+        </author>
+        <author>
+            <name>F. Alessio</name>
+        </author>
+        <author>
+            <name>M. Alexander</name>
+        </author>
+        <author>
+            <name>S. Ali</name>
+        </author>
+        <author>
+            <name>G. Alkhazov</name>
+        </author>
+        <author>
+            <name>P. Alvarez Cartelle</name>
+        </author>
+        <author>
+            <name>A. A. Alves Jr</name>
+        </author>
+        <author>
+            <name>S. Amato</name>
+        </author>
+        <author>
+            <name>S. Amerio</name>
+        </author>
+        <author>
+            <name>Y. Amhis</name>
+        </author>
+        <author>
+            <name>L. An</name>
+        </author>
+        <author>
+            <name>L. Anderlini</name>
+        </author>
+        <author>
+            <name>J. Anderson</name>
+        </author>
+        <author>
+            <name>R. Andreassen</name>
+        </author>
+        <author>
+            <name>M. Andreotti</name>
+        </author>
+        <author>
+            <name>J. E. Andrews</name>
+        </author>
+        <author>
+            <name>R. B. Appleby</name>
+        </author>
+        <author>
+            <name>O. Aquines Gutierrez</name>
+        </author>
+        <author>
+            <name>F. Archilli</name>
+        </author>
+        <author>
+            <name>A. Artamonov</name>
+        </author>
+        <author>
+            <name>M. Artuso</name>
+        </author>
+        <author>
+            <name>E. Aslanides</name>
+        </author>
+        <author>
+            <name>G. Auriemma</name>
+        </author>
+        <author>
+            <name>M. Baalouch</name>
+        </author>
+        <author>
+            <name>A. Băbeanu</name>
+        </author>
+        <author>
+            <name>S. Bachmann</name>
+        </author>
+        <author>
+            <name>J. J. Back</name>
+        </author>
+        <author>
+            <name>A. Badalov</name>
+        </author>
+        <author>
+            <name>V. Balagura</name>
+        </author>
+        <author>
+            <name>W. Baldini</name>
+        </author>
+        <author>
+            <name>R. J. Barlow</name>
+        </author>
+        <author>
+            <name>C. Barschel</name>
+        </author>
+        <author>
+            <name>S. Barsuk</name>
+        </author>
+        <author>
+            <name>W. Barter</name>
+        </author>
+        <author>
+            <name>V. Batozskaya</name>
+        </author>
+        <author>
+            <name>V. Battista</name>
+        </author>
+        <author>
+            <name>A. Bay</name>
+        </author>
+        <author>
+            <name>L. Beaucourt</name>
+        </author>
+        <author>
+            <name>J. Beddow</name>
+        </author>
+        <author>
+            <name>F. Bedeschi</name>
+        </author>
+        <author>
+            <name>I. Bediaga</name>
+        </author>
+        <author>
+            <name>S. Belogurov</name>
+        </author>
+        <author>
+            <name>K. Belous</name>
+        </author>
+        <author>
+            <name>I. Belyaev</name>
+        </author>
+        <author>
+            <name>E. Ben-Haim</name>
+        </author>
+        <author>
+            <name>G. Bencivenni</name>
+        </author>
+        <author>
+            <name>S. Benson</name>
+        </author>
+        <author>
+            <name>J. Benton</name>
+        </author>
+        <author>
+            <name>A. Berezhnoy</name>
+        </author>
+        <author>
+            <name>R. Bernet</name>
+        </author>
+        <author>
+            <name>M. -O. Bettler</name>
+        </author>
+        <author>
+            <name>M. van Beuzekom</name>
+        </author>
+        <author>
+            <name>A. Bien</name>
+        </author>
+        <author>
+            <name>S. Bifani</name>
+        </author>
+        <author>
+            <name>T. Bird</name>
+        </author>
+        <author>
+            <name>A. Bizzeti</name>
+        </author>
+        <author>
+            <name>P. M. Bjørnstad</name>
+        </author>
+        <author>
+            <name>T. Blake</name>
+        </author>
+        <author>
+            <name>F. Blanc</name>
+        </author>
+        <author>
+            <name>J. Blouw</name>
+        </author>
+        <author>
+            <name>S. Blusk</name>
+        </author>
+        <author>
+            <name>V. Bocci</name>
+        </author>
+        <author>
+            <name>A. Bondar</name>
+        </author>
+        <author>
+            <name>N. Bondar</name>
+        </author>
+        <author>
+            <name>W. Bonivento</name>
+        </author>
+        <author>
+            <name>S. Borghi</name>
+        </author>
+        <author>
+            <name>A. Borgia</name>
+        </author>
+        <author>
+            <name>M. Borsato</name>
+        </author>
+        <author>
+            <name>T. J. V. Bowcock</name>
+        </author>
+        <author>
+            <name>E. Bowen</name>
+        </author>
+        <author>
+            <name>C. Bozzi</name>
+        </author>
+        <author>
+            <name>T. Brambach</name>
+        </author>
+        <author>
+            <name>J. van den Brand</name>
+        </author>
+        <author>
+            <name>J. Bressieux</name>
+        </author>
+        <author>
+            <name>D. Brett</name>
+        </author>
+        <author>
+            <name>M. Britsch</name>
+        </author>
+        <author>
+            <name>T. Britton</name>
+        </author>
+        <author>
+            <name>J. Brodzicka</name>
+        </author>
+        <author>
+            <name>N. H. Brook</name>
+        </author>
+        <author>
+            <name>H. Brown</name>
+        </author>
+        <author>
+            <name>A. Bursche</name>
+        </author>
+        <author>
+            <name>G. Busetto</name>
+        </author>
+        <author>
+            <name>J. Buytaert</name>
+        </author>
+        <author>
+            <name>S. Cadeddu</name>
+        </author>
+        <author>
+            <name>R. Calabrese</name>
+        </author>
+        <author>
+            <name>M. Calvi</name>
+        </author>
+        <author>
+            <name>M. Calvo Gomez</name>
+        </author>
+        <author>
+            <name>A. Camboni</name>
+        </author>
+        <author>
+            <name>P. Campana</name>
+        </author>
+        <author>
+            <name>D. Campora Perez</name>
+        </author>
+        <author>
+            <name>A. Carbone</name>
+        </author>
+        <author>
+            <name>G. Carboni</name>
+        </author>
+        <author>
+            <name>R. Cardinale</name>
+        </author>
+        <author>
+            <name>A. Cardini</name>
+        </author>
+        <author>
+            <name>H. Carranza-Mejia</name>
+        </author>
+        <author>
+            <name>L. Carson</name>
+        </author>
+        <author>
+            <name>K. Carvalho Akiba</name>
+        </author>
+        <author>
+            <name>G. Casse</name>
+        </author>
+        <author>
+            <name>L. Cassina</name>
+        </author>
+        <author>
+            <name>L. Castillo Garcia</name>
+        </author>
+        <author>
+            <name>M. Cattaneo</name>
+        </author>
+        <author>
+            <name>Ch. Cauet</name>
+        </author>
+        <author>
+            <name>R. Cenci</name>
+        </author>
+        <author>
+            <name>M. Charles</name>
+        </author>
+        <author>
+            <name>Ph. Charpentier</name>
+        </author>
+        <author>
+            <name>S. Chen</name>
+        </author>
+        <author>
+            <name>S. -F. Cheung</name>
+        </author>
+        <author>
+            <name>N. Chiapolini</name>
+        </author>
+        <author>
+            <name>M. Chrzaszcz</name>
+        </author>
+        <author>
+            <name>K. Ciba</name>
+        </author>
+        <author>
+            <name>X. Cid Vidal</name>
+        </author>
+        <author>
+            <name>G. Ciezarek</name>
+        </author>
+        <author>
+            <name>P. E. L. Clarke</name>
+        </author>
+        <author>
+            <name>M. Clemencic</name>
+        </author>
+        <author>
+            <name>H. V. Cliff</name>
+        </author>
+        <author>
+            <name>J. Closier</name>
+        </author>
+        <author>
+            <name>V. Coco</name>
+        </author>
+        <author>
+            <name>J. Cogan</name>
+        </author>
+        <author>
+            <name>E. Cogneras</name>
+        </author>
+        <author>
+            <name>P. Collins</name>
+        </author>
+        <author>
+            <name>A. Comerma-Montells</name>
+        </author>
+        <author>
+            <name>A. Contu</name>
+        </author>
+        <author>
+            <name>A. Cook</name>
+        </author>
+        <author>
+            <name>M. Coombes</name>
+        </author>
+        <author>
+            <name>S. Coquereau</name>
+        </author>
+        <author>
+            <name>G. Corti</name>
+        </author>
+        <author>
+            <name>M. Corvo</name>
+        </author>
+        <author>
+            <name>I. Counts</name>
+        </author>
+        <author>
+            <name>B. Couturier</name>
+        </author>
+        <author>
+            <name>G. A. Cowan</name>
+        </author>
+        <author>
+            <name>D. C. Craik</name>
+        </author>
+        <author>
+            <name>M. Cruz Torres</name>
+        </author>
+        <author>
+            <name>S. Cunliffe</name>
+        </author>
+        <author>
+            <name>R. Currie</name>
+        </author>
+        <author>
+            <name>C. D'Ambrosio</name>
+        </author>
+        <author>
+            <name>J. Dalseno</name>
+        </author>
+        <author>
+            <name>P. David</name>
+        </author>
+        <author>
+            <name>P. N. Y. David</name>
+        </author>
+        <author>
+            <name>A. Davis</name>
+        </author>
+        <author>
+            <name>K. De Bruyn</name>
+        </author>
+        <author>
+            <name>S. De Capua</name>
+        </author>
+        <author>
+            <name>M. De Cian</name>
+        </author>
+        <author>
+            <name>J. M. De Miranda</name>
+        </author>
+        <author>
+            <name>L. De Paula</name>
+        </author>
+        <author>
+            <name>W. De Silva</name>
+        </author>
+        <author>
+            <name>P. De Simone</name>
+        </author>
+        <author>
+            <name>D. Decamp</name>
+        </author>
+        <author>
+            <name>M. Deckenhoff</name>
+        </author>
+        <author>
+            <name>L. Del Buono</name>
+        </author>
+        <author>
+            <name>N. Déléage</name>
+        </author>
+        <author>
+            <name>D. Derkach</name>
+        </author>
+        <author>
+            <name>O. Deschamps</name>
+        </author>
+        <author>
+            <name>F. Dettori</name>
+        </author>
+        <author>
+            <name>A. Di Canto</name>
+        </author>
+        <author>
+            <name>H. Dijkstra</name>
+        </author>
+        <author>
+            <name>S. Donleavy</name>
+        </author>
+        <author>
+            <name>F. Dordei</name>
+        </author>
+        <author>
+            <name>M. Dorigo</name>
+        </author>
+        <author>
+            <name>A. Dosil Suárez</name>
+        </author>
+        <author>
+            <name>D. Dossett</name>
+        </author>
+        <author>
+            <name>A. Dovbnya</name>
+        </author>
+        <author>
+            <name>K. Dreimanis</name>
+        </author>
+        <author>
+            <name>G. Dujany</name>
+        </author>
+        <author>
+            <name>F. Dupertuis</name>
+        </author>
+        <author>
+            <name>P. Durante</name>
+        </author>
+        <author>
+            <name>R. Dzhelyadin</name>
+        </author>
+        <author>
+            <name>A. Dziurda</name>
+        </author>
+        <author>
+            <name>A. Dzyuba</name>
+        </author>
+        <author>
+            <name>S. Easo</name>
+        </author>
+        <author>
+            <name>U. Egede</name>
+        </author>
+        <author>
+            <name>V. Egorychev</name>
+        </author>
+        <author>
+            <name>S. Eidelman</name>
+        </author>
+        <author>
+            <name>S. Eisenhardt</name>
+        </author>
+        <author>
+            <name>U. Eitschberger</name>
+        </author>
+        <author>
+            <name>R. Ekelhof</name>
+        </author>
+        <author>
+            <name>L. Eklund</name>
+        </author>
+        <author>
+            <name>I. El Rifai</name>
+        </author>
+        <author>
+            <name>Ch. Elsasser</name>
+        </author>
+        <author>
+            <name>S. Ely</name>
+        </author>
+        <author>
+            <name>S. Esen</name>
+        </author>
+        <author>
+            <name>H. -M. Evans</name>
+        </author>
+        <author>
+            <name>T. Evans</name>
+        </author>
+        <author>
+            <name>A. Falabella</name>
+        </author>
+        <author>
+            <name>C. Färber</name>
+        </author>
+        <author>
+            <name>C. Farinelli</name>
+        </author>
+        <author>
+            <name>N. Farley</name>
+        </author>
+        <author>
+            <name>S. Farry</name>
+        </author>
+        <author>
+            <name>RF Fay</name>
+        </author>
+        <author>
+            <name>D. Ferguson</name>
+        </author>
+        <author>
+            <name>V. Fernandez Albor</name>
+        </author>
+        <author>
+            <name>F. Ferreira Rodrigues</name>
+        </author>
+        <author>
+            <name>M. Ferro-Luzzi</name>
+        </author>
+        <author>
+            <name>S. Filippov</name>
+        </author>
+        <author>
+            <name>M. Fiore</name>
+        </author>
+        <author>
+            <name>M. Fiorini</name>
+        </author>
+        <author>
+            <name>M. Firlej</name>
+        </author>
+        <author>
+            <name>C. Fitzpatrick</name>
+        </author>
+        <author>
+            <name>T. Fiutowski</name>
+        </author>
+        <author>
+            <name>M. Fontana</name>
+        </author>
+        <author>
+            <name>F. Fontanelli</name>
+        </author>
+        <author>
+            <name>R. Forty</name>
+        </author>
+        <author>
+            <name>O. Francisco</name>
+        </author>
+        <author>
+            <name>M. Frank</name>
+        </author>
+        <author>
+            <name>C. Frei</name>
+        </author>
+        <author>
+            <name>M. Frosini</name>
+        </author>
+        <author>
+            <name>J. Fu</name>
+        </author>
+        <author>
+            <name>E. Furfaro</name>
+        </author>
+        <author>
+            <name>A. Gallas Torreira</name>
+        </author>
+        <author>
+            <name>D. Galli</name>
+        </author>
+        <author>
+            <name>S. Gallorini</name>
+        </author>
+        <author>
+            <name>S. Gambetta</name>
+        </author>
+        <author>
+            <name>M. Gandelman</name>
+        </author>
+        <author>
+            <name>P. Gandini</name>
+        </author>
+        <author>
+            <name>Y. Gao</name>
+        </author>
+        <author>
+            <name>J. Garofoli</name>
+        </author>
+        <author>
+            <name>J. Garra Tico</name>
+        </author>
+        <author>
+            <name>L. Garrido</name>
+        </author>
+        <author>
+            <name>C. Gaspar</name>
+        </author>
+        <author>
+            <name>R. Gauld</name>
+        </author>
+        <author>
+            <name>L. Gavardi</name>
+        </author>
+        <author>
+            <name>G. Gavrilov</name>
+        </author>
+        <author>
+            <name>E. Gersabeck</name>
+        </author>
+        <author>
+            <name>M. Gersabeck</name>
+        </author>
+        <author>
+            <name>T. Gershon</name>
+        </author>
+        <author>
+            <name>Ph. Ghez</name>
+        </author>
+        <author>
+            <name>A. Gianelle</name>
+        </author>
+        <author>
+            <name>S. Giani'</name>
+        </author>
+        <author>
+            <name>V. Gibson</name>
+        </author>
+        <author>
+            <name>L. Giubega</name>
+        </author>
+        <author>
+            <name>V. V. Gligorov</name>
+        </author>
+        <author>
+            <name>C. Göbel</name>
+        </author>
+        <author>
+            <name>D. Golubkov</name>
+        </author>
+        <author>
+            <name>A. Golutvin</name>
+        </author>
+        <author>
+            <name>A. Gomes</name>
+        </author>
+        <author>
+            <name>H. Gordon</name>
+        </author>
+        <author>
+            <name>C. Gotti</name>
+        </author>
+        <author>
+            <name>M. Grabalosa Gándara</name>
+        </author>
+        <author>
+            <name>R. Graciani Diaz</name>
+        </author>
+        <author>
+            <name>L. A. Granado Cardoso</name>
+        </author>
+        <author>
+            <name>E. Graugés</name>
+        </author>
+        <author>
+            <name>G. Graziani</name>
+        </author>
+        <author>
+            <name>A. Grecu</name>
+        </author>
+        <author>
+            <name>E. Greening</name>
+        </author>
+        <author>
+            <name>S. Gregson</name>
+        </author>
+        <author>
+            <name>P. Griffith</name>
+        </author>
+        <author>
+            <name>L. Grillo</name>
+        </author>
+        <author>
+            <name>O. Grünberg</name>
+        </author>
+        <author>
+            <name>B. Gui</name>
+        </author>
+        <author>
+            <name>E. Gushchin</name>
+        </author>
+        <author>
+            <name>Yu. Guz</name>
+        </author>
+        <author>
+            <name>T. Gys</name>
+        </author>
+        <author>
+            <name>C. Hadjivasiliou</name>
+        </author>
+        <author>
+            <name>G. Haefeli</name>
+        </author>
+        <author>
+            <name>C. Haen</name>
+        </author>
+        <author>
+            <name>S. C. Haines</name>
+        </author>
+        <author>
+            <name>S. Hall</name>
+        </author>
+        <author>
+            <name>B. Hamilton</name>
+        </author>
+        <author>
+            <name>T. Hampson</name>
+        </author>
+        <author>
+            <name>X. Han</name>
+        </author>
+        <author>
+            <name>S. Hansmann-Menzemer</name>
+        </author>
+        <author>
+            <name>N. Harnew</name>
+        </author>
+        <author>
+            <name>S. T. Harnew</name>
+        </author>
+        <author>
+            <name>J. Harrison</name>
+        </author>
+        <author>
+            <name>T. Hartmann</name>
+        </author>
+        <author>
+            <name>J. He</name>
+        </author>
+        <author>
+            <name>T. Head</name>
+        </author>
+        <author>
+            <name>V. Heijne</name>
+        </author>
+        <author>
+            <name>K. Hennessy</name>
+        </author>
+        <author>
+            <name>P. Henrard</name>
+        </author>
+        <author>
+            <name>L. Henry</name>
+        </author>
+        <author>
+            <name>J. A. Hernando Morata</name>
+        </author>
+        <author>
+            <name>E. van Herwijnen</name>
+        </author>
+        <author>
+            <name>M. Heß</name>
+        </author>
+        <author>
+            <name>A. Hicheur</name>
+        </author>
+        <author>
+            <name>D. Hill</name>
+        </author>
+        <author>
+            <name>M. Hoballah</name>
+        </author>
+        <author>
+            <name>C. Hombach</name>
+        </author>
+        <author>
+            <name>W. Hulsbergen</name>
+        </author>
+        <author>
+            <name>P. Hunt</name>
+        </author>
+        <author>
+            <name>N. Hussain</name>
+        </author>
+        <author>
+            <name>D. Hutchcroft</name>
+        </author>
+        <author>
+            <name>D. Hynds</name>
+        </author>
+        <author>
+            <name>M. Idzik</name>
+        </author>
+        <author>
+            <name>P. Ilten</name>
+        </author>
+        <author>
+            <name>R. Jacobsson</name>
+        </author>
+        <author>
+            <name>A. Jaeger</name>
+        </author>
+        <author>
+            <name>J. Jalocha</name>
+        </author>
+        <author>
+            <name>E. Jans</name>
+        </author>
+        <author>
+            <name>P. Jaton</name>
+        </author>
+        <author>
+            <name>A. Jawahery</name>
+        </author>
+        <author>
+            <name>F. Jing</name>
+        </author>
+        <author>
+            <name>M. John</name>
+        </author>
+        <author>
+            <name>D. Johnson</name>
+        </author>
+        <author>
+            <name>C. R. Jones</name>
+        </author>
+        <author>
+            <name>C. Joram</name>
+        </author>
+        <author>
+            <name>B. Jost</name>
+        </author>
+        <author>
+            <name>N. Jurik</name>
+        </author>
+        <author>
+            <name>M. Kaballo</name>
+        </author>
+        <author>
+            <name>S. Kandybei</name>
+        </author>
+        <author>
+            <name>W. Kanso</name>
+        </author>
+        <author>
+            <name>M. Karacson</name>
+        </author>
+        <author>
+            <name>T. M. Karbach</name>
+        </author>
+        <author>
+            <name>S. Karodia</name>
+        </author>
+        <author>
+            <name>M. Kelsey</name>
+        </author>
+        <author>
+            <name>I. R. Kenyon</name>
+        </author>
+        <author>
+            <name>T. Ketel</name>
+        </author>
+        <author>
+            <name>B. Khanji</name>
+        </author>
+        <author>
+            <name>C. Khurewathanakul</name>
+        </author>
+        <author>
+            <name>S. Klaver</name>
+        </author>
+        <author>
+            <name>O. Kochebina</name>
+        </author>
+        <author>
+            <name>M. Kolpin</name>
+        </author>
+        <author>
+            <name>I. Komarov</name>
+        </author>
+        <author>
+            <name>R. F. Koopman</name>
+        </author>
+        <author>
+            <name>P. Koppenburg</name>
+        </author>
+        <author>
+            <name>M. Korolev</name>
+        </author>
+        <author>
+            <name>A. Kozlinskiy</name>
+        </author>
+        <author>
+            <name>L. Kravchuk</name>
+        </author>
+        <author>
+            <name>K. Kreplin</name>
+        </author>
+        <author>
+            <name>M. Kreps</name>
+        </author>
+        <author>
+            <name>G. Krocker</name>
+        </author>
+        <author>
+            <name>P. Krokovny</name>
+        </author>
+        <author>
+            <name>F. Kruse</name>
+        </author>
+        <author>
+            <name>W. Kucewicz</name>
+        </author>
+        <author>
+            <name>M. Kucharczyk</name>
+        </author>
+        <author>
+            <name>V. Kudryavtsev</name>
+        </author>
+        <author>
+            <name>K. Kurek</name>
+        </author>
+        <author>
+            <name>T. Kvaratskheliya</name>
+        </author>
+        <author>
+            <name>V. N. La Thi</name>
+        </author>
+        <author>
+            <name>D. Lacarrere</name>
+        </author>
+        <author>
+            <name>G. Lafferty</name>
+        </author>
+        <author>
+            <name>A. Lai</name>
+        </author>
+        <author>
+            <name>D. Lambert</name>
+        </author>
+        <author>
+            <name>R. W. Lambert</name>
+        </author>
+        <author>
+            <name>E. Lanciotti</name>
+        </author>
+        <author>
+            <name>G. Lanfranchi</name>
+        </author>
+        <author>
+            <name>C. Langenbruch</name>
+        </author>
+        <author>
+            <name>B. Langhans</name>
+        </author>
+        <author>
+            <name>T. Latham</name>
+        </author>
+        <author>
+            <name>C. Lazzeroni</name>
+        </author>
+        <author>
+            <name>R. Le Gac</name>
+        </author>
+        <author>
+            <name>J. van Leerdam</name>
+        </author>
+        <author>
+            <name>J. -P. Lees</name>
+        </author>
+        <author>
+            <name>R. Lefèvre</name>
+        </author>
+        <author>
+            <name>A. Leflat</name>
+        </author>
+        <author>
+            <name>J. Lefrançois</name>
+        </author>
+        <author>
+            <name>S. Leo</name>
+        </author>
+        <author>
+            <name>O. Leroy</name>
+        </author>
+        <author>
+            <name>T. Lesiak</name>
+        </author>
+        <author>
+            <name>B. Leverington</name>
+        </author>
+        <author>
+            <name>Y. Li</name>
+        </author>
+        <author>
+            <name>M. Liles</name>
+        </author>
+        <author>
+            <name>R. Lindner</name>
+        </author>
+        <author>
+            <name>C. Linn</name>
+        </author>
+        <author>
+            <name>F. Lionetto</name>
+        </author>
+        <author>
+            <name>B. Liu</name>
+        </author>
+        <author>
+            <name>G. Liu</name>
+        </author>
+        <author>
+            <name>S. Lohn</name>
+        </author>
+        <author>
+            <name>I. Longstaff</name>
+        </author>
+        <author>
+            <name>J. H. Lopes</name>
+        </author>
+        <author>
+            <name>N. Lopez-March</name>
+        </author>
+        <author>
+            <name>P. Lowdon</name>
+        </author>
+        <author>
+            <name>H. Lu</name>
+        </author>
+        <author>
+            <name>D. Lucchesi</name>
+        </author>
+        <author>
+            <name>H. Luo</name>
+        </author>
+        <author>
+            <name>A. Lupato</name>
+        </author>
+        <author>
+            <name>E. Luppi</name>
+        </author>
+        <author>
+            <name>O. Lupton</name>
+        </author>
+        <author>
+            <name>F. Machefert</name>
+        </author>
+        <author>
+            <name>I. V. Machikhiliyan</name>
+        </author>
+        <author>
+            <name>F. Maciuc</name>
+        </author>
+        <author>
+            <name>O. Maev</name>
+        </author>
+        <author>
+            <name>S. Malde</name>
+        </author>
+        <author>
+            <name>G. Manca</name>
+        </author>
+        <author>
+            <name>G. Mancinelli</name>
+        </author>
+        <author>
+            <name>J. Maratas</name>
+        </author>
+        <author>
+            <name>J. F. Marchand</name>
+        </author>
+        <author>
+            <name>U. Marconi</name>
+        </author>
+        <author>
+            <name>C. Marin Benito</name>
+        </author>
+        <author>
+            <name>P. Marino</name>
+        </author>
+        <author>
+            <name>R. Märki</name>
+        </author>
+        <author>
+            <name>J. Marks</name>
+        </author>
+        <author>
+            <name>G. Martellotti</name>
+        </author>
+        <author>
+            <name>A. Martens</name>
+        </author>
+        <author>
+            <name>A. Martín Sánchez</name>
+        </author>
+        <author>
+            <name>M. Martinelli</name>
+        </author>
+        <author>
+            <name>D. Martinez Santos</name>
+        </author>
+        <author>
+            <name>F. Martinez Vidal</name>
+        </author>
+        <author>
+            <name>D. Martins Tostes</name>
+        </author>
+        <author>
+            <name>A. Massafferri</name>
+        </author>
+        <author>
+            <name>R. Matev</name>
+        </author>
+        <author>
+            <name>Z. Mathe</name>
+        </author>
+        <author>
+            <name>C. Matteuzzi</name>
+        </author>
+        <author>
+            <name>A. Mazurov</name>
+        </author>
+        <author>
+            <name>M. McCann</name>
+        </author>
+        <author>
+            <name>J. McCarthy</name>
+        </author>
+        <author>
+            <name>A. McNab</name>
+        </author>
+        <author>
+            <name>R. McNulty</name>
+        </author>
+        <author>
+            <name>B. McSkelly</name>
+        </author>
+        <author>
+            <name>B. Meadows</name>
+        </author>
+        <author>
+            <name>F. Meier</name>
+        </author>
+        <author>
+            <name>M. Meissner</name>
+        </author>
+        <author>
+            <name>M. Merk</name>
+        </author>
+        <author>
+            <name>D. A. Milanes</name>
+        </author>
+        <author>
+            <name>M. -N. Minard</name>
+        </author>
+        <author>
+            <name>N. Moggi</name>
+        </author>
+        <author>
+            <name>J. Molina Rodriguez</name>
+        </author>
+        <author>
+            <name>S. Monteil</name>
+        </author>
+        <author>
+            <name>M. Morandin</name>
+        </author>
+        <author>
+            <name>P. Morawski</name>
+        </author>
+        <author>
+            <name>A. Mordà</name>
+        </author>
+        <author>
+            <name>M. J. Morello</name>
+        </author>
+        <author>
+            <name>J. Moron</name>
+        </author>
+        <author>
+            <name>A. -B. Morris</name>
+        </author>
+        <author>
+            <name>R. Mountain</name>
+        </author>
+        <author>
+            <name>F. Muheim</name>
+        </author>
+        <author>
+            <name>K. Müller</name>
+        </author>
+        <author>
+            <name>R. Muresan</name>
+        </author>
+        <author>
+            <name>M. Mussini</name>
+        </author>
+        <author>
+            <name>B. Muster</name>
+        </author>
+        <author>
+            <name>P. Naik</name>
+        </author>
+        <author>
+            <name>T. Nakada</name>
+        </author>
+        <author>
+            <name>R. Nandakumar</name>
+        </author>
+        <author>
+            <name>I. Nasteva</name>
+        </author>
+        <author>
+            <name>M. Needham</name>
+        </author>
+        <author>
+            <name>N. Neri</name>
+        </author>
+        <author>
+            <name>S. Neubert</name>
+        </author>
+        <author>
+            <name>N. Neufeld</name>
+        </author>
+        <author>
+            <name>M. Neuner</name>
+        </author>
+        <author>
+            <name>A. D. Nguyen</name>
+        </author>
+        <author>
+            <name>T. D. Nguyen</name>
+        </author>
+        <author>
+            <name>C. Nguyen-Mau</name>
+        </author>
+        <author>
+            <name>M. Nicol</name>
+        </author>
+        <author>
+            <name>V. Niess</name>
+        </author>
+        <author>
+            <name>R. Niet</name>
+        </author>
+        <author>
+            <name>N. Nikitin</name>
+        </author>
+        <author>
+            <name>T. Nikodem</name>
+        </author>
+        <author>
+            <name>A. Novoselov</name>
+        </author>
+        <author>
+            <name>D. P. O'Hanlon</name>
+        </author>
+        <author>
+            <name>A. Oblakowska-Mucha</name>
+        </author>
+        <author>
+            <name>V. Obraztsov</name>
+        </author>
+        <author>
+            <name>S. Oggero</name>
+        </author>
+        <author>
+            <name>S. Ogilvy</name>
+        </author>
+        <author>
+            <name>O. Okhrimenko</name>
+        </author>
+        <author>
+            <name>R. Oldeman</name>
+        </author>
+        <author>
+            <name>G. Onderwater</name>
+        </author>
+        <author>
+            <name>M. Orlandea</name>
+        </author>
+        <author>
+            <name>J. M. Otalora Goicochea</name>
+        </author>
+        <author>
+            <name>P. Owen</name>
+        </author>
+        <author>
+            <name>A. Oyanguren</name>
+        </author>
+        <author>
+            <name>B. K. Pal</name>
+        </author>
+        <author>
+            <name>A. Palano</name>
+        </author>
+        <author>
+            <name>F. Palombo</name>
+        </author>
+        <author>
+            <name>M. Palutan</name>
+        </author>
+        <author>
+            <name>J. Panman</name>
+        </author>
+        <author>
+            <name>A. Papanestis</name>
+        </author>
+        <author>
+            <name>M. Pappagallo</name>
+        </author>
+        <author>
+            <name>C. Parkes</name>
+        </author>
+        <author>
+            <name>C. J. Parkinson</name>
+        </author>
+        <author>
+            <name>G. Passaleva</name>
+        </author>
+        <author>
+            <name>G. D. Patel</name>
+        </author>
+        <author>
+            <name>M. Patel</name>
+        </author>
+        <author>
+            <name>C. Patrignani</name>
+        </author>
+        <author>
+            <name>A. Pazos Alvarez</name>
+        </author>
+        <author>
+            <name>A. Pearce</name>
+        </author>
+        <author>
+            <name>A. Pellegrino</name>
+        </author>
+        <author>
+            <name>M. Pepe Altarelli</name>
+        </author>
+        <author>
+            <name>S. Perazzini</name>
+        </author>
+        <author>
+            <name>E. Perez Trigo</name>
+        </author>
+        <author>
+            <name>P. Perret</name>
+        </author>
+        <author>
+            <name>M. Perrin-Terrin</name>
+        </author>
+        <author>
+            <name>L. Pescatore</name>
+        </author>
+        <author>
+            <name>E. Pesen</name>
+        </author>
+        <author>
+            <name>K. Petridis</name>
+        </author>
+        <author>
+            <name>A. Petrolini</name>
+        </author>
+        <author>
+            <name>E. Picatoste Olloqui</name>
+        </author>
+        <author>
+            <name>B. Pietrzyk</name>
+        </author>
+        <author>
+            <name>T. Pilař</name>
+        </author>
+        <author>
+            <name>D. Pinci</name>
+        </author>
+        <author>
+            <name>A. Pistone</name>
+        </author>
+        <author>
+            <name>S. Playfer</name>
+        </author>
+        <author>
+            <name>M. Plo Casasus</name>
+        </author>
+        <author>
+            <name>F. Polci</name>
+        </author>
+        <author>
+            <name>A. Poluektov</name>
+        </author>
+        <author>
+            <name>E. Polycarpo</name>
+        </author>
+        <author>
+            <name>A. Popov</name>
+        </author>
+        <author>
+            <name>D. Popov</name>
+        </author>
+        <author>
+            <name>B. Popovici</name>
+        </author>
+        <author>
+            <name>C. Potterat</name>
+        </author>
+        <author>
+            <name>E. Price</name>
+        </author>
+        <author>
+            <name>J. Prisciandaro</name>
+        </author>
+        <author>
+            <name>A. Pritchard</name>
+        </author>
+        <author>
+            <name>C. Prouve</name>
+        </author>
+        <author>
+            <name>V. Pugatch</name>
+        </author>
+        <author>
+            <name>A. Puig Navarro</name>
+        </author>
+        <author>
+            <name>G. Punzi</name>
+        </author>
+        <author>
+            <name>W. Qian</name>
+        </author>
+        <author>
+            <name>B. Rachwal</name>
+        </author>
+        <author>
+            <name>J. H. Rademacker</name>
+        </author>
+        <author>
+            <name>B. Rakotomiaramanana</name>
+        </author>
+        <author>
+            <name>M. Rama</name>
+        </author>
+        <author>
+            <name>M. S. Rangel</name>
+        </author>
+        <author>
+            <name>I. Raniuk</name>
+        </author>
+        <author>
+            <name>N. Rauschmayr</name>
+        </author>
+        <author>
+            <name>G. Raven</name>
+        </author>
+        <author>
+            <name>S. Reichert</name>
+        </author>
+        <author>
+            <name>M. M. Reid</name>
+        </author>
+        <author>
+            <name>A. C. dos Reis</name>
+        </author>
+        <author>
+            <name>S. Ricciardi</name>
+        </author>
+        <author>
+            <name>S. Richards</name>
+        </author>
+        <author>
+            <name>M. Rihl</name>
+        </author>
+        <author>
+            <name>K. Rinnert</name>
+        </author>
+        <author>
+            <name>V. Rives Molina</name>
+        </author>
+        <author>
+            <name>D. A. Roa Romero</name>
+        </author>
+        <author>
+            <name>P. Robbe</name>
+        </author>
+        <author>
+            <name>A. B. Rodrigues</name>
+        </author>
+        <author>
+            <name>E. Rodrigues</name>
+        </author>
+        <author>
+            <name>P. Rodriguez Perez</name>
+        </author>
+        <author>
+            <name>S. Roiser</name>
+        </author>
+        <author>
+            <name>V. Romanovsky</name>
+        </author>
+        <author>
+            <name>A. Romero Vidal</name>
+        </author>
+        <author>
+            <name>M. Rotondo</name>
+        </author>
+        <author>
+            <name>J. Rouvinet</name>
+        </author>
+        <author>
+            <name>T. Ruf</name>
+        </author>
+        <author>
+            <name>F. Ruffini</name>
+        </author>
+        <author>
+            <name>H. Ruiz</name>
+        </author>
+        <author>
+            <name>P. Ruiz Valls</name>
+        </author>
+        <author>
+            <name>G. Sabatino</name>
+        </author>
+        <author>
+            <name>J. J. Saborido Silva</name>
+        </author>
+        <author>
+            <name>N. Sagidova</name>
+        </author>
+        <author>
+            <name>P. Sail</name>
+        </author>
+        <author>
+            <name>B. Saitta</name>
+        </author>
+        <author>
+            <name>V. Salustino Guimaraes</name>
+        </author>
+        <author>
+            <name>C. Sanchez Mayordomo</name>
+        </author>
+        <author>
+            <name>B. Sanmartin Sedes</name>
+        </author>
+        <author>
+            <name>R. Santacesaria</name>
+        </author>
+        <author>
+            <name>C. Santamarina Rios</name>
+        </author>
+        <author>
+            <name>E. Santovetti</name>
+        </author>
+        <author>
+            <name>M. Sapunov</name>
+        </author>
+        <author>
+            <name>A. Sarti</name>
+        </author>
+        <author>
+            <name>C. Satriano</name>
+        </author>
+        <author>
+            <name>A. Satta</name>
+        </author>
+        <author>
+            <name>D. M. Saunders</name>
+        </author>
+        <author>
+            <name>M. Savrie</name>
+        </author>
+        <author>
+            <name>D. Savrina</name>
+        </author>
+        <author>
+            <name>M. Schiller</name>
+        </author>
+        <author>
+            <name>H. Schindler</name>
+        </author>
+        <author>
+            <name>M. Schlupp</name>
+        </author>
+        <author>
+            <name>M. Schmelling</name>
+        </author>
+        <author>
+            <name>B. Schmidt</name>
+        </author>
+        <author>
+            <name>O. Schneider</name>
+        </author>
+        <author>
+            <name>A. Schopper</name>
+        </author>
+        <author>
+            <name>M. -H. Schune</name>
+        </author>
+        <author>
+            <name>R. Schwemmer</name>
+        </author>
+        <author>
+            <name>B. Sciascia</name>
+        </author>
+        <author>
+            <name>A. Sciubba</name>
+        </author>
+        <author>
+            <name>M. Seco</name>
+        </author>
+        <author>
+            <name>A. Semennikov</name>
+        </author>
+        <author>
+            <name>I. Sepp</name>
+        </author>
+        <author>
+            <name>N. Serra</name>
+        </author>
+        <author>
+            <name>J. Serrano</name>
+        </author>
+        <author>
+            <name>L. Sestini</name>
+        </author>
+        <author>
+            <name>P. Seyfert</name>
+        </author>
+        <author>
+            <name>M. Shapkin</name>
+        </author>
+        <author>
+            <name>I. Shapoval</name>
+        </author>
+        <author>
+            <name>Y. Shcheglov</name>
+        </author>
+        <author>
+            <name>T. Shears</name>
+        </author>
+        <author>
+            <name>L. Shekhtman</name>
+        </author>
+        <author>
+            <name>V. Shevchenko</name>
+        </author>
+        <author>
+            <name>A. Shires</name>
+        </author>
+        <author>
+            <name>R. Silva Coutinho</name>
+        </author>
+        <author>
+            <name>G. Simi</name>
+        </author>
+        <author>
+            <name>M. Sirendi</name>
+        </author>
+        <author>
+            <name>N. Skidmore</name>
+        </author>
+        <author>
+            <name>T. Skwarnicki</name>
+        </author>
+        <author>
+            <name>N. A. Smith</name>
+        </author>
+        <author>
+            <name>E. Smith</name>
+        </author>
+        <author>
+            <name>E. Smith</name>
+        </author>
+        <author>
+            <name>J. Smith</name>
+        </author>
+        <author>
+            <name>M. Smith</name>
+        </author>
+        <author>
+            <name>H. Snoek</name>
+        </author>
+        <author>
+            <name>M. D. Sokoloff</name>
+        </author>
+        <author>
+            <name>F. J. P. Soler</name>
+        </author>
+        <author>
+            <name>F. Soomro</name>
+        </author>
+        <author>
+            <name>D. Souza</name>
+        </author>
+        <author>
+            <name>B. Souza De Paula</name>
+        </author>
+        <author>
+            <name>B. Spaan</name>
+        </author>
+        <author>
+            <name>A. Sparkes</name>
+        </author>
+        <author>
+            <name>P. Spradlin</name>
+        </author>
+        <author>
+            <name>F. Stagni</name>
+        </author>
+        <author>
+            <name>M. Stahl</name>
+        </author>
+        <author>
+            <name>S. Stahl</name>
+        </author>
+        <author>
+            <name>O. Steinkamp</name>
+        </author>
+        <author>
+            <name>O. Stenyakin</name>
+        </author>
+        <author>
+            <name>S. Stevenson</name>
+        </author>
+        <author>
+            <name>S. Stoica</name>
+        </author>
+        <author>
+            <name>S. Stone</name>
+        </author>
+        <author>
+            <name>B. Storaci</name>
+        </author>
+        <author>
+            <name>S. Stracka</name>
+        </author>
+        <author>
+            <name>M. Straticiuc</name>
+        </author>
+        <author>
+            <name>U. Straumann</name>
+        </author>
+        <author>
+            <name>R. Stroili</name>
+        </author>
+        <author>
+            <name>V. K. Subbiah</name>
+        </author>
+        <author>
+            <name>L. Sun</name>
+        </author>
+        <author>
+            <name>W. Sutcliffe</name>
+        </author>
+        <author>
+            <name>K. Swientek</name>
+        </author>
+        <author>
+            <name>S. Swientek</name>
+        </author>
+        <author>
+            <name>V. Syropoulos</name>
+        </author>
+        <author>
+            <name>M. Szczekowski</name>
+        </author>
+        <author>
+            <name>P. Szczypka</name>
+        </author>
+        <author>
+            <name>D. Szilard</name>
+        </author>
+        <author>
+            <name>T. Szumlak</name>
+        </author>
+        <author>
+            <name>S. T'Jampens</name>
+        </author>
+        <author>
+            <name>M. Teklishyn</name>
+        </author>
+        <author>
+            <name>G. Tellarini</name>
+        </author>
+        <author>
+            <name>F. Teubert</name>
+        </author>
+        <author>
+            <name>C. Thomas</name>
+        </author>
+        <author>
+            <name>E. Thomas</name>
+        </author>
+        <author>
+            <name>J. van Tilburg</name>
+        </author>
+        <author>
+            <name>V. Tisserand</name>
+        </author>
+        <author>
+            <name>M. Tobin</name>
+        </author>
+        <author>
+            <name>S. Tolk</name>
+        </author>
+        <author>
+            <name>L. Tomassetti</name>
+        </author>
+        <author>
+            <name>D. Tonelli</name>
+        </author>
+        <author>
+            <name>S. Topp-Joergensen</name>
+        </author>
+        <author>
+            <name>N. Torr</name>
+        </author>
+        <author>
+            <name>E. Tournefier</name>
+        </author>
+        <author>
+            <name>S. Tourneur</name>
+        </author>
+        <author>
+            <name>M. T. Tran</name>
+        </author>
+        <author>
+            <name>M. Tresch</name>
+        </author>
+        <author>
+            <name>A. Tsaregorodtsev</name>
+        </author>
+        <author>
+            <name>P. Tsopelas</name>
+        </author>
+        <author>
+            <name>N. Tuning</name>
+        </author>
+        <author>
+            <name>M. Ubeda Garcia</name>
+        </author>
+        <author>
+            <name>A. Ukleja</name>
+        </author>
+        <author>
+            <name>A. Ustyuzhanin</name>
+        </author>
+        <author>
+            <name>U. Uwer</name>
+        </author>
+        <author>
+            <name>V. Vagnoni</name>
+        </author>
+        <author>
+            <name>G. Valenti</name>
+        </author>
+        <author>
+            <name>A. Vallier</name>
+        </author>
+        <author>
+            <name>R. Vazquez Gomez</name>
+        </author>
+        <author>
+            <name>P. Vazquez Regueiro</name>
+        </author>
+        <author>
+            <name>C. Vázquez Sierra</name>
+        </author>
+        <author>
+            <name>S. Vecchi</name>
+        </author>
+        <author>
+            <name>J. J. Velthuis</name>
+        </author>
+        <author>
+            <name>M. Veltri</name>
+        </author>
+        <author>
+            <name>G. Veneziano</name>
+        </author>
+        <author>
+            <name>M. Vesterinen</name>
+        </author>
+        <author>
+            <name>B. Viaud</name>
+        </author>
+        <author>
+            <name>D. Vieira</name>
+        </author>
+        <author>
+            <name>M. Vieites Diaz</name>
+        </author>
+        <author>
+            <name>X. Vilasis-Cardona</name>
+        </author>
+        <author>
+            <name>A. Vollhardt</name>
+        </author>
+        <author>
+            <name>D. Volyanskyy</name>
+        </author>
+        <author>
+            <name>D. Voong</name>
+        </author>
+        <author>
+            <name>A. Vorobyev</name>
+        </author>
+        <author>
+            <name>V. Vorobyev</name>
+        </author>
+        <author>
+            <name>C. Voß</name>
+        </author>
+        <author>
+            <name>H. Voss</name>
+        </author>
+        <author>
+            <name>J. A. de Vries</name>
+        </author>
+        <author>
+            <name>R. Waldi</name>
+        </author>
+        <author>
+            <name>C. Wallace</name>
+        </author>
+        <author>
+            <name>R. Wallace</name>
+        </author>
+        <author>
+            <name>J. Walsh</name>
+        </author>
+        <author>
+            <name>S. Wandernoth</name>
+        </author>
+        <author>
+            <name>J. Wang</name>
+        </author>
+        <author>
+            <name>D. R. Ward</name>
+        </author>
+        <author>
+            <name>N. K. Watson</name>
+        </author>
+        <author>
+            <name>D. Websdale</name>
+        </author>
+        <author>
+            <name>M. Whitehead</name>
+        </author>
+        <author>
+            <name>J. Wicht</name>
+        </author>
+        <author>
+            <name>D. Wiedner</name>
+        </author>
+        <author>
+            <name>G. Wilkinson</name>
+        </author>
+        <author>
+            <name>M. P. Williams</name>
+        </author>
+        <author>
+            <name>M. Williams</name>
+        </author>
+        <author>
+            <name>F. F. Wilson</name>
+        </author>
+        <author>
+            <name>J. Wimberley</name>
+        </author>
+        <author>
+            <name>J. Wishahi</name>
+        </author>
+        <author>
+            <name>W. Wislicki</name>
+        </author>
+        <author>
+            <name>M. Witek</name>
+        </author>
+        <author>
+            <name>G. Wormser</name>
+        </author>
+        <author>
+            <name>S. A. Wotton</name>
+        </author>
+        <author>
+            <name>S. Wright</name>
+        </author>
+        <author>
+            <name>S. Wu</name>
+        </author>
+        <author>
+            <name>K. Wyllie</name>
+        </author>
+        <author>
+            <name>Y. Xie</name>
+        </author>
+        <author>
+            <name>Z. Xing</name>
+        </author>
+        <author>
+            <name>Z. Xu</name>
+        </author>
+        <author>
+            <name>Z. Yang</name>
+        </author>
+        <author>
+            <name>X. Yuan</name>
+        </author>
+        <author>
+            <name>O. Yushchenko</name>
+        </author>
+        <author>
+            <name>M. Zangoli</name>
+        </author>
+        <author>
+            <name>M. Zavertyaev</name>
+        </author>
+        <author>
+            <name>L. Zhang</name>
+        </author>
+        <author>
+            <name>W. C. Zhang</name>
+        </author>
+        <author>
+            <name>Y. Zhang</name>
+        </author>
+        <author>
+            <name>A. Zhelezov</name>
+        </author>
+        <author>
+            <name>A. Zhokhov</name>
+        </author>
+        <author>
+            <name>L. Zhong</name>
+        </author>
+        <author>
+            <name>A. Zvyagin</name>
+        </author>
+        <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1007/JHEP07(2014)103</arxiv:doi>
+        <link title="doi" href="http://dx.doi.org/10.1007/JHEP07(2014)103" rel="related"/>
+        <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Journal of High Energy Physics 07 (2014) 103</arxiv:journal_ref>
+        <link href="http://arxiv.org/abs/1406.0755v3" rel="alternate" type="text/html"/>
+        <link title="pdf" href="http://arxiv.org/pdf/1406.0755v3" rel="related" type="application/pdf"/>
+        <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+        <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    </entry>
+</feed>
