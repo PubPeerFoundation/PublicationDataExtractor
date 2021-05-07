@@ -2,10 +2,10 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Schema;
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 
 abstract class Extractor
 {
