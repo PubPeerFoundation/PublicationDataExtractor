@@ -2,10 +2,10 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
 use PubPeerFoundation\PublicationDataExtractor\Output;
 use PubPeerFoundation\PublicationDataExtractor\Schema;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 
 abstract class Extractor
 {
@@ -36,8 +36,7 @@ abstract class Extractor
     /**
      * Extractor constructor.
      *
-     * @param mixed  $document
-     * @param Output $output
+     * @param mixed $document
      */
     public function __construct($document, Output $output)
     {
@@ -47,8 +46,6 @@ abstract class Extractor
 
     /**
      * Dynamically choose what methods to call on each Resource.
-     *
-     * @return array
      */
     public function extract(): array
     {

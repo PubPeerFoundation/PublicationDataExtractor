@@ -2,10 +2,10 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor\Resources\Extractors;
 
-use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 use PubPeerFoundation\PublicationDataExtractor\Exceptions\UnparseableApiException;
+use PubPeerFoundation\PublicationDataExtractor\Exceptions\JournalTitleNotFoundException;
 
-class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesTagsData
+class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIdentifiersData, ProvidesJournalData, ProvidesAuthorsData, ProvidesTagsData, ProvidesLinksData
 {
     /**
      * @throws UnparseableApiException
@@ -114,6 +114,26 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
             $this->resourceOutput['tags'][] = [
                 'name' => $tag,
             ];
+        }
+    }
+
+    /**
+     * Extract and format data needed for the links Relationship
+     * on the Publication Model.
+     */
+    public function extractLinksData(): void
+    {
+        if (array_key_exists('relation', $this->searchTree)) {
+            foreach (get_array($this->searchTree['relation'], 'has-preprint') as $preprint) {
+                $this->resourceOutput['links'][] = [
+                    'has_preprint' => $preprint['id'],
+                ];
+            }
+            foreach (get_array($this->searchTree['relation'], 'is-preprint-of') as $preprint) {
+                $this->resourceOutput['links'][] = [
+                    'is_preprint_of' => $preprint['id'],
+                ];
+            }
         }
     }
 

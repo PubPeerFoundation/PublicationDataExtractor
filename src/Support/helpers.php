@@ -1,7 +1,7 @@
 <?php
 
-use PubPeerFoundation\PublicationDataExtractor\Support\DateHelper;
 use Tightenco\Collect\Support\Arr;
+use PubPeerFoundation\PublicationDataExtractor\Support\DateHelper;
 
 if (! function_exists('get_class_name')) {
     /**

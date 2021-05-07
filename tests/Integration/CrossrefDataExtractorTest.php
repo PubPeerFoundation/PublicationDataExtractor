@@ -3,17 +3,17 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
 use PubPeerFoundation\PublicationDataExtractor\Output;
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
-use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\CrossrefUpdates;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
 use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
+use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\CrossrefUpdates;
 
 class CrossrefDataExtractorTest extends TestCase
 {
     use TestHelpers;
 
     /** @test */
-    public function it_can_extract_publication_data_from_crossref_api()
+    public function itCanExtractPublicationDataFromCrossrefApi()
     {
         // Arrange
         $file = $this->loadJson('Crossref/valid-article');
@@ -33,7 +33,7 @@ class CrossrefDataExtractorTest extends TestCase
     }
 
     /** @test */
-    public function it_can_extract_identifiers_data_from_crossref_api()
+    public function itCanExtractIdentifiersDataFromCrossrefApi()
     {
         // Arrange
         $file = $this->loadJson('Crossref/valid-article');
@@ -59,7 +59,7 @@ class CrossrefDataExtractorTest extends TestCase
     }
 
     /** @test */
-    public function it_can_extract_authors_from_crossref_api()
+    public function itCanExtractAuthorsFromCrossrefApi()
     {
         // Arrange
         $file = $this->loadJson('Crossref/valid-with-orcid-article');
@@ -101,7 +101,7 @@ class CrossrefDataExtractorTest extends TestCase
     }
 
     /** @test */
-    public function it_can_extract_updates_from_crossref_api()
+    public function itCanExtractUpdatesFromCrossrefApi()
     {
         // Arrange
         $file = $this->loadJson('Crossref/valid-with-updates-article');
@@ -119,5 +119,39 @@ class CrossrefDataExtractorTest extends TestCase
                 'type' => 'Corrected',
             ],
         ], $extracted['updates']);
+    }
+
+    /** @test */
+    public function itCanExtractHasPreprintFromCrossrefApi()
+    {
+        // Arrange
+        $file = $this->loadJson('Crossref/valid-with-has-updates-article');
+
+        // Act
+        $extracted = (new Crossref($file, new Output()))->extract();
+
+        // Assert
+        $this->assertArraySubset([
+            [
+                'has_preprint' => '10.1101/335703',
+            ],
+        ], $extracted['links']);
+    }
+
+    /** @test */
+    public function itCanExtractIsPreprintOfFromCrossrefApi()
+    {
+        // Arrange
+        $file = $this->loadJson('Crossref/valid-with-is-preprint-of');
+
+        // Act
+        $extracted = (new Crossref($file, new Output()))->extract();
+
+        // Assert
+        $this->assertArraySubset([
+            [
+                'is_preprint_of' => '10.1016/j.neuron.2019.05.022',
+            ],
+        ], $extracted['links']);
     }
 }

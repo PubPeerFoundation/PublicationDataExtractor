@@ -1,0 +1,475 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "institution": { "name": "bioRxiv", "place": ["-"], "acronym": ["-"] },
+    "indexed": {
+      "date-parts": [[2020, 1, 18]],
+      "date-time": "2020-01-18T03:15:02Z",
+      "timestamp": 1579317302709
+    },
+    "posted": { "date-parts": [[2018, 5, 31]] },
+    "group-title": "Neuroscience",
+    "reference-count": 73,
+    "publisher": "Cold Spring Harbor Laboratory",
+    "content-domain": { "domain": [], "crossmark-restriction": false },
+    "short-container-title": [],
+    "accepted": { "date-parts": [[2019, 3, 11]] },
+    "abstract": "<jats:p>In motor neocortex, preparatory activity predictive of specific movements is maintained by a positive feedback loop with the thalamus. Motor thalamus receives excitatory input from the cerebellum, which learns to generate predictive signals for motor control. The contribution of this pathway to neocortical preparatory signals remains poorly understood. Here we show that in a virtual reality conditioning task, cerebellar output neurons in the dentate nucleus exhibit preparatory activity similar to that in anterolateral motor cortex prior to reward acquisition. Silencing activity in dentate nucleus by photoactivating inhibitory Purkinje cells in the cerebellar cortex caused robust, short-latency suppression of preparatory activity in anterolateral motor cortex. Our results suggest that preparatory activity is controlled by a learned decrease of Purkinje cell firing in advance of reward under supervision of climbing fibre inputs signalling reward delivery. Thus, cerebellar computations exert a powerful influence on preparatory activity in motor neocortex.</jats:p>",
+    "DOI": "10.1101/335703",
+    "type": "posted-content",
+    "created": {
+      "date-parts": [[2018, 5, 31]],
+      "date-time": "2018-05-31T22:15:27Z",
+      "timestamp": 1527804927000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 4,
+    "title": [
+      "Cerebellar contribution to preparatory activity in motor neocortex"
+    ],
+    "prefix": "10.1101",
+    "author": [
+      {
+        "given": "Francois P.",
+        "family": "Chabrol",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Antonin",
+        "family": "Blot",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Thomas D.",
+        "family": "Mrsic-Flogel",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "246",
+    "reference": [
+      {
+        "key": "2019071912043639000_335703v2.1",
+        "DOI": "10.1016/0006-8993(70)90273-8",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.2",
+        "DOI": "10.1152/jn.00906.2011",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.3",
+        "unstructured": "Baumann, O. , Borra, R.J. , Bower, J.M. , Cullen, K.E. , Habas, C. , Ivry, R.B. , Leggio, M. , Mattingley, J.B. , Molinari, M. , Moulton, E. a. , et al. (2014). Consensus Paper: The Role of the Cerebellum in Perceptual Processes. The Cerebellum 197\u2013220."
+      },
+      {
+        "key": "2019071912043639000_335703v2.4",
+        "volume": "10",
+        "first-page": "2729",
+        "year": "2016",
+        "article-title": "Time-invariant feed-forward inhibition of Purkinje cells in the cerebellar cortex in vivo",
+        "journal-title": "J. Physiol."
+      },
+      {
+        "key": "2019071912043639000_335703v2.5",
+        "DOI": "10.1152/jn.00307.2006",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.6",
+        "volume": "80",
+        "first-page": "480",
+        "year": "1989",
+        "article-title": "Disturbances of motor preparation in basal ganglia and cerebellar disorders",
+        "journal-title": "Prog. Brain Res."
+      },
+      {
+        "key": "2019071912043639000_335703v2.7",
+        "DOI": "10.1523/JNEUROSCI.4534-04.2005",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.8",
+        "DOI": "10.1162/jocn.2009.21280",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.9",
+        "DOI": "10.1126/science.173.3997.652",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.10",
+        "DOI": "10.1016/j.jphysparis.2011.10.005",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.11",
+        "unstructured": "Gao, Z. , Davis, C. , Thomas, A.M. , Economo, M.N. , Abrego, A.M. , Svoboda, K. , Zeeuw, C.I. De , and Li, N. (2018). A cortico-cerebellar loop for motor planning. Nature.",
+        "DOI": "10.1038/s41586-018-0633-x",
+        "doi-asserted-by": "crossref"
+      },
+      {
+        "key": "2019071912043639000_335703v2.12",
+        "DOI": "10.1038/nn.4531",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.13",
+        "DOI": "10.1016/j.neuron.2013.10.020",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.14",
+        "DOI": "10.1038/nature22324",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.15",
+        "DOI": "10.1523/JNEUROSCI.1868-09.2009",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.16",
+        "DOI": "10.1038/s41593-018-0228-8",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.17",
+        "DOI": "10.1038/s41593-018-0136-y",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.18",
+        "DOI": "10.1007/s00429-007-0150-4",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.19",
+        "DOI": "10.7554/eLife.00247",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.20",
+        "DOI": "10.1016/S0006-8993(00)02744-X",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.21",
+        "DOI": "10.1523/JNEUROSCI.4202-06.2007",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.22",
+        "DOI": "10.1111/j.1469-7793.1999.551ae.x",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.23",
+        "DOI": "10.1523/JNEUROSCI.23-23-08432.2003",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.24",
+        "DOI": "10.1038/nn.3650",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.25",
+        "unstructured": "Khilkevich, A. , Canton-Josh, J. , DeLord, E. , and Mauk, M.D. (2018). A cerebellar adaptation to uncertain inputs. Sci. Adv. 4."
+      },
+      {
+        "key": "2019071912043639000_335703v2.26",
+        "DOI": "10.1016/j.neuron.2015.08.033",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.27",
+        "DOI": "10.1016/j.brainres.2003.09.036",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.28",
+        "DOI": "10.1016/0006-8993(79)90189-6",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.29",
+        "volume": "7",
+        "first-page": "e35676",
+        "year": "2018",
+        "article-title": "Different contributions of preparatory activity in the basal ganglia and cerebellum for self-timing",
+        "journal-title": "Elife",
+        "DOI": "10.7554/eLife.35676",
+        "doi-asserted-by": "crossref"
+      },
+      {
+        "key": "2019071912043639000_335703v2.30",
+        "DOI": "10.1111/j.1460-9568.2006.05150.x",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.31",
+        "DOI": "10.1038/nature14178",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.32",
+        "DOI": "10.1038/nature17643",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.33",
+        "DOI": "10.1126/science.272.5265.1126",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.34",
+        "DOI": "10.1111/j.1460-9568.2007.05482.x",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.35",
+        "DOI": "10.1146/annurev.neuro.27.070203.144247",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.36",
+        "DOI": "10.1007/BF00239513",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.37",
+        "DOI": "10.1002/cne.901810210",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.38",
+        "DOI": "10.1016/j.conb.2011.05.025",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.39",
+        "DOI": "10.1038/nn.2197",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.40",
+        "DOI": "10.1016/S0074-7742(08)60347-5",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.41",
+        "DOI": "10.1038/nn.3826",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.42",
+        "unstructured": "Ohmae, S. , and Medina, J.F. (2015). Climbing fibers encode a temporal-difference prediction error during cerebellar learning in mice. Nat. Neurosci. 18.",
+        "DOI": "10.1038/nn.4167",
+        "doi-asserted-by": "crossref"
+      },
+      {
+        "key": "2019071912043639000_335703v2.43",
+        "DOI": "10.1523/JNEUROSCI.2221-16.2017",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.44",
+        "unstructured": "Pachitariu, M. , Steinmetz, N. , Kadir, S. , Carandini, M. , and Harris, K.D. (2016). Kilosort: realtime spike-sorting for extracellular electrophysiology with hundreds of channels. BioRxiv 061481.",
+        "DOI": "10.1101/061481",
+        "doi-asserted-by": "crossref"
+      },
+      {
+        "key": "2019071912043639000_335703v2.45",
+        "DOI": "10.1038/nn.3800",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.46",
+        "DOI": "10.1016/0006-8993(83)91374-4",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.47",
+        "DOI": "10.1038/nn1097",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.48",
+        "DOI": "10.1523/JNEUROSCI.13-04-01708.1993",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.49",
+        "DOI": "10.1038/nature10732",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.50",
+        "DOI": "10.1038/nn.3773",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.51",
+        "DOI": "10.1523/JNEUROSCI.5441-06.2007",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.52",
+        "DOI": "10.1038/nrn1953",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.53",
+        "unstructured": "Reinhold, K. , Lien, A.D. , and Scanziani, M. (2015). Distinct recurrent versus afferent dynamics in cortical visual processing. Nat. Neurosci. 18.",
+        "DOI": "10.1038/nn.4153",
+        "doi-asserted-by": "crossref"
+      },
+      {
+        "key": "2019071912043639000_335703v2.54",
+        "DOI": "10.1523/JNEUROSCI.5441-08.2009",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.55",
+        "unstructured": "Roux, \u00c2. , Coulmance, \u00c1.\u00c3. , and Riehle, A. (2003). SHORT COMMUNICATION Context-related representation of timing processes in monkey motor cortex. 18, 1011\u20131016."
+      },
+      {
+        "key": "2019071912043639000_335703v2.56",
+        "DOI": "10.1016/0306-4522(94)90518-5",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.57",
+        "DOI": "10.1038/nature22073",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.58",
+        "volume": "13",
+        "first-page": "637",
+        "year": "2014",
+        "article-title": "Physiologic Changes Associated with Cerebellar Dystonia",
+        "journal-title": "Cerebellum",
+        "DOI": "10.1007/s12311-014-0572-5",
+        "doi-asserted-by": "crossref"
+      },
+      {
+        "key": "2019071912043639000_335703v2.59",
+        "volume": "2",
+        "first-page": "133",
+        "year": "1985",
+        "article-title": "Synaptic organization of the cerebello-thalamo-cerebral pathway in the cat. I",
+        "journal-title": "Projection of individual cerebellar nuclei to single pyramidal tract neurons in areas 4 and 6. Neurosci. Res."
+      },
+      {
+        "key": "2019071912043639000_335703v2.60",
+        "DOI": "10.1523/JNEUROSCI.1238-13.2013",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.61",
+        "DOI": "10.1016/j.tics.2017.02.005",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.62",
+        "DOI": "10.1016/j.neuron.2008.05.008",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.63",
+        "DOI": "10.1146/annurev.neuro.31.060407.125606",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.64",
+        "DOI": "10.1523/JNEUROSCI.0857-12.2012",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.65",
+        "DOI": "10.1016/j.conb.2017.10.023",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.66",
+        "DOI": "10.1523/JNEUROSCI.1873-07.2007",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.67",
+        "DOI": "10.1152/jn.1976.39.5.1062",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.68",
+        "DOI": "10.1016/0006-8993(79)90383-4",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.69",
+        "DOI": "10.1152/jn.01149.2004",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.70",
+        "DOI": "10.3389/fnsys.2014.00002",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.71",
+        "unstructured": "Wagner, M.J. , Hyun Kim, T. , Savall, J. , Schnitzer, M.J. , and Luo, L. (2017). Cerebellar granule cells encode the expectation of reward. Nat. Lett. 1\u201318.",
+        "DOI": "10.1038/nature21726",
+        "doi-asserted-by": "crossref"
+      },
+      {
+        "key": "2019071912043639000_335703v2.72",
+        "DOI": "10.1146/annurev.ne.08.030185.000245",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "key": "2019071912043639000_335703v2.73",
+        "DOI": "10.7554/elife.02224",
+        "doi-asserted-by": "publisher"
+      }
+    ],
+    "container-title": [],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://syndication.highwire.org/content/doi/10.1101/335703",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [[2020, 1, 18]],
+      "date-time": "2020-01-18T02:55:20Z",
+      "timestamp": 1579316120000
+    },
+    "score": 1.0,
+    "subtitle": [],
+    "short-title": [],
+    "issued": { "date-parts": [[2018, 5, 31]] },
+    "references-count": 73,
+    "URL": "http://dx.doi.org/10.1101/335703",
+    "relation": {
+      "is-preprint-of": [
+        {
+          "id-type": "doi",
+          "id": "10.1016/j.neuron.2019.05.022",
+          "asserted-by": "subject"
+        }
+      ],
+      "cites": []
+    },
+    "subtype": "preprint"
+  }
+}

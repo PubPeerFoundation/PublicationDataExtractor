@@ -1,0 +1,1017 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [[2021, 3, 31]],
+      "date-time": "2021-03-31T12:23:46Z",
+      "timestamp": 1617193426454
+    },
+    "reference-count": 75,
+    "publisher": "Elsevier BV",
+    "issue": "3",
+    "license": [
+      {
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/",
+        "start": {
+          "date-parts": [[2019, 8, 1]],
+          "date-time": "2019-08-01T00:00:00Z",
+          "timestamp": 1564617600000
+        },
+        "delay-in-days": 0,
+        "content-version": "tdm"
+      },
+      {
+        "URL": "http://creativecommons.org/licenses/by/4.0/",
+        "start": {
+          "date-parts": [[2019, 5, 16]],
+          "date-time": "2019-05-16T00:00:00Z",
+          "timestamp": 1557964800000
+        },
+        "delay-in-days": 0,
+        "content-version": "vor"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100010269",
+        "name": "Wellcome",
+        "doi-asserted-by": "publisher",
+        "award": []
+      },
+      {
+        "DOI": "10.13039/501100001711",
+        "name": "SNSF",
+        "doi-asserted-by": "publisher",
+        "award": ["169802"]
+      },
+      {
+        "name": "Biozentrum",
+        "award": ["090843/F/09/Z"]
+      },
+      {
+        "name": "Gatsby Foundation",
+        "award": []
+      },
+      {
+        "name": "ERC",
+        "award": ["616509"]
+      }
+    ],
+    "content-domain": {
+      "domain": ["cell.com", "elsevier.com", "sciencedirect.com"],
+      "crossmark-restriction": true
+    },
+    "short-container-title": ["Neuron"],
+    "published-print": {
+      "date-parts": [[2019, 8]]
+    },
+    "DOI": "10.1016/j.neuron.2019.05.022",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [[2019, 6, 11]],
+      "date-time": "2019-06-11T15:08:22Z",
+      "timestamp": 1560265702000
+    },
+    "page": "506-519.e4",
+    "update-policy": "http://dx.doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 50,
+    "title": [
+      "Cerebellar Contribution to Preparatory Activity in Motor Neocortex"
+    ],
+    "prefix": "10.1016",
+    "volume": "103",
+    "author": [
+      {
+        "given": "Francois P.",
+        "family": "Chabrol",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Antonin",
+        "family": "Blot",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Thomas D.",
+        "family": "Mrsic-Flogel",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib1",
+        "doi-asserted-by": "crossref",
+        "first-page": "49",
+        "DOI": "10.1016/0006-8993(70)90273-8",
+        "article-title": "Ascending projections of the medial cerebellar (fastigial) nucleus: an experimental study in the cat",
+        "volume": "24",
+        "author": "Angaut",
+        "year": "1970",
+        "journal-title": "Brain Res."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib2",
+        "doi-asserted-by": "crossref",
+        "first-page": "2129",
+        "DOI": "10.1152/jn.00906.2011",
+        "article-title": "Delay activity of saccade-related neurons in the caudal dentate nucleus of the macaque cerebellum",
+        "volume": "109",
+        "author": "Ashmore",
+        "year": "2013",
+        "journal-title": "J. Neurophysiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib3",
+        "doi-asserted-by": "crossref",
+        "first-page": "197",
+        "DOI": "10.1007/s12311-014-0627-7",
+        "article-title": "Consensus paper: the role of the cerebellum in perceptual processes",
+        "volume": "14",
+        "author": "Baumann",
+        "year": "2015",
+        "journal-title": "Cerebellum"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib4",
+        "doi-asserted-by": "crossref",
+        "first-page": "2729",
+        "DOI": "10.1113/JP271518",
+        "article-title": "Time-invariant feed-forward inhibition of Purkinje cells in the cerebellar cortex in vivo",
+        "volume": "594",
+        "author": "Blot",
+        "year": "2016",
+        "journal-title": "J. Physiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib5",
+        "doi-asserted-by": "crossref",
+        "first-page": "3130",
+        "DOI": "10.1152/jn.00307.2006",
+        "article-title": "Preparatory activity in premotor and motor cortex reflects the speed of the upcoming reach",
+        "volume": "96",
+        "author": "Churchland",
+        "year": "2006",
+        "journal-title": "J. Neurophysiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib6",
+        "doi-asserted-by": "crossref",
+        "first-page": "775",
+        "DOI": "10.1016/j.neuron.2008.05.008",
+        "article-title": "High-frequency organization and synchrony of activity in the Purkinje cell layer of the cerebellum",
+        "volume": "58",
+        "author": "de Solages",
+        "year": "2008",
+        "journal-title": "Neuron"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib7",
+        "doi-asserted-by": "crossref",
+        "first-page": "481",
+        "DOI": "10.1016/S0079-6123(08)62247-5",
+        "article-title": "Disturbances of motor preparation in basal ganglia and cerebellar disorders",
+        "volume": "80",
+        "author": "Diener",
+        "year": "1989",
+        "journal-title": "Prog. Brain Res."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib8",
+        "doi-asserted-by": "crossref",
+        "first-page": "889",
+        "DOI": "10.1523/JNEUROSCI.4534-04.2005",
+        "article-title": "Differential effects of cerebellar inactivation on eyeblink conditioned excitation and inhibition",
+        "volume": "25",
+        "author": "Freeman",
+        "year": "2005",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib9",
+        "doi-asserted-by": "crossref",
+        "first-page": "331",
+        "DOI": "10.1152/jn.1989.61.2.331",
+        "article-title": "Mnemonic coding of visual space in the monkey’s dorsolateral prefrontal cortex",
+        "volume": "61",
+        "author": "Funahashi",
+        "year": "1989",
+        "journal-title": "J. Neurophysiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib10",
+        "doi-asserted-by": "crossref",
+        "first-page": "652",
+        "DOI": "10.1126/science.173.3997.652",
+        "article-title": "Neuron activity related to short-term memory",
+        "volume": "173",
+        "author": "Fuster",
+        "year": "1971",
+        "journal-title": "Science"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib11",
+        "doi-asserted-by": "crossref",
+        "first-page": "128",
+        "DOI": "10.1016/j.jphysparis.2011.10.005",
+        "article-title": "Tetrode recordings in the cerebellar cortex",
+        "volume": "106",
+        "author": "Gao",
+        "year": "2012",
+        "journal-title": "J. Physiol. Paris"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib12",
+        "doi-asserted-by": "crossref",
+        "first-page": "113",
+        "DOI": "10.1038/s41586-018-0633-x",
+        "article-title": "A cortico-cerebellar loop for motor planning",
+        "volume": "563",
+        "author": "Gao",
+        "year": "2018",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib13",
+        "doi-asserted-by": "crossref",
+        "first-page": "727",
+        "DOI": "10.1038/nn.4531",
+        "article-title": "Cerebellar granule cells acquire a widespread predictive feedback signal during motor learning",
+        "volume": "20",
+        "author": "Giovannucci",
+        "year": "2017",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib14",
+        "doi-asserted-by": "crossref",
+        "first-page": "179",
+        "DOI": "10.1016/j.neuron.2013.10.020",
+        "article-title": "Flow of cortical activity underlying a tactile decision in mice",
+        "volume": "81",
+        "author": "Guo",
+        "year": "2014",
+        "journal-title": "Neuron"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib15",
+        "doi-asserted-by": "crossref",
+        "first-page": "181",
+        "DOI": "10.1038/nature22324",
+        "article-title": "Maintenance of persistent activity in a frontal thalamocortical loop",
+        "volume": "545",
+        "author": "Guo",
+        "year": "2017",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib16",
+        "doi-asserted-by": "crossref",
+        "first-page": "8586",
+        "DOI": "10.1523/JNEUROSCI.1868-09.2009",
+        "article-title": "Distinct cerebellar contributions to intrinsic connectivity networks",
+        "volume": "29",
+        "author": "Habas",
+        "year": "2009",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib17",
+        "doi-asserted-by": "crossref",
+        "first-page": "1431",
+        "DOI": "10.1038/s41593-018-0228-8",
+        "article-title": "Coordinated cerebellar climbing fiber activity signals learned sensorimotor predictions",
+        "volume": "21",
+        "author": "Heffley",
+        "year": "2018",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib18",
+        "doi-asserted-by": "crossref",
+        "first-page": "736",
+        "DOI": "10.1038/s41593-018-0136-y",
+        "article-title": "Encoding of error and learning to correct that error by the Purkinje cells of the cerebellum",
+        "volume": "21",
+        "author": "Herzfeld",
+        "year": "2018",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib19",
+        "doi-asserted-by": "crossref",
+        "first-page": "149",
+        "DOI": "10.1007/s00429-007-0150-4",
+        "article-title": "Anatomical analysis of afferent projections to the medial prefrontal cortex in the rat",
+        "volume": "212",
+        "author": "Hoover",
+        "year": "2007",
+        "journal-title": "Brain Struct. Funct."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib20",
+        "doi-asserted-by": "crossref",
+        "first-page": "e00400",
+        "DOI": "10.7554/eLife.00400",
+        "article-title": "Convergence of pontine and proprioceptive streams onto multimodal cerebellar granule cells",
+        "volume": "2",
+        "author": "Huang",
+        "year": "2013",
+        "journal-title": "eLife"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib21",
+        "doi-asserted-by": "crossref",
+        "first-page": "191",
+        "DOI": "10.1016/S0006-8993(00)02744-X",
+        "article-title": "A di-synaptic projection from the lateral cerebellar nucleus to the laterodorsal part of the striatum via the central lateral nucleus of the thalamus in the rat",
+        "volume": "880",
+        "author": "Ichinohe",
+        "year": "2000",
+        "journal-title": "Brain Res."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib22",
+        "doi-asserted-by": "crossref",
+        "first-page": "2493",
+        "DOI": "10.1523/JNEUROSCI.4202-06.2007",
+        "article-title": "Acquisition, extinction, and reacquisition of a cerebellar cortical memory trace",
+        "volume": "27",
+        "author": "Jirenhed",
+        "year": "2007",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib23",
+        "doi-asserted-by": "crossref",
+        "first-page": "551",
+        "DOI": "10.1111/j.1469-7793.1999.551ae.x",
+        "article-title": "Topographical organization of projections to cat motor cortex from nucleus interpositus anterior and forelimb skin",
+        "volume": "514",
+        "author": "Jörntell",
+        "year": "1999",
+        "journal-title": "J. Physiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib24",
+        "doi-asserted-by": "crossref",
+        "first-page": "8432",
+        "DOI": "10.1523/JNEUROSCI.23-23-08432.2003",
+        "article-title": "Cerebellar loops with motor cortex and prefrontal cortex of a nonhuman primate",
+        "volume": "23",
+        "author": "Kelly",
+        "year": "2003",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib25",
+        "doi-asserted-by": "crossref",
+        "first-page": "416",
+        "DOI": "10.1038/nn.3650",
+        "article-title": "A temporal basis for predicting the sensory consequences of motor commands in an electric fish",
+        "volume": "17",
+        "author": "Kennedy",
+        "year": "2014",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib26",
+        "doi-asserted-by": "crossref",
+        "first-page": "p9660",
+        "DOI": "10.1126/sciadv.aap9660",
+        "article-title": "A cerebellar adaptation to uncertain inputs",
+        "volume": "4",
+        "author": "Khilkevich",
+        "year": "2018",
+        "journal-title": "Sci. Adv."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib27",
+        "doi-asserted-by": "crossref",
+        "first-page": "367",
+        "DOI": "10.1016/j.neuron.2015.08.033",
+        "article-title": "Cortical and subcortical contributions to short-term memory for orienting movements",
+        "volume": "88",
+        "author": "Kopec",
+        "year": "2015",
+        "journal-title": "Neuron"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib28",
+        "doi-asserted-by": "crossref",
+        "first-page": "193",
+        "DOI": "10.1016/j.brainres.2003.09.036",
+        "article-title": "Purkinje cell activity during learning a new timing in classical eyeblink conditioning",
+        "volume": "994",
+        "author": "Kotani",
+        "year": "2003",
+        "journal-title": "Brain Res."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib29",
+        "doi-asserted-by": "crossref",
+        "first-page": "435",
+        "DOI": "10.1016/0006-8993(79)90189-6",
+        "article-title": "Preparatory activity of monkey pyramidal tract neurons related to quick movement onset during visual tracking performance",
+        "volume": "168",
+        "author": "Kubota",
+        "year": "1979",
+        "journal-title": "Brain Res."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib30",
+        "doi-asserted-by": "crossref",
+        "first-page": "e35676",
+        "DOI": "10.7554/eLife.35676",
+        "article-title": "Different contributions of preparatory activity in the basal ganglia and cerebellum for self-timing",
+        "volume": "7",
+        "author": "Kunimatsu",
+        "year": "2018",
+        "journal-title": "eLife"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib31",
+        "doi-asserted-by": "crossref",
+        "first-page": "2801",
+        "DOI": "10.1111/j.1460-9568.2006.05150.x",
+        "article-title": "Topographical organization of pathways from somatosensory cortex through the pontine nuclei to tactile regions of the rat cerebellar hemispheres",
+        "volume": "24",
+        "author": "Leergaard",
+        "year": "2006",
+        "journal-title": "Eur. J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib32",
+        "doi-asserted-by": "crossref",
+        "first-page": "51",
+        "DOI": "10.1038/nature14178",
+        "article-title": "A motor cortex circuit for motor planning and movement",
+        "volume": "519",
+        "author": "Li",
+        "year": "2015",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib33",
+        "doi-asserted-by": "crossref",
+        "first-page": "459",
+        "DOI": "10.1038/nature17643",
+        "article-title": "Robust neuronal dynamics in premotor cortex during motor planning",
+        "volume": "532",
+        "author": "Li",
+        "year": "2016",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib34",
+        "doi-asserted-by": "crossref",
+        "first-page": "1126",
+        "DOI": "10.1126/science.272.5265.1126",
+        "article-title": "The cerebellum: a neuronal learning machine?",
+        "volume": "272",
+        "author": "Raymond",
+        "year": "1996",
+        "journal-title": "Science"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib35",
+        "doi-asserted-by": "crossref",
+        "first-page": "2374",
+        "DOI": "10.1111/j.1460-9568.2007.05482.x",
+        "article-title": "Topographic distribution of output neurons in cerebellar nuclei and cortex to somatotopic map of primary motor cortex",
+        "volume": "25",
+        "author": "Lu",
+        "year": "2007",
+        "journal-title": "Eur. J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib36",
+        "doi-asserted-by": "crossref",
+        "first-page": "307",
+        "DOI": "10.1146/annurev.neuro.27.070203.144247",
+        "article-title": "The neural basis of temporal processing",
+        "volume": "27",
+        "author": "Mauk",
+        "year": "2004",
+        "journal-title": "Annu. Rev. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib37",
+        "doi-asserted-by": "crossref",
+        "first-page": "229",
+        "DOI": "10.1007/BF00239513",
+        "article-title": "Premotor cortex of the rhesus monkey: neuronal activity in anticipation of predictable environmental events",
+        "volume": "61",
+        "author": "Mauritz",
+        "year": "1986",
+        "journal-title": "Exp. Brain Res."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib38",
+        "doi-asserted-by": "crossref",
+        "first-page": "397",
+        "DOI": "10.1002/cne.901810210",
+        "article-title": "Morphological and electrophysiological characteristics of projection neurons in the nucleus interpositus of the cat cerebellum",
+        "volume": "181",
+        "author": "McCrea",
+        "year": "1978",
+        "journal-title": "J. Comp. Neurol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib39",
+        "doi-asserted-by": "crossref",
+        "first-page": "616",
+        "DOI": "10.1016/j.conb.2011.05.025",
+        "article-title": "The multiple roles of Purkinje cells in sensori-motor calibration: to predict, teach and command",
+        "volume": "21",
+        "author": "Medina",
+        "year": "2011",
+        "journal-title": "Curr. Opin. Neurobiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib40",
+        "doi-asserted-by": "crossref",
+        "first-page": "1185",
+        "DOI": "10.1038/nn.2197",
+        "article-title": "Links from complex spikes to local plasticity and motor learning in the cerebellum of awake-behaving monkeys",
+        "volume": "11",
+        "author": "Medina",
+        "year": "2008",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib41",
+        "doi-asserted-by": "crossref",
+        "first-page": "61",
+        "DOI": "10.1016/S0074-7742(08)60347-5",
+        "article-title": "Cerebellar output channels",
+        "volume": "41",
+        "author": "Middleton",
+        "year": "1997",
+        "journal-title": "Int. Rev. Neurobiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib42",
+        "doi-asserted-by": "crossref",
+        "first-page": "1574",
+        "DOI": "10.1038/nn.3826",
+        "article-title": "Neural antecedents of self-initiated actions in secondary motor cortex",
+        "volume": "17",
+        "author": "Murakami",
+        "year": "2014",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib43",
+        "doi-asserted-by": "crossref",
+        "first-page": "1798",
+        "DOI": "10.1038/nn.4167",
+        "article-title": "Climbing fibers encode a temporal-difference prediction error during cerebellar learning in mice",
+        "volume": "18",
+        "author": "Ohmae",
+        "year": "2015",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib44",
+        "doi-asserted-by": "crossref",
+        "first-page": "3511",
+        "DOI": "10.1523/JNEUROSCI.2221-16.2017",
+        "article-title": "Cerebellar roles in self-timing for sub- and supra-second intervals",
+        "volume": "37",
+        "author": "Ohmae",
+        "year": "2017",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib45",
+        "author": "Pachitariu",
+        "year": "2016",
+        "article-title": "Kilosort: realtime spike-sorting for extracellular electrophysiology with hundreds of channels",
+        "journal-title": "bioRxiv"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib46",
+        "doi-asserted-by": "crossref",
+        "first-page": "1395",
+        "DOI": "10.1038/nn.3800",
+        "article-title": "Encoding and decoding in parietal cortex during sensorimotor decision-making",
+        "volume": "17",
+        "author": "Park",
+        "year": "2014",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib47",
+        "doi-asserted-by": "crossref",
+        "first-page": "141",
+        "DOI": "10.1016/0006-8993(83)91374-4",
+        "article-title": "The cerebellar nucleo-cortical projection in the rat studied by the retrograde fluorescent double-labelling method",
+        "volume": "271",
+        "author": "Payne",
+        "year": "1983",
+        "journal-title": "Brain Res."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib48",
+        "doi-asserted-by": "crossref",
+        "first-page": "882",
+        "DOI": "10.1038/nn1097",
+        "article-title": "Preparatory activity in motor cortex reflects learning of local visuomotor skills",
+        "volume": "6",
+        "author": "Paz",
+        "year": "2003",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib49",
+        "doi-asserted-by": "crossref",
+        "first-page": "1708",
+        "DOI": "10.1523/JNEUROSCI.13-04-01708.1993",
+        "article-title": "Cerebellar cortex lesions disrupt learning-dependent timing of conditioned eyelid responses",
+        "volume": "13",
+        "author": "Perrett",
+        "year": "1993",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib50",
+        "doi-asserted-by": "crossref",
+        "first-page": "502",
+        "DOI": "10.1038/nature10732",
+        "article-title": "Purkinje neuron synchrony elicits time-locked spiking in the cerebellar nuclei",
+        "volume": "481",
+        "author": "Person",
+        "year": "2011",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib51",
+        "doi-asserted-by": "crossref",
+        "first-page": "1233",
+        "DOI": "10.1038/nn.3773",
+        "article-title": "Cerebellum involvement in cortical sensorimotor circuits for the control of voluntary movements",
+        "volume": "17",
+        "author": "Proville",
+        "year": "2014",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib52",
+        "doi-asserted-by": "crossref",
+        "first-page": "6029",
+        "DOI": "10.1523/JNEUROSCI.5441-06.2007",
+        "article-title": "Involvement of the basal ganglia and cerebellar motor pathways in the preparation of self-initiated and externally triggered movements in humans",
+        "volume": "27",
+        "author": "Purzner",
+        "year": "2007",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib53",
+        "doi-asserted-by": "crossref",
+        "first-page": "511",
+        "DOI": "10.1038/nrn1953",
+        "article-title": "The primate cortico-cerebellar system: anatomy and function",
+        "volume": "7",
+        "author": "Ramnani",
+        "year": "2006",
+        "journal-title": "Nat. Rev. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib54",
+        "doi-asserted-by": "crossref",
+        "first-page": "1789",
+        "DOI": "10.1038/nn.4153",
+        "article-title": "Distinct recurrent versus afferent dynamics in cortical visual processing",
+        "volume": "18",
+        "author": "Reinhold",
+        "year": "2015",
+        "journal-title": "Nat. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib55",
+        "doi-asserted-by": "crossref",
+        "first-page": "13870",
+        "DOI": "10.1523/JNEUROSCI.5441-08.2009",
+        "article-title": "Dynamic encoding of movement direction in motor cortical neurons",
+        "volume": "29",
+        "author": "Rickert",
+        "year": "2009",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib56",
+        "doi-asserted-by": "crossref",
+        "first-page": "1011",
+        "DOI": "10.1046/j.1460-9568.2003.02792.x",
+        "article-title": "Context-related representation of timing processes in monkey motor cortex",
+        "volume": "18",
+        "author": "Roux",
+        "year": "2003",
+        "journal-title": "Eur. J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib57",
+        "doi-asserted-by": "crossref",
+        "first-page": "47",
+        "DOI": "10.3389/fncir.2012.00047",
+        "article-title": "Novel recombinant adeno-associated viruses for Cre activated and inactivated transgene expression in neurons",
+        "volume": "6",
+        "author": "Saunders",
+        "year": "2012",
+        "journal-title": "Front. Neural Circuits"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib58",
+        "doi-asserted-by": "crossref",
+        "first-page": "725",
+        "DOI": "10.1016/0306-4522(94)90518-5",
+        "article-title": "Cerebellar-responsive neurons in the thalamic ventroanterior-ventrolateral complex of rats: light and electron microscopy",
+        "volume": "63",
+        "author": "Sawyer",
+        "year": "1994",
+        "journal-title": "Neuroscience"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib59",
+        "doi-asserted-by": "crossref",
+        "first-page": "219",
+        "DOI": "10.1038/nature22073",
+        "article-title": "Thalamic amplification of cortical connectivity sustains attentional control",
+        "volume": "545",
+        "author": "Schmitt",
+        "year": "2017",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib60",
+        "doi-asserted-by": "crossref",
+        "first-page": "637",
+        "DOI": "10.1007/s12311-014-0572-5",
+        "article-title": "Physiologic changes associated with cerebellar dystonia",
+        "volume": "13",
+        "author": "Shakkottai",
+        "year": "2014",
+        "journal-title": "Cerebellum"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib61",
+        "doi-asserted-by": "crossref",
+        "first-page": "133",
+        "DOI": "10.1016/0168-0102(85)90009-4",
+        "article-title": "Synaptic organization of the cerebello-thalamo-cerebral pathway in the cat. I. Projection of individual cerebellar nuclei to single pyramidal tract neurons in areas 4 and 6",
+        "volume": "2",
+        "author": "Shinoda",
+        "year": "1985",
+        "journal-title": "Neurosci. Res."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib62",
+        "doi-asserted-by": "crossref",
+        "first-page": "15272",
+        "DOI": "10.1523/JNEUROSCI.1238-13.2013",
+        "article-title": "Persistent activity in prefrontal cortex during trace eyelid conditioning: dissociating responses that reflect cerebellar output from those that do not",
+        "volume": "33",
+        "author": "Siegel",
+        "year": "2013",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib63",
+        "doi-asserted-by": "crossref",
+        "first-page": "045003",
+        "DOI": "10.1088/1741-2552/aa5eea",
+        "article-title": "Open Ephys: an open-source, plugin-based platform for multichannel electrophysiology",
+        "volume": "14",
+        "author": "Siegle",
+        "year": "2017",
+        "journal-title": "J. Neural Eng."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib64",
+        "doi-asserted-by": "crossref",
+        "first-page": "313",
+        "DOI": "10.1016/j.tics.2017.02.005",
+        "article-title": "The cerebellum: adaptive prediction for movement and cognition",
+        "volume": "21",
+        "author": "Sokolov",
+        "year": "2017",
+        "journal-title": "Trends Cogn. Sci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib65",
+        "doi-asserted-by": "crossref",
+        "first-page": "413",
+        "DOI": "10.1146/annurev.neuro.31.060407.125606",
+        "article-title": "Cerebellum and nonmotor function",
+        "volume": "32",
+        "author": "Strick",
+        "year": "2009",
+        "journal-title": "Annu. Rev. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib66",
+        "doi-asserted-by": "crossref",
+        "first-page": "10854",
+        "DOI": "10.1523/JNEUROSCI.0857-12.2012",
+        "article-title": "Organization of cerebral projections to identified cerebellar zones in the posterior cerebellum of the rat",
+        "volume": "32",
+        "author": "Suzuki",
+        "year": "2012",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib67",
+        "doi-asserted-by": "crossref",
+        "first-page": "33",
+        "DOI": "10.1016/j.conb.2017.10.023",
+        "article-title": "Neural mechanisms of movement planning: motor cortex and beyond",
+        "volume": "49",
+        "author": "Svoboda",
+        "year": "2018",
+        "journal-title": "Curr. Opin. Neurobiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib68",
+        "doi-asserted-by": "crossref",
+        "first-page": "12109",
+        "DOI": "10.1523/JNEUROSCI.1873-07.2007",
+        "article-title": "Cognitive signals in the primate motor thalamus predict saccade timing",
+        "volume": "27",
+        "author": "Tanaka",
+        "year": "2007",
+        "journal-title": "J. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib69",
+        "doi-asserted-by": "crossref",
+        "first-page": "1062",
+        "DOI": "10.1152/jn.1976.39.5.1062",
+        "article-title": "Anticipatory activity of motor cortex neurons in relation to direction of an intended movement",
+        "volume": "39",
+        "author": "Tanji",
+        "year": "1976",
+        "journal-title": "J. Neurophysiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib70",
+        "doi-asserted-by": "crossref",
+        "first-page": "168",
+        "DOI": "10.1016/0006-8993(79)90383-4",
+        "article-title": "The cerebellar dentatothalamic connection: terminal field, lamellae, rods and somatotopy",
+        "volume": "169",
+        "author": "Thach",
+        "year": "1979",
+        "journal-title": "Brain Res."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib71",
+        "doi-asserted-by": "crossref",
+        "first-page": "3687",
+        "DOI": "10.1152/jn.01149.2004",
+        "article-title": "Neuronal activity representing temporal prediction of reward in the primate prefrontal cortex",
+        "volume": "93",
+        "author": "Tsujimoto",
+        "year": "2005",
+        "journal-title": "J. Neurophysiol."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib72",
+        "doi-asserted-by": "crossref",
+        "first-page": "227",
+        "DOI": "10.3389/fnsys.2014.00227",
+        "article-title": "What we do not know about cerebellar systems neuroscience",
+        "volume": "8",
+        "author": "Voogd",
+        "year": "2014",
+        "journal-title": "Front. Syst. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib73",
+        "doi-asserted-by": "crossref",
+        "first-page": "96",
+        "DOI": "10.1038/nature21726",
+        "article-title": "Cerebellar granule cells encode the expectation of reward",
+        "volume": "544",
+        "author": "Wagner",
+        "year": "2017",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib74",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1146/annurev.ne.08.030185.000245",
+        "article-title": "The primate premotor cortex: past, present, and preparatory",
+        "volume": "8",
+        "author": "Wise",
+        "year": "1985",
+        "journal-title": "Annu. Rev. Neurosci."
+      },
+      {
+        "key": "10.1016/j.neuron.2019.05.022_bib75",
+        "doi-asserted-by": "crossref",
+        "first-page": "e02536",
+        "DOI": "10.7554/eLife.02536",
+        "article-title": "Cerebellar modules operate at different frequencies",
+        "volume": "3",
+        "author": "Zhou",
+        "year": "2014",
+        "journal-title": "eLife"
+      }
+    ],
+    "container-title": ["Neuron"],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0896627319304477?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0896627319304477?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [[2019, 9, 21]],
+      "date-time": "2019-09-21T08:36:44Z",
+      "timestamp": 1569055004000
+    },
+    "score": 1,
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [[2019, 8]]
+    },
+    "references-count": 75,
+    "journal-issue": {
+      "published-print": {
+        "date-parts": [[2019, 8]]
+      },
+      "issue": "3"
+    },
+    "alternative-id": ["S0896627319304477"],
+    "URL": "http://dx.doi.org/10.1016/j.neuron.2019.05.022",
+    "relation": {
+      "has-preprint": [
+        {
+          "id-type": "doi",
+          "id": "10.1101/335703",
+          "asserted-by": "object"
+        }
+      ],
+      "cites": []
+    },
+    "ISSN": ["0896-6273"],
+    "issn-type": [
+      {
+        "value": "0896-6273",
+        "type": "print"
+      }
+    ],
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Cerebellar Contribution to Preparatory Activity in Motor Neocortex",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Neuron",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.neuron.2019.05.022",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2019 The Author(s). Published by Elsevier Inc.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

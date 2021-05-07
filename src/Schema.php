@@ -2,8 +2,8 @@
 
 namespace PubPeerFoundation\PublicationDataExtractor;
 
-use Volan\ValidatorResult;
 use Volan\Volan;
+use Volan\ValidatorResult;
 
 class Schema
 {
@@ -87,6 +87,15 @@ class Schema
                     '_type' => 'string',
                 ],
             ],
+            'links' => [
+                '_type' => 'nested_array',
+                'has_preprint' => [
+                    '_type' => 'string',
+                ],
+                'is_preprint_of' => [
+                    '_type' => 'string',
+                ],
+            ],
             'affiliations' => [
                 '_type' => 'nested_array',
                 'name' => [
@@ -118,7 +127,6 @@ class Schema
      * Validate the data against Schema.
      *
      * @param $data
-     * @return \Volan\ValidatorResult
      */
     public static function validate($data): ValidatorResult
     {
@@ -130,8 +138,6 @@ class Schema
 
     /**
      * Get the main data types from Schema.
-     *
-     * @return array
      */
     public static function getDataTypes(): array
     {

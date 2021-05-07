@@ -13,9 +13,6 @@ class Tags extends Model
 
     /**
      * Add unknown tags to the current list.
-     *
-     * @param  array $tags
-     * @return array
      */
     public function add(array $tags): array
     {
