@@ -3,10 +3,10 @@
 namespace PubPeerFoundation\PublicationDataExtractor\Test\Integration;
 
 use PubPeerFoundation\PublicationDataExtractor\Output;
-use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
-use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\Crossref;
 use PubPeerFoundation\PublicationDataExtractor\Resources\Extractors\CrossrefUpdates;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestCase;
+use PubPeerFoundation\PublicationDataExtractor\Test\TestHelpers;
 
 class CrossrefDataExtractorTest extends TestCase
 {
