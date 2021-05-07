@@ -1,39 +1,39 @@
 {
-    "name": "pubpeer-foundation/publication-data-extractor",
-    "description": "Extract publication data from multiple external APIs",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Xavier Roussel",
-            "email": "xavier.roussel@pubpeer.org"
-        }
-    ],
-    "require": {
-	    "php": "^7.1",
-        "graham-campbell/guzzle-factory": "^3.0",
-        "nesbot/carbon": "^2.27",
-        "serkin/volan": "dev-master",
-        "tightenco/collect": "^5.6",
-        "symfony/dom-crawler": "^5.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7.0"
-    },
-    "autoload": {
-        "files": [
-            "src/Support/helpers.php"
-        ],
-        "psr-4": {
-            "PubPeerFoundation\\PublicationDataExtractor\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "PubPeerFoundation\\PublicationDataExtractor\\Test\\": "tests/"
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit"
+  "name": "pubpeer-foundation/publication-data-extractor",
+  "description": "Extract publication data from multiple external APIs",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Xavier Roussel",
+      "email": "xavier.roussel@pubpeer.org"
     }
+  ],
+  "require": {
+    "php": "^7.1",
+    "graham-campbell/guzzle-factory": "^3.0",
+    "nesbot/carbon": "^1.26.3",
+    "serkin/volan": "dev-master",
+    "tightenco/collect": "^5.6",
+    "symfony/dom-crawler": "^5.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "files": [
+      "src/Support/helpers.php"
+    ],
+    "psr-4": {
+      "PubPeerFoundation\\PublicationDataExtractor\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PubPeerFoundation\\PublicationDataExtractor\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
 }
