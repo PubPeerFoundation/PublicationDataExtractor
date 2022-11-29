@@ -36,7 +36,7 @@ abstract class Extractor
     /**
      * Extractor constructor.
      *
-     * @param mixed $document
+     * @param  mixed  $document
      */
     public function __construct($document, Output $output)
     {

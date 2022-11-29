@@ -13,6 +13,7 @@ trait TestHelpers
      * @param $object - instance in which protected value is being modified
      * @param $property - property on instance being modified
      * @param $value - new value of the property being modified
+     *
      * @throws \ReflectionException
      */
     public function setProtectedProperty($object, $property, $value)
@@ -28,8 +29,8 @@ trait TestHelpers
      *
      * @param $object - instance in which protected value is being modified
      * @param $property - property on instance being modified
-     *
      * @return mixed
+     *
      * @throws \ReflectionException
      */
     public function getProtectedProperty($object, $property)
@@ -44,11 +45,11 @@ trait TestHelpers
     /**
      * Call protected/private method of a class.
      *
-     * @param object &$object Instantiated object that we will run method on
-     * @param string $methodName Method name to call
-     * @param array $parameters array of parameters to pass into method
-     *
+     * @param  object  &$object  Instantiated object that we will run method on
+     * @param  string  $methodName  Method name to call
+     * @param  array  $parameters  array of parameters to pass into method
      * @return mixed method return
+     *
      * @throws \ReflectionException
      */
     public function invokeMethod(&$object, $methodName, array $parameters = [])

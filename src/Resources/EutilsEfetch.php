@@ -34,8 +34,7 @@ class EutilsEfetch extends Resource
     }
 
     /**
-     * @param string $document
-     *
+     * @param  string  $document
      * @return array
      */
     public function getDataFrom(string $document): array

@@ -152,7 +152,7 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
     /**
      * Loop over affiliations.
      *
-     * @param  array $author
+     * @param  array  $author
      * @return array
      */
     protected function loopOverAffiliations($author): array

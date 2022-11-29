@@ -14,7 +14,7 @@ class Journal extends Model
     /**
      * Add unknown attributes to the current details array.
      *
-     * @param  array $journal
+     * @param  array  $journal
      * @return array
      */
     public function add(array $journal): array

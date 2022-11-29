@@ -53,7 +53,7 @@ class Fetcher
     /**
      * ApiDataFetcher constructor.
      *
-     * @param Identifier $identifier
+     * @param  Identifier  $identifier
      */
     public function __construct(Identifier $identifier)
     {
@@ -130,8 +130,7 @@ class Fetcher
     /**
      * Get resource instance from resources array.
      *
-     * @param int $index
-     *
+     * @param  int  $index
      * @return resource
      */
     protected function getResourceAtIndex(int $index): Resource
@@ -142,8 +141,7 @@ class Fetcher
     /**
      * Create and store an instance of the Resource class.
      *
-     * @param string $resourceClass
-     *
+     * @param  string  $resourceClass
      * @return resource
      */
     protected function instantiateResource($resourceClass): Resource

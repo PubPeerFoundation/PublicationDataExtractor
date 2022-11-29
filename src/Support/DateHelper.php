@@ -7,7 +7,7 @@ use Carbon\Carbon;
 class DateHelper
 {
     /**
-     * @param  array        $parts
+     * @param  array  $parts
      * @return mixed|string
      */
     public static function dateFromDateParts(array $parts)
