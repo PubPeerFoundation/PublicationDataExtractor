@@ -72,7 +72,7 @@ class Fetcher
     {
         $this->fetchResources();
 
-        $this->fetchComplementaryResources();
+        //$this->fetchComplementaryResources();
 
         $this->output->resetLists();
 
