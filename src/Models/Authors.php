@@ -14,7 +14,7 @@ class Authors extends Model
     /**
      * Add unknown authors to the current list.
      *
-     * @param  array $authors
+     * @param  array  $authors
      * @return array
      */
     public function add(array $authors): array
@@ -37,8 +37,8 @@ class Authors extends Model
     /**
      * Add unknown attributes to current author.
      *
-     * @param array $authors
-     * @param int   $counter
+     * @param  array  $authors
+     * @param  int  $counter
      */
     protected function addUnknownAttributes(array $authors, int $counter): void
     {

@@ -25,8 +25,8 @@ abstract class Resource
     /**
      * Resource constructor.
      *
-     * @param Identifier $identifier
-     * @param Output     $output
+     * @param  Identifier  $identifier
+     * @param  Output  $output
      */
     public function __construct(Identifier $identifier, Output $output)
     {
@@ -54,7 +54,7 @@ abstract class Resource
     /**
      * Transform raw data to a usable format.
      *
-     * @param  string $document
+     * @param  string  $document
      * @return array
      */
     abstract public function getDataFrom(string $document): array;

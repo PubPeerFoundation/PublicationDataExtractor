@@ -14,8 +14,8 @@ class Output
     /**
      * Dynamically call the add method on the desired model.
      *
-     * @param string $name
-     * @param array  $resourceData
+     * @param  string  $name
+     * @param  array  $resourceData
      */
     public function __call(string $name, array $resourceData): void
     {

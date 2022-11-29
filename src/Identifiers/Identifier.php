@@ -42,7 +42,7 @@ abstract class Identifier
     /**
      * Identifier constructor.
      *
-     * @param string $queryString
+     * @param  string  $queryString
      */
     public function __construct(string $queryString)
     {

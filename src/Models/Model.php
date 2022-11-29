@@ -55,7 +55,7 @@ class Model
     /**
      * Figure out which values are already known.
      *
-     * @param  string $key
+     * @param  string  $key
      * @return array
      */
     protected function knownIdentifierValues(string $key): array
@@ -68,7 +68,7 @@ class Model
     /**
      * Should the attribute be kept?
      *
-     * @param  string $key
+     * @param  string  $key
      * @param  mixed  $value
      * @return bool
      */

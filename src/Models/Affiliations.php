@@ -14,7 +14,7 @@ class Affiliations extends Model
     /**
      * Add unknown affiliations to the current list.
      *
-     * @param  array $affiliations
+     * @param  array  $affiliations
      * @return array
      */
     public function add(array $affiliations): array

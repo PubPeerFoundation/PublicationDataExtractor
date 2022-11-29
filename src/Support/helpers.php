@@ -21,7 +21,7 @@ if (! function_exists('date_from_parts')) {
     /**
      * Get Carbon Date Object from parts.
      *
-     * @param  array $array
+     * @param  array  $array
      * @return mixed
      */
     function date_from_parts($array)
@@ -47,7 +47,7 @@ if (! function_exists('date_from_parseable_format')) {
     /**
      * Get Carbon Date Object from parseable string.
      *
-     * @param  string $string
+     * @param  string  $string
      * @return mixed
      */
     function date_from_parseable_format($string)
@@ -60,7 +60,7 @@ if (! function_exists('date_from_human_readable')) {
     /**
      * Get Carbon Date Object from human readable string.
      *
-     * @param  string $string
+     * @param  string  $string
      * @return mixed
      */
     function date_from_human_readable($string)
@@ -73,7 +73,7 @@ if (! function_exists('get_string')) {
     /**
      * Get string from array path.
      *
-     * @param array $array
+     * @param  array  $array
      * @param $key
      * @param  mixed  $default
      * @return string
@@ -88,9 +88,9 @@ if (! function_exists('get_array')) {
     /**
      * Get array from dot access key.
      *
-     * @param mixed $target
+     * @param  mixed  $target
      * @param $key
-     * @param  array $default
+     * @param  array  $default
      * @return array
      */
     function get_array($target, $key, $default = [])
@@ -128,7 +128,7 @@ if (! function_exists('find_emails_in_array')) {
     /**
      * Find emails in array.
      *
-     * @param  array $array
+     * @param  array  $array
      * @return array
      */
     function find_emails_in_array($array)

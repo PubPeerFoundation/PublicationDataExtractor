@@ -30,7 +30,7 @@ class IdentifierResolver
     /**
      * Identifier constructor.
      *
-     * @param string $queryString
+     * @param  string  $queryString
      */
     public function __construct(string $queryString)
     {
@@ -40,8 +40,9 @@ class IdentifierResolver
     /**
      * Resolves the Identifier;.
      *
-     * @throws UnknownIdentifierException
      * @return Identifiers\Identifier
+     *
+     * @throws UnknownIdentifierException
      */
     public function handle(): Identifier
     {

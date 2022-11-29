@@ -14,7 +14,7 @@ class Publication extends Model
     /**
      * Add unknown attributes to the current details array.
      *
-     * @param  array $publication
+     * @param  array  $publication
      * @return array
      */
     public function add(array $publication): array
