@@ -12,7 +12,7 @@
   "require": {
     "php": "^7.1|^8.0",
     "graham-campbell/guzzle-factory": "^7.0",
-    "nesbot/carbon": "^1.26.3",
+    "nesbot/carbon": "^2.68.1",
     "serkin/volan": "dev-master",
     "tightenco/collect": "^5.6",
     "symfony/dom-crawler": "^5.0"
