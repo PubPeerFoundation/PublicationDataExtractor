@@ -138,7 +138,7 @@ class Crossref extends Extractor implements ProvidesPublicationData, ProvidesIde
     }
 
     /**
-     * @param $array
+     * @param  $array
      * @return mixed
      */
     protected function extractDateFrom($array)

@@ -5,7 +5,7 @@ use Tightenco\Collect\Support\Arr;
 
 if (! function_exists('get_class_name')) {
     /**
-     * @param $object
+     * @param  $object
      * @return string
      */
     function get_class_name($object)
@@ -74,7 +74,7 @@ if (! function_exists('get_string')) {
      * Get string from array path.
      *
      * @param  array  $array
-     * @param $key
+     * @param  $key
      * @param  mixed  $default
      * @return string
      */
@@ -89,7 +89,7 @@ if (! function_exists('get_array')) {
      * Get array from dot access key.
      *
      * @param  mixed  $target
-     * @param $key
+     * @param  $key
      * @param  array  $default
      * @return array
      */

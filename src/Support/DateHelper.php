@@ -25,7 +25,7 @@ class DateHelper
     }
 
     /**
-     * @param $formattedDate
+     * @param  $formattedDate
      * @return string
      */
     public static function dateFromParseableFormat($formattedDate)
@@ -34,7 +34,7 @@ class DateHelper
     }
 
     /**
-     * @param $pubDateObject
+     * @param  $pubDateObject
      * @return mixed|string
      */
     public static function dateFromPubDate($pubDateObject)
@@ -60,7 +60,7 @@ class DateHelper
     }
 
     /**
-     * @param $pubDateObject
+     * @param  $pubDateObject
      * @return int|string
      */
     protected static function getPubDateMonth($pubDateObject)
@@ -75,8 +75,8 @@ class DateHelper
     }
 
     /**
-     * @param $date
-     * @param $count
+     * @param  $date
+     * @param  $count
      * @return mixed
      */
     protected static function formatForParts($date, $count)
@@ -91,7 +91,7 @@ class DateHelper
     }
 
     /**
-     * @param $pubDateObject
+     * @param  $pubDateObject
      * @return mixed
      */
     protected static function countObjectParts($pubDateObject)

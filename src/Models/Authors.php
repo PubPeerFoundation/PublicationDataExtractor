@@ -56,9 +56,9 @@ class Authors extends Model
     /**
      * Should the current attribute be added to the author array?
      *
-     * @param $counter
-     * @param $key
-     * @param $value
+     * @param  $counter
+     * @param  $key
+     * @param  $value
      * @return bool
      */
     protected function attributeShouldBeAdded($counter, $key, $value)
@@ -70,8 +70,8 @@ class Authors extends Model
     /**
      * Is this attribute already known?
      *
-     * @param $counter
-     * @param $key
+     * @param  $counter
+     * @param  $key
      * @return bool
      */
     protected function noKnownAttribute($counter, $key)
@@ -83,9 +83,9 @@ class Authors extends Model
     /**
      * Did we find a longer first name?
      *
-     * @param $counter
-     * @param $key
-     * @param $value
+     * @param  $counter
+     * @param  $key
+     * @param  $value
      * @return bool
      */
     protected function foundLongerFirstName($counter, $key, $value)

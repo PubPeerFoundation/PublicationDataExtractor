@@ -10,9 +10,9 @@ trait TestHelpers
     /**
      * Sets a protected property on a given object via reflection.
      *
-     * @param $object - instance in which protected value is being modified
-     * @param $property - property on instance being modified
-     * @param $value - new value of the property being modified
+     * @param  $object  - instance in which protected value is being modified
+     * @param  $property  - property on instance being modified
+     * @param  $value  - new value of the property being modified
      *
      * @throws \ReflectionException
      */
@@ -27,8 +27,8 @@ trait TestHelpers
     /**
      * Gets a protected property on a given object via reflection.
      *
-     * @param $object - instance in which protected value is being modified
-     * @param $property - property on instance being modified
+     * @param  $object  - instance in which protected value is being modified
+     * @param  $property  - property on instance being modified
      * @return mixed
      *
      * @throws \ReflectionException
@@ -64,7 +64,7 @@ trait TestHelpers
     /**
      * Loads and decodes Json file.
      *
-     * @param $name
+     * @param  $name
      * @return mixed
      */
     public function loadJson($name)
@@ -75,7 +75,7 @@ trait TestHelpers
     /**
      * Loads and decodes Xml file.
      *
-     * @param $name
+     * @param  $name
      * @return SimpleXMLElement
      */
     public function loadXml($name)
