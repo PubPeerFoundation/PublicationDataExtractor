@@ -86,7 +86,7 @@ abstract class Extractor
     /**
      * Extract data from each type of the Resource.
      *
-     * @param $type
+     * @param  $type
      */
     protected function extractData($type): void
     {
@@ -105,7 +105,7 @@ abstract class Extractor
     /**
      * Build data output for each Resource type.
      *
-     * @param $type
+     * @param  $type
      */
     protected function buildOutput($type): void
     {

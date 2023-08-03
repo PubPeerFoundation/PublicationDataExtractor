@@ -126,7 +126,7 @@ class Schema
     /**
      * Validate the data against Schema.
      *
-     * @param $data
+     * @param  $data
      */
     public static function validate($data): ValidatorResult
     {

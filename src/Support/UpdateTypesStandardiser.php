@@ -34,7 +34,7 @@ class UpdateTypesStandardiser
     ];
 
     /**
-     * @param $type
+     * @param  $type
      * @return mixed
      */
     public static function getType($type)

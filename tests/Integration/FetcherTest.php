@@ -10,6 +10,7 @@ class FetcherTest extends TestCase
 {
     /**
      * @test
+     *
      * @group internet
      */
     public function it_fetches_data_from_a_doi_identifier()
@@ -27,6 +28,7 @@ class FetcherTest extends TestCase
 
     /**
      * @test
+     *
      * @group internet
      */
     public function it_fetches_data_from_a_pubmed_doi_identifier()
@@ -44,6 +46,7 @@ class FetcherTest extends TestCase
 
     /**
      * @test
+     *
      * @group internet
      */
     public function it_fetches_data_from_a_arxiv_identifier()
@@ -61,6 +64,7 @@ class FetcherTest extends TestCase
 
     /**
      * @test
+     *
      * @group internet
      */
     public function it_fetches_data_from_a_pubmed_identifier()
@@ -78,6 +82,7 @@ class FetcherTest extends TestCase
 
     /**
      * @test
+     *
      * @group internet
      */
     public function it_fetches_data_from_a_doi_book_identifier()
@@ -95,6 +100,7 @@ class FetcherTest extends TestCase
 
     /**
      * @test
+     *
      * @group internet
      */
     public function it_lists_errors_from_rejected_api_calls()

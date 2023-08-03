@@ -85,7 +85,7 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
     }
 
     /**
-     * @param $correction
+     * @param  $correction
      */
     protected function getUpdateFromCorrection($correction): void
     {
@@ -133,7 +133,7 @@ class EutilsEfetch extends Extractor implements ProvidesPublicationData, Provide
     /**
      * Create an author entry in output.
      *
-     * @param $author
+     * @param  $author
      */
     protected function createAuthorEntry($author): void
     {

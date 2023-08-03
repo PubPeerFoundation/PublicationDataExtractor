@@ -10,6 +10,7 @@ class OutputTest extends TestCase
 {
     /**
      * @test
+     *
      * @group forever
      */
     public function test_20_randomly_selected_identifiers()
