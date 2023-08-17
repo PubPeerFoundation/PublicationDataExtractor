@@ -90,7 +90,7 @@ class Fetcher
                 $this->apiData[] = $this->getResourceAtIndex($index)
                     ->getDataFrom((string) $response->getBody());
             },
-            'rejected' => function (RequestException $exception, $index) {
+            'rejected' => function (\Exception $exception, $index) {
                 $resourceName = get_class_name($this->getResourceAtIndex($index));
                 $this->errors[$resourceName] = $exception->getCode();
             },
