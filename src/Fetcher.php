@@ -4,7 +4,6 @@ namespace PubPeerFoundation\PublicationDataExtractor;
 
 use Generator;
 use GrahamCampbell\GuzzleFactory\GuzzleFactory;
-use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Promise\EachPromise;
 use Psr\Http\Message\ResponseInterface;
 use PubPeerFoundation\PublicationDataExtractor\Identifiers\Identifier;
