@@ -37,10 +37,10 @@ class CrossrefPublicationExtractorTest extends TestCase
         // Assert
         $this->assertArraySubset([
             'publication' => [
-                'title' =>  'blabla',
+                'title' => 'blabla',
                 'abstract' => 'blibli',
-                'url'   =>  'bloblo',
-                'published_at'  =>  '2010-12',
+                'url' => 'bloblo',
+                'published_at' => '2010-12',
             ],
         ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
@@ -70,10 +70,10 @@ class CrossrefPublicationExtractorTest extends TestCase
         // Assert
         $this->assertArraySubset([
             'publication' => [
-                'title' =>  'blabla',
+                'title' => 'blabla',
                 'abstract' => 'blibli',
-                'url'   =>  'bloblo',
-                'published_at'  =>  '2010-12',
+                'url' => 'bloblo',
+                'published_at' => '2010-12',
             ],
         ], $this->getProtectedProperty($extractor, 'resourceOutput'));
     }
