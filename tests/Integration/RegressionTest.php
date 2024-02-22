@@ -26,4 +26,23 @@ class RegressionTest extends TestCase
         $this->assertTrue('John Wiley & Sons, Inc.' === $output->getData()['journal']['publisher']);
         $this->assertCount(1, $output->getData()['journal']['issn']);
     }
+
+    /** @test */
+    public function it_can_extract_recent_dois()
+    {
+        $identifier = new IdentifierResolver('10.1126/sciimmunol.adk1643');
+        $dataFetcher = new Fetcher($identifier->handle());
+
+        $output = $dataFetcher->fetch();
+
+        $this->assertArrayIsValid($output->getData());
+
+        $issnIdentifiers = array_filter($output->getData()['identifiers'], function ($identifier) {
+            return 'issn' === $identifier['type'];
+        });
+
+        $this->assertCount(1, $issnIdentifiers);
+        //tTrue('John Wiley & Sons, Inc.' === $output->getData()['journal']['publisher']);
+        $this->assertCount(1, $output->getData()['journal']['issn']);
+    }
 }

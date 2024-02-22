@@ -10,7 +10,7 @@ class Doi extends Identifier
      * @var array
      */
     protected $resources = [
-        \PubPeerFoundation\PublicationDataExtractor\Resources\Doi::class,
+        // \PubPeerFoundation\PublicationDataExtractor\Resources\Doi::class,
         \PubPeerFoundation\PublicationDataExtractor\Resources\Crossref::class,
         \PubPeerFoundation\PublicationDataExtractor\Resources\CrossrefUpdates::class,
         \PubPeerFoundation\PublicationDataExtractor\Resources\IdConverter::class,
