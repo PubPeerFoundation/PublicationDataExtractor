@@ -16,7 +16,7 @@ class CrossrefUpdates extends Resource
      */
     protected $queryStringParameters = [
         'headers' => [
-            'User-Agent'    =>  'PubPeer/2.0 (https://pubpeer.com; mailto:contact@pubpeer.com)',
+            'User-Agent' => 'PubPeer/2.0 (https://pubpeer.com; mailto:contact@pubpeer.com)',
         ],
     ];
 

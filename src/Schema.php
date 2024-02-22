@@ -75,7 +75,7 @@ class Schema
                     '_type' => 'string',
                 ],
             ],
-            'types' =>  [
+            'types' => [
                 '_type' => 'nested_array',
                 'name' => [
                     '_type' => 'string',
