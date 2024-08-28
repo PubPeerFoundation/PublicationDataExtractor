@@ -59,7 +59,7 @@ class Fetcher
         $this->identifier = $identifier;
         $this->resourcesToFetch = $identifier->getRelatedResources();
         $this->output = new Output();
-        $this->client = GuzzleFactory::make([], 100);
+        $this->client = GuzzleFactory::make(['timeout' => 2], 100, null, 0);
     }
 
     /**
@@ -71,7 +71,7 @@ class Fetcher
     {
         $this->fetchResources();
 
-        //$this->fetchComplementaryResources();
+        $this->fetchComplementaryResources();
 
         $this->output->resetLists();
 
