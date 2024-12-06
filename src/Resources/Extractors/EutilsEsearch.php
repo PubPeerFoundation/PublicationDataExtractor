@@ -17,6 +17,10 @@ class EutilsEsearch extends Extractor implements ProvidesIdentifiersData
             throw new UnparseableApiException();
         }
 
+        if (array_key_exists('errorlist', $this->document['esearchresult'])) {
+            throw new UnparseableApiException();
+        }
+
         $this->searchTree = $this->document['esearchresult'];
     }
 
